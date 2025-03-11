@@ -23,7 +23,8 @@ dissimilarity.matrix <- vegdist(data.numeric, method = "bray", memb.exp = member
 fanny.result <- fanny(dissimilarity.matrix, k = 3, memb.exp = membership.exponent)
 data.wide$FANNY.Cluster <- fanny.result$clustering
 
-nmds.result <- metaMDS(data.wide, distance = "bray", k = 3, trymax = 500)
+nmds.result <- metaMDS(data.wide, distance = "bray", k = 4, trymax = 500)
+cat("Stress value:", nmds.result$stress, "\n")
 nmds.points <- data.frame(nmds.result$points)
 nmds.points$RELEVE_ID <- data.wide$RELEVE_ID
 nmds.points$FANNY.Cluster <- as.factor(data.wide$FANNY.Cluster)
