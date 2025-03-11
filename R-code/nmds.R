@@ -23,11 +23,16 @@ dissimilarity.matrix <- vegdist(data.numeric, method = "bray", memb.exp = member
 fanny.result <- fanny(dissimilarity.matrix, k = 3, memb.exp = membership.exponent)
 data.wide$FANNY.Cluster <- fanny.result$clustering
 
-nmds.result <- metaMDS(data.wide, distance = "bray", k = 4, trymax = 500)
+data.transformed <- log1p(data.wide)
+nmds.result <- metaMDS(data.transformed, distance = "bray", k = 4, trymax = 500)
 cat("Stress value:", nmds.result$stress, "\n")
 nmds.points <- data.frame(nmds.result$points)
-nmds.points$RELEVE_ID <- data.wide$RELEVE_ID
-nmds.points$FANNY.Cluster <- as.factor(data.wide$FANNY.Cluster)
+nmds.points$RELEVE_ID <- data.transformed$RELEVE_ID
+nmds.points$FANNY.Cluster <- as.factor(data.transformed$FANNY.Cluster)
+
+svg("shepard_plot.svg", width = 10, height = 10)
+stressplot(nmds.result, main = "Shepard Plot")
+dev.off()
 
 p <- ggplot(nmds.points, aes(x = MDS1, y = MDS2, color = FANNY.Cluster, label = RELEVE_ID)) +
   geom_point(size = 0.25) +
