@@ -18,27 +18,26 @@ data.wide <- data.aggregated %>%
 data.numeric <- data.wide %>%
   select(-RELEVE_ID) 
 
-membership.exponent <- 1.1
-dissimilarity.matrix <- vegdist(data.numeric, method = "bray", memb.exp = membership.exponent)
-fanny.result <- fanny(dissimilarity.matrix, k = 3, memb.exp = membership.exponent)
+str(data.numeric)
+dissimilarity.matrix <- vegdist(data.numeric, method = "bray")
+fanny.result <- fanny(dissimilarity.matrix, k = 3)
 data.wide$FANNY.Cluster <- fanny.result$clustering
 
-data.transformed <- log1p(data.wide)
-nmds.result <- metaMDS(data.transformed, distance = "bray", k = 4, trymax = 500)
+nmds.result <- metaMDS(data.wide, distance = "bray", k = 3, trymax = 500)
 cat("Stress value:", nmds.result$stress, "\n")
 nmds.points <- data.frame(nmds.result$points)
-nmds.points$RELEVE_ID <- data.transformed$RELEVE_ID
-nmds.points$FANNY.Cluster <- as.factor(data.transformed$FANNY.Cluster)
+nmds.points$RELEVE_ID <- data.wide$RELEVE_ID
+nmds.points$FANNY.Cluster <- as.factor(data.wide$FANNY.Cluster)
+print(nmds.points)
 
-svg("shepard_plot.svg", width = 10, height = 10)
-stressplot(nmds.result, main = "Shepard Plot")
-dev.off()
+p <- ggplot(nmds.points, aes(x = MDS1, y = MDS2)) +
+  geom_point(aes(color = FANNY.Cluster), size = 1.5) +
+  geom_text(aes(label = RELEVE_ID), hjust = 1.75, vjust = 1.75, size = 2.0, fontface = "bold") +
+  ggtitle("NMDS Ordination on generated data set") +
+  scale_color_manual(values = c("1" = "blue", "2" = "red"), labels = c("Intensive Management", "Traditional Management")) +
+  custom_theme
 
-p <- ggplot(nmds.points, aes(x = MDS1, y = MDS2, color = FANNY.Cluster, label = RELEVE_ID)) +
-  geom_point(size = 0.25) +
-  geom_text(aes(label = RELEVE_ID), hjust = 1.5, vjust = 1.5, size = 1) +  
-  ggtitle("NMDS Ordination with FANNY Clustering") +
-  custom_theme +
-  theme(axis.title = element_blank(), axis.text = element_blank(), axis.ticks = element_blank())
+#plot_data <- ggplot_build(p)
+#print(plot_data$data)
 
 save_plot(p, "nmds-generated-data.svg")

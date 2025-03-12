@@ -2,32 +2,36 @@ import pandas as pd
 import numpy as np
 import random
 
-def generate_data_set(species_list):
+def generate_data_set(species_list, grass_species):
     no_of_species = 0
-    releves = 50
-    low = 10
-    medium = 20
+    high_dominance_range = (6, 10)
     dominance_range = (1, 10)
     data_set = []
 
-    for i in range(releves):
-
-        if i < low:
-            no_of_species = random.randint(5, 10)
-        elif i < medium:
-            no_of_species = random.randint(11, 20)
-        else:
-            no_of_species = random.randint(21, 50)
-
-        selected_species = random.sample(species_list, no_of_species)
+    for i in range(1, 20):
+        no_of_species = random.randint(10, 12)
+        selected_species = random.sample(grass_species, no_of_species)
 
         for species in selected_species:
-            dominance_score = random.randint(*dominance_range)
+            dominance_score = random.randint(*high_dominance_range)
             data_set.append({
                 'RELEVE_ID': i + 1,
                 'SPECIES_NAME': f"'{species}'",
                 'DOMIN': dominance_score
             })
+
+
+    for j in range(21, 61):
+        no_of_species = random.randint(20, 30)
+        selected_species = random.sample(species_list, no_of_species)
+
+        for species in selected_species:
+            dominance_score = random.randint(*dominance_range)
+            data_set.append({
+                'RELEVE_ID': j + 1,
+                'SPECIES_NAME': f"'{species}'",
+                'DOMIN': dominance_score
+            })            
 
     return data_set
             
@@ -44,8 +48,10 @@ def write_data_set(data):
 
 
 species_file_path = "../datasets/2007-survey.txt"
+grass_species_file_path = "../datasets/2007-survey-grasses.txt"
 species_list = get_species_list(species_file_path)
-generated_data = generate_data_set(species_list)
+grasses_list = get_species_list(grass_species_file_path)
+generated_data = generate_data_set(species_list, grasses_list)
 write_data_set(generated_data)
 
 

@@ -1,0 +1,60 @@
+SPECIES_NAME, ELLENBERG_F
+Common Knapweed (Centaurea nigra)	4
+Meadowsweet (Filipendula ulmaria)	8
+Ribwort Plantain (Plantago lanceolata)	4
+Carnation Sedge (Carex panicea)	6
+Common Meadow-rue (Thalictrum flavum)	7
+Euphrasia officinalis agg.	5
+Meadow Buttercup (Ranunculus acris)	7
+Meadow Thistle (Cirsium dissectum)	6
+Red Clover (Trifolium pratense)	5
+Red Fescue (Festuca rubra)	4
+Common Valerian (Valeriana officinalis)	7
+Devil's-bit Scabious (Succisa pratensis)	6
+Downy Oat-grass (Helictotrichon pubescens)	4
+Flea Sedge (Carex pulicaris)	6
+Marsh Thistle (Cirsium palustre)	8
+Purple Moor-grass (Molinia caerulea)	7
+Quaking-grass (Briza media)	5
+Smooth Hawk's-beard (Crepis capillaris)	4
+Sweet Vernal-grass (Anthoxanthum odoratum)	5
+Wild Angelica (Angelica sylvestris)	7
+Yellow-rattle (Rhinanthus minor)	5
+Yorkshire-fog (Holcus lanatus)	6
+Brown Sedge (Carex disticha)	8
+Cock's-foot (Dactylis glomerata)	5
+Common Mouse-ear (Cerastium fontanum)	4
+Common Sorrel (Rumex acetosa)	5
+Cowslip (Primula veris)	5
+Creeping Buttercup (Ranunculus repens)	7
+Crested Dog's-tail (Cynosurus cristatus)	5
+Cuckooflower (Cardamine pratensis)	7
+Daisy (Bellis perennis)	4
+Field Wood-rush (Luzula campestris)	5
+Glaucous Sedge (Carex flacca)	5
+Meadow Fescue (Festuca pratensis)	5
+Ragged-Robin (Lychnis flos-cuculi)	7
+Selfheal (Prunella vulgaris)	5
+Taraxacum aggregate	5
+Tufted Hair-grass (Deschampsia cespitosa)	7
+Upright Brome (Bromopsis erecta)	5
+Yellow Iris (Iris pseudacorus)	9
+Amphibious Bistort (Persicaria amphibia)	10
+Bladder-sedge (Carex vesicaria)	9
+Common Bird's-foot-trefoil (Lotus corniculatus)	5
+Common Cottongrass (Eriophorum angustifolium)	10
+Common Sedge (Carex nigra)	8
+Creeping Thistle (Cirsium arvense)	5
+Early Marsh-orchid (Dactylorhiza incarnata)	8
+False Oat-grass (Arrhenatherum elatius)	5
+Hard Rush (Juncus inflexus)	8
+Lesser Pond-sedge (Carex acutiformis)	9
+Marsh-bedstraw (Galium palustre)	8
+Marsh-marigold (Caltha palustris)	9
+Meadow Foxtail (Alopecurus pratensis)	7
+Rosebay Willowherb (Chamerion angustifolium)	5
+Smooth Meadow-grass (Poa pratensis)	5
+Tufted Vetch (Vicia cracca)	5
+White Clover (Trifolium repens)	5
+Field Horsetail (Equisetum arvense)	5
+Marsh Horsetail (Equisetum palustre)	9
