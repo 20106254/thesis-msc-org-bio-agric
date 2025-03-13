@@ -4,8 +4,8 @@ import random
 
 def generate_data_set(species_list, grass_species):
     no_of_species = 0
-    high_dominance_range = (6, 10)
-    dominance_range = (1, 10)
+    high_dominance_range = (5.0, 9.0)
+    dominance_range = (0.1, 9.0)
     data_set = []
 
     for i in range(1, 20):
@@ -13,22 +13,22 @@ def generate_data_set(species_list, grass_species):
         selected_species = random.sample(grass_species, no_of_species)
 
         for species in selected_species:
-            dominance_score = random.randint(*high_dominance_range)
+            dominance_score = round(random.uniform(*dominance_range), 1)
             data_set.append({
-                'RELEVE_ID': i + 1,
+                'RELEVE_ID': i,
                 'SPECIES_NAME': f"'{species}'",
                 'DOMIN': dominance_score
             })
 
 
-    for j in range(21, 61):
+    for j in range(21, 60):
         no_of_species = random.randint(20, 30)
         selected_species = random.sample(species_list, no_of_species)
 
         for species in selected_species:
-            dominance_score = random.randint(*dominance_range)
+            dominance_score = round(random.uniform(*dominance_range), 1)
             data_set.append({
-                'RELEVE_ID': j + 1,
+                'RELEVE_ID': j,
                 'SPECIES_NAME': f"'{species}'",
                 'DOMIN': dominance_score
             })            
