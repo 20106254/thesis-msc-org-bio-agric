@@ -17,48 +17,25 @@ data.wide <- data.aggregated %>%
 data.numeric <- data.wide %>%
   select(-RELEVE_ID) 
 
-data.numeric[data.numeric < 0] <- 0 
+dissimilarity.matrix <- vegdist(data.numeric, method = "bray")
 
-membership.exponent <- 1.1
+fanny.result <- fanny(dissimilarity.matrix, k = 2)
 
-dissimilarity.matrix <- vegdist(data.numeric, method = "bray", mem.exp = membership.exponent)
+clusters <- fanny.result$clustering
 
-fanny.result <- fanny(dissimilarity.matrix, k = 3, memb.exp = membership.exponent)
+data_df <- data.frame(data.numeric, cluster = clusters)
 
-data.wide$cluster <- fanny.result$clustering
+data.richness <- data.numeric %>%
+  rowwise() %>%
+  mutate(species_richness = sum(c_across(everything()) > 0))
 
-print(data.wide$cluster)
+data_df <- data.frame(data.richness, cluster = clusters)
 
-print(fanny.result$membership)
+mann_whitney_result <- wilcox.test(data_df$species_richness ~ data_df$cluster)
 
-cluster1_data <- subset(data.wide, cluster == 1)
-cluster2_data <- subset(data.wide, cluster == 2)
-cluster3_data <- subset(data.wide, cluster == 3)
-print("Cluster 1 data")
-print(cluster1_data)
-print("Cluster 2 data")
-print(cluster2_data)
-print("Cluster 3 data")
-print(cluster3_data)
+print(mann_whitney_result)
 
-table(data.wide$cluster)
-
-summary(fanny.result$membership)
-
-p <- ggplot(data, aes(x = RELEVE_ID, y = SPECIES_NAME)) +
-  geom_point(size = 3) +
-  labs(title = "FANNY Clustering Results", x = "RELEVE_ID", y = "SPECIES_NAME", color = "Cluster") +
-  theme_minimal()
-
-save_plot(p, "clusters.svg")
-
-if (length(unique(data.wide$cluster)) > 2) {
-  data.subset <- subset(data.wide, cluster %in% c(1, 2)) 
-} else {
-  data.subset <- data
-}
-
-result <- wilcox.test(RELEVE_ID ~ cluster, data = data.subset, exact = FALSE)
-print(result)
-
+svg("mann-whitney-box.svg")
+boxplot(data_df$species_richness ~ data_df$cluster, main = "Boxplot of Variable by Cluster", xlab = "Cluster", ylab = "Species Richness")
+dev.off()
 
