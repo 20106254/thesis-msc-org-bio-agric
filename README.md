@@ -8,11 +8,11 @@ This repository contains the following:
 
 Scripts used to run statistical analysis against generated data sets written in R
 
-`Python`
+`python`
 
 Python used to generate sample data sets
 
-`Datasets`
+`datasets`
 
 Data from the 2007 Semi Natural Grassland Survey of Site Number 68. 
 
