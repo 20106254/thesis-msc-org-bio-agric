@@ -20,9 +20,11 @@ data.numeric <- data.wide %>%
 
 data.numeric[data.numeric < 0] <- 0 
 
-dissimilarity.matrix <- vegdist(data.numeric, method = "bray")
+#membership.exponent <- 1.1
 
-fanny.result <- fanny(dissimilarity.matrix, k = 3)
+dissimilarity.matrix <- vegdist(data.numeric, method = "bray") #, mem.exp = membership.exponent)
+
+fanny.result <- fanny(dissimilarity.matrix, k = 3) #, memb.exp = membership.exponent)
 
 data.wide$FANNY.Cluster <- fanny.result$clustering
 
@@ -31,6 +33,10 @@ cluster.counts <- table(data.wide$FANNY.Cluster)
 plot.data <- as.data.frame(cluster.counts)
 
 colnames(plot.data) <- c("Cluster", "Count")
+
+print(plot.data)
+
+plot.data$Cluster <- factor(plot.data$Cluster, levels = c(1, 2, 3), labels = c("Low species richness", "Medium species richness", "High species richness"))
 
 plot <- ggplot(plot.data, aes(x = Cluster, y = Count, fill = Cluster)) +
   geom_bar(stat = "identity", color = "black") +
