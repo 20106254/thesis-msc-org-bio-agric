@@ -18,9 +18,12 @@ data.wide <- data.aggregated %>%
 data.numeric <- data.wide %>%
   select(-RELEVE_ID) 
 
-str(data.numeric)
-dissimilarity.matrix <- vegdist(data.numeric, method = "bray")
-fanny.result <- fanny(dissimilarity.matrix, k = 3)
+membership.exp <- 1.1
+dissimilarity.matrix <- vegdist(data.numeric, method = "bray", memb.exp = membership.exp)
+
+fanny.result <- fanny(dissimilarity.matrix, k = 2, memb.exp = membership.exp)
+print(fanny.result)
+
 data.wide$FANNY.Cluster <- fanny.result$clustering
 
 nmds.result <- metaMDS(data.wide, distance = "bray", k = 3, trymax = 500)
@@ -34,10 +37,7 @@ p <- ggplot(nmds.points, aes(x = MDS1, y = MDS2)) +
   geom_point(aes(color = FANNY.Cluster), size = 1.5) +
   geom_text(aes(label = RELEVE_ID), hjust = 1.75, vjust = 1.75, size = 2.0, fontface = "bold") +
   ggtitle("NMDS Ordination on generated data set") +
-  scale_color_manual(values = c("1" = "blue", "2" = "red"), labels = c("Intensive Management", "Traditional Management")) +
+  scale_color_manual(values = c("1" = "red", "2" = "blue"), labels = c("Grazing + Fertiliser", "Organic Management")) +
   custom_theme
-
-#plot_data <- ggplot_build(p)
-#print(plot_data$data)
 
 save_plot(p, "nmds-generated-data.svg")
