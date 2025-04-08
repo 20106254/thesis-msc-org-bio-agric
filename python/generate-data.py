@@ -47,8 +47,8 @@ def write_data_set(data):
     releve_df.to_csv("generated-data-set.csv", index=False)
 
 
-species_file_path = "../datasets/2007-survey.txt"
-grass_species_file_path = "../datasets/2007-survey-grasses.txt"
+species_file_path = "../datasets/site-68-2007/2007-survey.txt"
+grass_species_file_path = "../datasets/site-68-2007/2007-survey-grasses.txt"
 species_list = get_species_list(species_file_path)
 grasses_list = get_species_list(grass_species_file_path)
 generated_data = generate_data_set(species_list, grasses_list)
