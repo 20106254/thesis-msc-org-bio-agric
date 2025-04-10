@@ -16,7 +16,7 @@ RELEVE_ID,SPECIES_NAME,GRID_NO,DOMIN
 3,'Creeping Bentgrass (Agrostis Stolonifera)',2,6
 3,'Common Reed (Phragmites australis)',2,8
 3,'Rough meadow grass (Poa trivialis)',2,3
-3,'Unidentified grass',2,3
+3,'Unidentified grass (Latin name)',2,3
 3,'Creeping Buttercup (Ranunculus repens)',2,0.1
 3,'Hard Rush (Juncus inflexus)',2,8
 4,'Common Reed (Phragmites australis)',2,3
