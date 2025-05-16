@@ -21,25 +21,28 @@ def parse_xml_and_write_csv(input_file, output_file):
                     if plot_name == "22":
                         continue
                         
-                    custom_d = plot.get('custom_d_plots', '')
+                    grid_no = plot.get('custom_a_plots', '')
 
                     species_list = plot.find('.//Species')
                     if species_list is not None:
                         for species in species_list:
                             genus = species.get('genus', '')
                             spec = species.get('spec', '')
-                            quantity_id = species.get('quantity_id', '')
+                            quantity = species.get('quantity', '')
 
-                            if not quantity_id:
+                            if not quantity or quantity == '0':
                                 continue
+                            
+                            if quantity == '+':
+                                quantity = 0.1
 
                             species_name = f"{genus} {spec}" if genus and spec else ''
 
                             writer.writerow({
                                 'RELEVE_ID': plot_name,
                                 'SPECIES_NAME': species_name,
-                                'GRID_NO': custom_d,
-                                'DOMIN': quantity_id
+                                'GRID_NO': grid_no,
+                                'DOMIN': quantity
                             })
         print(f"Successfully extracted data to {output_file}")
     except ET.ParseError as e:
