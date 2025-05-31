@@ -27,7 +27,7 @@ def extract_plot_data(xml_file, output_csv):
                             'Latitude': element.get('northing_lat'),
                             'Longitude': element.get('easting_lon'),
                             'Grid': element.get('custom_a_plots'),
-                            'Releve': element.get('_id')
+                            'Releve': element.get('name')
                         }
                         
                         # Only write if we have all required fields
