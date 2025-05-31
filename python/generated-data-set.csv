@@ -1,1207 +1,1160 @@
 RELEVE_ID,SPECIES_NAME,DOMIN
-1,'Sweet Vernal-grass (Anthoxanthum odoratum)',1.9
-1,'Yorkshire-fog (Holcus lanatus)',3.7
-1,'Tufted Hair-grass (Deschampsia cespitosa)',2.1
-1,'Downy Oat-grass (Helictotrichon pubescens)',8.0
-1,'Meadow Foxtail (Alopecurus pratensis)',0.8
-1,'Smooth Meadow-grass (Poa pratensis)',7.1
-1,'Crested Dog's-tail (Cynosurus cristatus)',4.6
-1,'Upright Brome (Bromopsis erecta)',3.6
-1,'Purple Moor-grass (Molinia caerulea)',3.5
-1,'Cock's-foot (Dactylis glomerata)',0.7
-2,'Tufted Hair-grass (Deschampsia cespitosa)',1.3
-2,'Crested Dog's-tail (Cynosurus cristatus)',0.6
-2,'False Oat-grass (Arrhenatherum elatius)',1.6
-2,'Purple Moor-grass (Molinia caerulea)',7.8
-2,'Meadow Fescue (Festuca pratensis)',9.0
-2,'Yorkshire-fog (Holcus lanatus)',2.2
-2,'Meadow Foxtail (Alopecurus pratensis)',0.3
-2,'Smooth Meadow-grass (Poa pratensis)',0.5
-2,'Downy Oat-grass (Helictotrichon pubescens)',6.3
-2,'Upright Brome (Bromopsis erecta)',3.3
-2,'Cock's-foot (Dactylis glomerata)',1.6
-3,'Cock's-foot (Dactylis glomerata)',1.7
-3,'False Oat-grass (Arrhenatherum elatius)',2.9
-3,'Downy Oat-grass (Helictotrichon pubescens)',4.7
-3,'Purple Moor-grass (Molinia caerulea)',0.8
-3,'Upright Brome (Bromopsis erecta)',6.9
-3,'Sweet Vernal-grass (Anthoxanthum odoratum)',2.1
-3,'Tufted Hair-grass (Deschampsia cespitosa)',7.5
-3,'Meadow Foxtail (Alopecurus pratensis)',0.1
-3,'Meadow Fescue (Festuca pratensis)',6.5
-3,'Crested Dog's-tail (Cynosurus cristatus)',8.3
-3,'Smooth Meadow-grass (Poa pratensis)',4.7
-4,'Meadow Fescue (Festuca pratensis)',6.0
-4,'Tufted Hair-grass (Deschampsia cespitosa)',6.3
-4,'Upright Brome (Bromopsis erecta)',3.7
-4,'Yorkshire-fog (Holcus lanatus)',1.1
-4,'Cock's-foot (Dactylis glomerata)',5.2
-4,'Meadow Foxtail (Alopecurus pratensis)',8.0
-4,'Downy Oat-grass (Helictotrichon pubescens)',4.8
-4,'Smooth Meadow-grass (Poa pratensis)',3.4
-4,'Quaking-grass (Briza media)',7.3
-4,'Sweet Vernal-grass (Anthoxanthum odoratum)',8.2
-5,'Purple Moor-grass (Molinia caerulea)',7.5
-5,'False Oat-grass (Arrhenatherum elatius)',7.3
-5,'Cock's-foot (Dactylis glomerata)',5.4
-5,'Tufted Hair-grass (Deschampsia cespitosa)',2.2
-5,'Crested Dog's-tail (Cynosurus cristatus)',4.7
-5,'Upright Brome (Bromopsis erecta)',2.0
-5,'Meadow Fescue (Festuca pratensis)',8.1
+1,'Yorkshire-fog (Holcus lanatus)',3.0
+1,'Meadow Foxtail (Alopecurus pratensis)',63.0
+1,'False Oat-grass (Arrhenatherum elatius)',18.0
+1,'Cock's-foot (Dactylis glomerata)',18.0
+1,'Smooth Meadow-grass (Poa pratensis)',0.5
+1,'Meadow Fescue (Festuca pratensis)',0.5
+1,'Sweet Vernal-grass (Anthoxanthum odoratum)',30.0
+1,'Tufted Hair-grass (Deschampsia cespitosa)',0.5
+1,'Quaking-grass (Briza media)',96.0
+1,'Crested Dog's-tail (Cynosurus cristatus)',30.0
+2,'Sweet Vernal-grass (Anthoxanthum odoratum)',0.3
+2,'Cock's-foot (Dactylis glomerata)',63.0
+2,'Crested Dog's-tail (Cynosurus cristatus)',96.0
+2,'Meadow Fescue (Festuca pratensis)',42.0
+2,'Yorkshire-fog (Holcus lanatus)',0.5
+2,'Tufted Hair-grass (Deschampsia cespitosa)',30.0
+2,'Purple Moor-grass (Molinia caerulea)',3.0
+2,'Quaking-grass (Briza media)',83.0
+2,'Smooth Meadow-grass (Poa pratensis)',30.0
+2,'Downy Oat-grass (Helictotrichon pubescens)',30.0
+2,'Meadow Foxtail (Alopecurus pratensis)',96.0
+3,'Crested Dog's-tail (Cynosurus cristatus)',3.0
+3,'Smooth Meadow-grass (Poa pratensis)',0.1
+3,'Meadow Fescue (Festuca pratensis)',0.3
+3,'Sweet Vernal-grass (Anthoxanthum odoratum)',8.0
+3,'Meadow Foxtail (Alopecurus pratensis)',0.5
+3,'Upright Brome (Bromopsis erecta)',8.0
+3,'False Oat-grass (Arrhenatherum elatius)',18.0
+3,'Purple Moor-grass (Molinia caerulea)',63.0
+3,'Cock's-foot (Dactylis glomerata)',42.0
+3,'Downy Oat-grass (Helictotrichon pubescens)',83.0
+3,'Tufted Hair-grass (Deschampsia cespitosa)',30.0
+3,'Quaking-grass (Briza media)',0.5
+4,'Upright Brome (Bromopsis erecta)',3.0
+4,'Downy Oat-grass (Helictotrichon pubescens)',0.1
+4,'Cock's-foot (Dactylis glomerata)',0.3
+4,'Smooth Meadow-grass (Poa pratensis)',0.3
+4,'Quaking-grass (Briza media)',18.0
+4,'Meadow Fescue (Festuca pratensis)',18.0
+4,'False Oat-grass (Arrhenatherum elatius)',0.5
+4,'Meadow Foxtail (Alopecurus pratensis)',42.0
+4,'Sweet Vernal-grass (Anthoxanthum odoratum)',0.1
+4,'Crested Dog's-tail (Cynosurus cristatus)',0.5
+4,'Purple Moor-grass (Molinia caerulea)',83.0
+5,'Meadow Foxtail (Alopecurus pratensis)',63.0
+5,'Downy Oat-grass (Helictotrichon pubescens)',83.0
 5,'Smooth Meadow-grass (Poa pratensis)',3.0
-5,'Sweet Vernal-grass (Anthoxanthum odoratum)',1.4
-5,'Downy Oat-grass (Helictotrichon pubescens)',3.2
-5,'Quaking-grass (Briza media)',9.0
-5,'Yorkshire-fog (Holcus lanatus)',3.6
-6,'Purple Moor-grass (Molinia caerulea)',5.0
-6,'Smooth Meadow-grass (Poa pratensis)',4.5
-6,'Cock's-foot (Dactylis glomerata)',5.6
-6,'Sweet Vernal-grass (Anthoxanthum odoratum)',0.3
-6,'Meadow Foxtail (Alopecurus pratensis)',2.4
-6,'Quaking-grass (Briza media)',8.2
-6,'Tufted Hair-grass (Deschampsia cespitosa)',7.2
-6,'Yorkshire-fog (Holcus lanatus)',6.2
-6,'Upright Brome (Bromopsis erecta)',7.0
+5,'Yorkshire-fog (Holcus lanatus)',96.0
+5,'Tufted Hair-grass (Deschampsia cespitosa)',42.0
+5,'Purple Moor-grass (Molinia caerulea)',8.0
+5,'Sweet Vernal-grass (Anthoxanthum odoratum)',83.0
+5,'Cock's-foot (Dactylis glomerata)',0.3
+5,'Upright Brome (Bromopsis erecta)',0.1
+5,'Meadow Fescue (Festuca pratensis)',63.0
+6,'Upright Brome (Bromopsis erecta)',0.1
+6,'Quaking-grass (Briza media)',8.0
+6,'Smooth Meadow-grass (Poa pratensis)',96.0
 6,'Downy Oat-grass (Helictotrichon pubescens)',0.5
-6,'False Oat-grass (Arrhenatherum elatius)',2.7
-7,'Purple Moor-grass (Molinia caerulea)',0.6
-7,'Quaking-grass (Briza media)',7.5
-7,'Meadow Foxtail (Alopecurus pratensis)',0.3
-7,'Tufted Hair-grass (Deschampsia cespitosa)',6.2
-7,'Crested Dog's-tail (Cynosurus cristatus)',2.5
-7,'Downy Oat-grass (Helictotrichon pubescens)',7.2
-7,'Cock's-foot (Dactylis glomerata)',3.7
-7,'False Oat-grass (Arrhenatherum elatius)',8.8
-7,'Yorkshire-fog (Holcus lanatus)',4.1
-7,'Upright Brome (Bromopsis erecta)',4.5
-7,'Sweet Vernal-grass (Anthoxanthum odoratum)',7.7
-8,'Sweet Vernal-grass (Anthoxanthum odoratum)',4.3
-8,'Meadow Foxtail (Alopecurus pratensis)',6.8
-8,'Yorkshire-fog (Holcus lanatus)',3.8
-8,'Cock's-foot (Dactylis glomerata)',1.6
-8,'Quaking-grass (Briza media)',5.4
-8,'Smooth Meadow-grass (Poa pratensis)',0.5
-8,'Tufted Hair-grass (Deschampsia cespitosa)',3.6
-8,'Meadow Fescue (Festuca pratensis)',7.4
-8,'Downy Oat-grass (Helictotrichon pubescens)',6.9
-8,'Upright Brome (Bromopsis erecta)',3.6
-8,'Crested Dog's-tail (Cynosurus cristatus)',7.3
-8,'Purple Moor-grass (Molinia caerulea)',2.9
-9,'Upright Brome (Bromopsis erecta)',7.3
-9,'Tufted Hair-grass (Deschampsia cespitosa)',5.1
-9,'Sweet Vernal-grass (Anthoxanthum odoratum)',7.8
-9,'Yorkshire-fog (Holcus lanatus)',2.6
-9,'False Oat-grass (Arrhenatherum elatius)',8.5
-9,'Smooth Meadow-grass (Poa pratensis)',5.1
-9,'Purple Moor-grass (Molinia caerulea)',8.6
-9,'Cock's-foot (Dactylis glomerata)',7.9
-9,'Quaking-grass (Briza media)',0.8
-9,'Meadow Fescue (Festuca pratensis)',7.7
-9,'Downy Oat-grass (Helictotrichon pubescens)',8.2
-10,'Tufted Hair-grass (Deschampsia cespitosa)',7.6
-10,'Sweet Vernal-grass (Anthoxanthum odoratum)',1.1
-10,'Upright Brome (Bromopsis erecta)',3.6
+6,'False Oat-grass (Arrhenatherum elatius)',0.5
+6,'Crested Dog's-tail (Cynosurus cristatus)',18.0
+6,'Yorkshire-fog (Holcus lanatus)',0.3
+6,'Cock's-foot (Dactylis glomerata)',8.0
+6,'Purple Moor-grass (Molinia caerulea)',0.3
+6,'Meadow Foxtail (Alopecurus pratensis)',3.0
+7,'Meadow Foxtail (Alopecurus pratensis)',0.5
+7,'Downy Oat-grass (Helictotrichon pubescens)',0.5
+7,'Quaking-grass (Briza media)',83.0
+7,'Yorkshire-fog (Holcus lanatus)',8.0
+7,'Meadow Fescue (Festuca pratensis)',96.0
+7,'Tufted Hair-grass (Deschampsia cespitosa)',30.0
+7,'False Oat-grass (Arrhenatherum elatius)',30.0
+7,'Upright Brome (Bromopsis erecta)',3.0
+7,'Sweet Vernal-grass (Anthoxanthum odoratum)',63.0
+7,'Purple Moor-grass (Molinia caerulea)',8.0
+7,'Cock's-foot (Dactylis glomerata)',96.0
+8,'Smooth Meadow-grass (Poa pratensis)',96.0
+8,'Downy Oat-grass (Helictotrichon pubescens)',30.0
+8,'Yorkshire-fog (Holcus lanatus)',0.5
+8,'Meadow Foxtail (Alopecurus pratensis)',8.0
+8,'Crested Dog's-tail (Cynosurus cristatus)',63.0
+8,'Quaking-grass (Briza media)',0.5
+8,'False Oat-grass (Arrhenatherum elatius)',0.5
+8,'Cock's-foot (Dactylis glomerata)',96.0
+8,'Upright Brome (Bromopsis erecta)',30.0
+8,'Tufted Hair-grass (Deschampsia cespitosa)',83.0
+8,'Sweet Vernal-grass (Anthoxanthum odoratum)',42.0
+8,'Meadow Fescue (Festuca pratensis)',30.0
+9,'Yorkshire-fog (Holcus lanatus)',83.0
+9,'Meadow Foxtail (Alopecurus pratensis)',8.0
+9,'Sweet Vernal-grass (Anthoxanthum odoratum)',0.1
+9,'Crested Dog's-tail (Cynosurus cristatus)',8.0
+9,'Meadow Fescue (Festuca pratensis)',0.5
+9,'Downy Oat-grass (Helictotrichon pubescens)',0.5
+9,'False Oat-grass (Arrhenatherum elatius)',0.1
+9,'Cock's-foot (Dactylis glomerata)',0.5
+9,'Upright Brome (Bromopsis erecta)',30.0
+9,'Purple Moor-grass (Molinia caerulea)',96.0
+9,'Smooth Meadow-grass (Poa pratensis)',42.0
+9,'Quaking-grass (Briza media)',96.0
+10,'Downy Oat-grass (Helictotrichon pubescens)',83.0
+10,'Sweet Vernal-grass (Anthoxanthum odoratum)',18.0
 10,'Cock's-foot (Dactylis glomerata)',0.3
-10,'Purple Moor-grass (Molinia caerulea)',2.4
-10,'Meadow Foxtail (Alopecurus pratensis)',4.5
-10,'Downy Oat-grass (Helictotrichon pubescens)',5.4
-10,'Crested Dog's-tail (Cynosurus cristatus)',4.6
-10,'False Oat-grass (Arrhenatherum elatius)',1.2
-10,'Quaking-grass (Briza media)',5.6
-10,'Yorkshire-fog (Holcus lanatus)',2.7
-10,'Smooth Meadow-grass (Poa pratensis)',4.0
-11,'Crested Dog's-tail (Cynosurus cristatus)',5.9
-11,'Quaking-grass (Briza media)',1.6
-11,'Purple Moor-grass (Molinia caerulea)',3.2
-11,'Upright Brome (Bromopsis erecta)',2.4
-11,'Smooth Meadow-grass (Poa pratensis)',2.0
-11,'Tufted Hair-grass (Deschampsia cespitosa)',8.8
-11,'False Oat-grass (Arrhenatherum elatius)',1.0
-11,'Meadow Fescue (Festuca pratensis)',4.6
-11,'Cock's-foot (Dactylis glomerata)',3.4
-11,'Downy Oat-grass (Helictotrichon pubescens)',5.8
-12,'Tufted Hair-grass (Deschampsia cespitosa)',3.7
-12,'Crested Dog's-tail (Cynosurus cristatus)',8.2
-12,'False Oat-grass (Arrhenatherum elatius)',6.6
-12,'Yorkshire-fog (Holcus lanatus)',5.9
-12,'Smooth Meadow-grass (Poa pratensis)',6.9
-12,'Downy Oat-grass (Helictotrichon pubescens)',2.0
-12,'Meadow Foxtail (Alopecurus pratensis)',2.5
-12,'Purple Moor-grass (Molinia caerulea)',8.8
-12,'Meadow Fescue (Festuca pratensis)',3.2
-12,'Sweet Vernal-grass (Anthoxanthum odoratum)',7.2
-12,'Quaking-grass (Briza media)',0.5
-12,'Cock's-foot (Dactylis glomerata)',1.2
-13,'False Oat-grass (Arrhenatherum elatius)',8.6
-13,'Upright Brome (Bromopsis erecta)',7.7
-13,'Smooth Meadow-grass (Poa pratensis)',2.0
-13,'Quaking-grass (Briza media)',8.3
-13,'Downy Oat-grass (Helictotrichon pubescens)',5.1
-13,'Crested Dog's-tail (Cynosurus cristatus)',3.6
-13,'Meadow Foxtail (Alopecurus pratensis)',7.4
-13,'Sweet Vernal-grass (Anthoxanthum odoratum)',7.0
-13,'Meadow Fescue (Festuca pratensis)',7.7
-13,'Purple Moor-grass (Molinia caerulea)',2.9
-14,'Upright Brome (Bromopsis erecta)',8.7
-14,'Meadow Fescue (Festuca pratensis)',7.1
-14,'Smooth Meadow-grass (Poa pratensis)',8.7
-14,'Downy Oat-grass (Helictotrichon pubescens)',7.8
-14,'Cock's-foot (Dactylis glomerata)',0.2
-14,'Meadow Foxtail (Alopecurus pratensis)',7.1
-14,'Purple Moor-grass (Molinia caerulea)',0.3
-14,'Crested Dog's-tail (Cynosurus cristatus)',5.1
-14,'False Oat-grass (Arrhenatherum elatius)',0.2
-14,'Tufted Hair-grass (Deschampsia cespitosa)',2.3
-14,'Quaking-grass (Briza media)',4.9
-15,'Purple Moor-grass (Molinia caerulea)',5.9
-15,'Meadow Foxtail (Alopecurus pratensis)',0.5
-15,'False Oat-grass (Arrhenatherum elatius)',6.2
-15,'Cock's-foot (Dactylis glomerata)',7.5
-15,'Tufted Hair-grass (Deschampsia cespitosa)',2.8
-15,'Yorkshire-fog (Holcus lanatus)',0.8
-15,'Meadow Fescue (Festuca pratensis)',0.3
-15,'Sweet Vernal-grass (Anthoxanthum odoratum)',1.4
-15,'Downy Oat-grass (Helictotrichon pubescens)',6.7
-15,'Crested Dog's-tail (Cynosurus cristatus)',7.8
-15,'Smooth Meadow-grass (Poa pratensis)',4.3
-15,'Upright Brome (Bromopsis erecta)',4.1
-16,'Quaking-grass (Briza media)',7.6
-16,'Downy Oat-grass (Helictotrichon pubescens)',7.9
-16,'Crested Dog's-tail (Cynosurus cristatus)',3.9
-16,'Meadow Foxtail (Alopecurus pratensis)',7.5
-16,'Cock's-foot (Dactylis glomerata)',3.7
-16,'Purple Moor-grass (Molinia caerulea)',2.6
-16,'Upright Brome (Bromopsis erecta)',0.8
-16,'Meadow Fescue (Festuca pratensis)',6.0
-16,'Tufted Hair-grass (Deschampsia cespitosa)',8.8
-16,'Yorkshire-fog (Holcus lanatus)',6.0
-17,'False Oat-grass (Arrhenatherum elatius)',5.5
-17,'Cock's-foot (Dactylis glomerata)',5.0
-17,'Tufted Hair-grass (Deschampsia cespitosa)',1.3
-17,'Crested Dog's-tail (Cynosurus cristatus)',7.2
-17,'Smooth Meadow-grass (Poa pratensis)',6.7
-17,'Quaking-grass (Briza media)',6.8
-17,'Meadow Fescue (Festuca pratensis)',1.9
-17,'Sweet Vernal-grass (Anthoxanthum odoratum)',1.1
-17,'Downy Oat-grass (Helictotrichon pubescens)',2.3
-17,'Meadow Foxtail (Alopecurus pratensis)',2.7
-17,'Purple Moor-grass (Molinia caerulea)',1.5
-18,'Smooth Meadow-grass (Poa pratensis)',3.9
-18,'Cock's-foot (Dactylis glomerata)',6.5
-18,'Quaking-grass (Briza media)',8.8
-18,'Purple Moor-grass (Molinia caerulea)',4.6
-18,'Sweet Vernal-grass (Anthoxanthum odoratum)',2.3
-18,'Meadow Foxtail (Alopecurus pratensis)',5.9
-18,'Downy Oat-grass (Helictotrichon pubescens)',0.2
-18,'Upright Brome (Bromopsis erecta)',7.3
-18,'Meadow Fescue (Festuca pratensis)',7.6
-18,'Yorkshire-fog (Holcus lanatus)',0.2
-18,'Crested Dog's-tail (Cynosurus cristatus)',4.9
-19,'Quaking-grass (Briza media)',7.2
-19,'Smooth Meadow-grass (Poa pratensis)',6.0
-19,'Purple Moor-grass (Molinia caerulea)',6.4
-19,'Crested Dog's-tail (Cynosurus cristatus)',0.6
-19,'Meadow Foxtail (Alopecurus pratensis)',1.5
-19,'Cock's-foot (Dactylis glomerata)',8.2
-19,'Sweet Vernal-grass (Anthoxanthum odoratum)',6.4
-19,'Tufted Hair-grass (Deschampsia cespitosa)',3.8
-19,'Yorkshire-fog (Holcus lanatus)',4.9
-19,'Downy Oat-grass (Helictotrichon pubescens)',7.9
-19,'False Oat-grass (Arrhenatherum elatius)',8.9
-19,'Upright Brome (Bromopsis erecta)',4.5
-21,'Crested Dog's-tail (Cynosurus cristatus)',5.8
-21,'Marsh-marigold (Caltha palustris)',0.7
-21,'Flea Sedge (Carex pulicaris)',9.0
-21,'Meadow Fescue (Festuca pratensis)',7.6
-21,'Common Mouse-ear (Cerastium fontanum)',1.8
-21,'Meadow Foxtail (Alopecurus pratensis)',5.5
-21,'Common Sedge (Carex nigra)',4.6
-21,'Bladder-sedge (Carex vesicaria)',0.6
-21,'Hard Rush (Juncus inflexus)',8.9
-21,'Sweet Vernal-grass (Anthoxanthum odoratum)',6.2
-21,'Field Wood-rush (Luzula campestris)',0.9
-21,'Meadow Buttercup (Ranunculus acris)',3.0
-21,'Smooth Meadow-grass (Poa pratensis)',4.3
-21,'False Oat-grass (Arrhenatherum elatius)',0.6
-21,'Common Meadow-rue (Thalictrum flavum)',4.6
-21,'Marsh Horsetail (Equisetum palustre)',6.7
-21,'Ragged-Robin (Lychnis flos-cuculi)',3.5
-21,'Selfheal (Prunella vulgaris)',5.5
-21,'Common Cottongrass (Eriophorum angustifolium)',3.2
-21,'Cowslip (Primula veris)',6.1
-21,'Carnation Sedge (Carex panicea)',4.7
-21,'Yellow Iris (Iris pseudacorus)',1.4
-21,'Creeping Buttercup (Ranunculus repens)',2.3
-21,'Early Marsh-orchid (Dactylorhiza incarnata)',3.3
-22,'Marsh-bedstraw (Galium palustre)',5.2
-22,'Common Valerian (Valeriana officinalis)',4.2
-22,'Creeping Buttercup (Ranunculus repens)',7.7
-22,'False Oat-grass (Arrhenatherum elatius)',1.3
-22,'Hard Rush (Juncus inflexus)',1.1
-22,'Lesser Pond-sedge (Carex acutiformis)',5.8
-22,'Smooth Meadow-grass (Poa pratensis)',8.4
-22,'Cowslip (Primula veris)',8.3
-22,'Meadow Thistle (Cirsium dissectum)',5.2
-22,'Upright Brome (Bromopsis erecta)',2.4
-22,'Sweet Vernal-grass (Anthoxanthum odoratum)',2.0
-22,'Meadowsweet (Filipendula ulmaria)',1.9
-22,'Downy Oat-grass (Helictotrichon pubescens)',8.9
-22,'Amphibious Bistort (Persicaria amphibia)',2.3
-22,'Smooth Hawk's-beard (Crepis capillaris)',7.6
-22,'Cuckooflower (Cardamine pratensis)',1.8
-22,'Field Horsetail (Equisetum arvense)',7.4
-22,'Field Wood-rush (Luzula campestris)',6.4
-22,'Common Sedge (Carex nigra)',6.3
-22,'Carnation Sedge (Carex panicea)',5.5
-22,'Marsh Thistle (Cirsium palustre)',7.8
-22,'Tufted Hair-grass (Deschampsia cespitosa)',3.9
-22,'Tufted Vetch (Vicia cracca)',6.1
-22,'White Clover (Trifolium repens)',7.6
-22,'Yorkshire-fog (Holcus lanatus)',5.8
-22,'Meadow Buttercup (Ranunculus acris)',6.3
-22,'Daisy (Bellis perennis)',6.9
-22,'Flea Sedge (Carex pulicaris)',2.0
-22,'Meadow Foxtail (Alopecurus pratensis)',3.5
-22,'Common Meadow-rue (Thalictrum flavum)',2.4
-23,'Tufted Hair-grass (Deschampsia cespitosa)',6.7
-23,'Meadow Buttercup (Ranunculus acris)',6.9
-23,'Meadow Thistle (Cirsium dissectum)',8.4
-23,'Cuckooflower (Cardamine pratensis)',2.7
-23,'Carnation Sedge (Carex panicea)',1.1
-23,'Taraxacum aggregate',5.9
-23,'Wild Angelica (Angelica sylvestris)',1.9
-23,'Field Horsetail (Equisetum arvense)',8.6
-23,'Amphibious Bistort (Persicaria amphibia)',5.4
-23,'Flea Sedge (Carex pulicaris)',7.8
-23,'Creeping Buttercup (Ranunculus repens)',2.3
-23,'Field Wood-rush (Luzula campestris)',1.0
-23,'Red Fescue (Festuca rubra)',7.7
-23,'Tufted Vetch (Vicia cracca)',5.7
-23,'Yellow Iris (Iris pseudacorus)',6.6
-23,'Red Clover (Trifolium pratense)',4.8
-23,'White Clover (Trifolium repens)',4.4
-23,'Marsh Thistle (Cirsium palustre)',4.1
-23,'Marsh Horsetail (Equisetum palustre)',1.1
-23,'Meadow Fescue (Festuca pratensis)',3.9
-24,'Bladder-sedge (Carex vesicaria)',6.3
-24,'Ribwort Plantain (Plantago lanceolata)',4.4
-24,'Lesser Pond-sedge (Carex acutiformis)',5.0
-24,'Red Clover (Trifolium pratense)',0.9
-24,'Purple Moor-grass (Molinia caerulea)',6.5
-24,'Daisy (Bellis perennis)',2.7
-24,'Marsh Thistle (Cirsium palustre)',6.3
-24,'Creeping Buttercup (Ranunculus repens)',1.1
-24,'Hard Rush (Juncus inflexus)',6.6
-24,'Yorkshire-fog (Holcus lanatus)',2.7
-24,'Ragged-Robin (Lychnis flos-cuculi)',1.4
-24,'Glaucous Sedge (Carex flacca)',1.3
-24,'Meadow Foxtail (Alopecurus pratensis)',2.0
-24,'Creeping Thistle (Cirsium arvense)',5.8
-24,'Cowslip (Primula veris)',6.7
-24,'False Oat-grass (Arrhenatherum elatius)',8.3
-24,'Meadow Fescue (Festuca pratensis)',8.2
-24,'Selfheal (Prunella vulgaris)',7.7
-24,'Euphrasia officinalis agg.',4.6
-24,'Smooth Hawk's-beard (Crepis capillaris)',6.1
-24,'Field Wood-rush (Luzula campestris)',7.3
-24,'Early Marsh-orchid (Dactylorhiza incarnata)',0.4
-24,'Common Sorrel (Rumex acetosa)',8.0
-24,'Smooth Meadow-grass (Poa pratensis)',6.3
-24,'Field Horsetail (Equisetum arvense)',7.4
-24,'Marsh Horsetail (Equisetum palustre)',7.0
-24,'Flea Sedge (Carex pulicaris)',6.7
-25,'Red Fescue (Festuca rubra)',1.2
-25,'Creeping Thistle (Cirsium arvense)',3.8
-25,'Euphrasia officinalis agg.',7.5
-25,'Marsh-marigold (Caltha palustris)',0.8
-25,'Early Marsh-orchid (Dactylorhiza incarnata)',2.3
-25,'Common Sorrel (Rumex acetosa)',2.6
-25,'Downy Oat-grass (Helictotrichon pubescens)',2.8
-25,'Common Knapweed (Centaurea nigra)',3.1
-25,'Lesser Pond-sedge (Carex acutiformis)',1.1
-25,'Flea Sedge (Carex pulicaris)',1.5
-25,'Taraxacum aggregate',7.0
-25,'Wild Angelica (Angelica sylvestris)',4.3
-25,'Field Wood-rush (Luzula campestris)',2.5
-25,'Meadow Fescue (Festuca pratensis)',5.8
-25,'Sweet Vernal-grass (Anthoxanthum odoratum)',6.7
-25,'Cowslip (Primula veris)',2.3
-25,'Marsh Horsetail (Equisetum palustre)',6.7
-25,'Ribwort Plantain (Plantago lanceolata)',2.8
-25,'False Oat-grass (Arrhenatherum elatius)',7.4
-25,'Common Cottongrass (Eriophorum angustifolium)',0.5
-25,'Rosebay Willowherb (Chamerion angustifolium)',6.0
-25,'White Clover (Trifolium repens)',6.0
-25,'Ragged-Robin (Lychnis flos-cuculi)',1.6
-25,'Cock's-foot (Dactylis glomerata)',6.9
-25,'Cuckooflower (Cardamine pratensis)',4.5
-25,'Glaucous Sedge (Carex flacca)',1.9
-26,'Selfheal (Prunella vulgaris)',4.2
-26,'Early Marsh-orchid (Dactylorhiza incarnata)',0.8
-26,'Yellow-rattle (Rhinanthus minor)',3.2
-26,'Marsh-bedstraw (Galium palustre)',2.0
-26,'Wild Angelica (Angelica sylvestris)',3.1
-26,'Marsh Thistle (Cirsium palustre)',7.3
-26,'Common Sedge (Carex nigra)',7.9
-26,'White Clover (Trifolium repens)',8.7
-26,'Brown Sedge (Carex disticha)',5.9
-26,'Smooth Hawk's-beard (Crepis capillaris)',3.2
-26,'Glaucous Sedge (Carex flacca)',4.8
-26,'Downy Oat-grass (Helictotrichon pubescens)',6.7
-26,'Sweet Vernal-grass (Anthoxanthum odoratum)',8.6
-26,'Flea Sedge (Carex pulicaris)',8.4
-26,'Red Clover (Trifolium pratense)',7.9
-26,'Rosebay Willowherb (Chamerion angustifolium)',2.3
-26,'Taraxacum aggregate',4.6
-26,'Common Sorrel (Rumex acetosa)',3.5
-26,'Amphibious Bistort (Persicaria amphibia)',1.9
-26,'Meadow Foxtail (Alopecurus pratensis)',1.5
-27,'Sweet Vernal-grass (Anthoxanthum odoratum)',2.1
-27,'Hard Rush (Juncus inflexus)',8.8
-27,'Amphibious Bistort (Persicaria amphibia)',7.2
-27,'Purple Moor-grass (Molinia caerulea)',7.1
-27,'Daisy (Bellis perennis)',6.1
-27,'Common Mouse-ear (Cerastium fontanum)',5.8
-27,'Glaucous Sedge (Carex flacca)',5.4
-27,'Meadow Fescue (Festuca pratensis)',4.0
-27,'Brown Sedge (Carex disticha)',3.5
-27,'False Oat-grass (Arrhenatherum elatius)',4.2
-27,'Marsh Horsetail (Equisetum palustre)',1.7
-27,'Yellow-rattle (Rhinanthus minor)',2.8
-27,'Common Meadow-rue (Thalictrum flavum)',3.2
-27,'Red Clover (Trifolium pratense)',1.1
-27,'Common Cottongrass (Eriophorum angustifolium)',7.7
-27,'Smooth Meadow-grass (Poa pratensis)',5.9
-27,'Flea Sedge (Carex pulicaris)',1.6
-27,'Creeping Buttercup (Ranunculus repens)',2.0
-27,'Bladder-sedge (Carex vesicaria)',4.8
-27,'Cock's-foot (Dactylis glomerata)',2.8
-27,'Yellow Iris (Iris pseudacorus)',6.0
-27,'Field Horsetail (Equisetum arvense)',8.6
-27,'White Clover (Trifolium repens)',5.6
-27,'Tufted Vetch (Vicia cracca)',7.9
-27,'Taraxacum aggregate',2.6
-27,'Creeping Thistle (Cirsium arvense)',8.9
-27,'Marsh Thistle (Cirsium palustre)',7.3
-27,'Common Knapweed (Centaurea nigra)',3.1
-27,'Yorkshire-fog (Holcus lanatus)',5.6
-28,'Sweet Vernal-grass (Anthoxanthum odoratum)',5.0
-28,'Wild Angelica (Angelica sylvestris)',4.6
-28,'Tufted Vetch (Vicia cracca)',1.2
-28,'Meadow Thistle (Cirsium dissectum)',7.3
-28,'Quaking-grass (Briza media)',4.6
-28,'Common Bird's-foot-trefoil (Lotus corniculatus)',2.6
-28,'Lesser Pond-sedge (Carex acutiformis)',6.6
-28,'Daisy (Bellis perennis)',2.6
-28,'Meadowsweet (Filipendula ulmaria)',6.1
-28,'Red Clover (Trifolium pratense)',3.3
-28,'Yellow-rattle (Rhinanthus minor)',3.2
-28,'Marsh-marigold (Caltha palustris)',8.1
-28,'Meadow Foxtail (Alopecurus pratensis)',0.6
-28,'Common Meadow-rue (Thalictrum flavum)',4.2
-28,'Common Cottongrass (Eriophorum angustifolium)',0.3
-28,'Common Sedge (Carex nigra)',6.5
-28,'Downy Oat-grass (Helictotrichon pubescens)',8.3
-28,'Glaucous Sedge (Carex flacca)',3.7
-28,'Marsh-bedstraw (Galium palustre)',3.8
-28,'False Oat-grass (Arrhenatherum elatius)',8.5
-28,'Cowslip (Primula veris)',7.7
-28,'Yellow Iris (Iris pseudacorus)',0.7
-28,'Yorkshire-fog (Holcus lanatus)',8.9
-28,'Purple Moor-grass (Molinia caerulea)',4.6
-28,'Red Fescue (Festuca rubra)',5.6
-29,'Common Sedge (Carex nigra)',7.4
-29,'Field Wood-rush (Luzula campestris)',8.5
-29,'Meadow Buttercup (Ranunculus acris)',1.5
-29,'White Clover (Trifolium repens)',0.7
-29,'Brown Sedge (Carex disticha)',5.3
-29,'Common Mouse-ear (Cerastium fontanum)',3.2
-29,'Marsh Thistle (Cirsium palustre)',5.3
-29,'Ragged-Robin (Lychnis flos-cuculi)',8.3
-29,'Meadow Foxtail (Alopecurus pratensis)',1.2
-29,'Quaking-grass (Briza media)',4.4
-29,'Early Marsh-orchid (Dactylorhiza incarnata)',2.2
-29,'Meadow Fescue (Festuca pratensis)',8.3
-29,'Smooth Hawk's-beard (Crepis capillaris)',6.3
-29,'Selfheal (Prunella vulgaris)',6.7
-29,'Hard Rush (Juncus inflexus)',2.9
-29,'Daisy (Bellis perennis)',8.8
-29,'Meadowsweet (Filipendula ulmaria)',1.7
-29,'Marsh Horsetail (Equisetum palustre)',3.9
-29,'Crested Dog's-tail (Cynosurus cristatus)',1.9
-29,'Amphibious Bistort (Persicaria amphibia)',3.9
-29,'Common Valerian (Valeriana officinalis)',6.3
-29,'Upright Brome (Bromopsis erecta)',6.8
-29,'Creeping Buttercup (Ranunculus repens)',4.4
-29,'Tufted Vetch (Vicia cracca)',4.8
-29,'Cowslip (Primula veris)',5.1
-29,'Glaucous Sedge (Carex flacca)',6.6
-29,'Euphrasia officinalis agg.',2.7
-29,'Cuckooflower (Cardamine pratensis)',8.6
-29,'Tufted Hair-grass (Deschampsia cespitosa)',7.1
-30,'Devil's-bit Scabious (Succisa pratensis)',4.1
-30,'Tufted Vetch (Vicia cracca)',3.8
-30,'Euphrasia officinalis agg.',2.1
-30,'Yellow-rattle (Rhinanthus minor)',3.2
-30,'Smooth Meadow-grass (Poa pratensis)',2.6
-30,'Common Mouse-ear (Cerastium fontanum)',2.8
-30,'Flea Sedge (Carex pulicaris)',2.4
-30,'Cock's-foot (Dactylis glomerata)',1.9
-30,'Meadow Fescue (Festuca pratensis)',4.2
-30,'Upright Brome (Bromopsis erecta)',3.1
-30,'Meadow Buttercup (Ranunculus acris)',8.3
-30,'Meadowsweet (Filipendula ulmaria)',2.4
-30,'Bladder-sedge (Carex vesicaria)',5.8
-30,'Ribwort Plantain (Plantago lanceolata)',5.1
-30,'Common Valerian (Valeriana officinalis)',8.1
-30,'Common Bird's-foot-trefoil (Lotus corniculatus)',5.0
-30,'Early Marsh-orchid (Dactylorhiza incarnata)',5.8
-30,'Marsh Horsetail (Equisetum palustre)',4.0
-30,'Common Sorrel (Rumex acetosa)',3.9
-30,'Marsh-bedstraw (Galium palustre)',7.6
-30,'Quaking-grass (Briza media)',7.9
-30,'Rosebay Willowherb (Chamerion angustifolium)',3.7
-30,'White Clover (Trifolium repens)',0.5
-30,'Tufted Hair-grass (Deschampsia cespitosa)',3.6
-30,'Common Cottongrass (Eriophorum angustifolium)',3.1
-30,'Purple Moor-grass (Molinia caerulea)',7.9
-30,'Field Horsetail (Equisetum arvense)',5.4
-30,'Meadow Foxtail (Alopecurus pratensis)',0.4
-30,'Common Meadow-rue (Thalictrum flavum)',3.0
-30,'Crested Dog's-tail (Cynosurus cristatus)',7.0
-31,'Wild Angelica (Angelica sylvestris)',7.3
-31,'Purple Moor-grass (Molinia caerulea)',4.6
-31,'Daisy (Bellis perennis)',2.2
-31,'Common Mouse-ear (Cerastium fontanum)',0.8
-31,'Marsh Thistle (Cirsium palustre)',7.5
-31,'Taraxacum aggregate',0.9
-31,'Carnation Sedge (Carex panicea)',1.1
-31,'Amphibious Bistort (Persicaria amphibia)',1.6
-31,'Bladder-sedge (Carex vesicaria)',2.3
-31,'Smooth Meadow-grass (Poa pratensis)',5.8
-31,'Common Sedge (Carex nigra)',3.9
-31,'Common Bird's-foot-trefoil (Lotus corniculatus)',7.6
-31,'Common Meadow-rue (Thalictrum flavum)',2.2
-31,'Hard Rush (Juncus inflexus)',8.6
-31,'Quaking-grass (Briza media)',8.4
-31,'Cowslip (Primula veris)',5.9
-31,'Cuckooflower (Cardamine pratensis)',5.8
-31,'White Clover (Trifolium repens)',1.8
-31,'Glaucous Sedge (Carex flacca)',2.1
-31,'Marsh-bedstraw (Galium palustre)',0.9
-31,'Field Wood-rush (Luzula campestris)',0.3
-32,'Flea Sedge (Carex pulicaris)',6.1
-32,'Taraxacum aggregate',1.2
-32,'Crested Dog's-tail (Cynosurus cristatus)',6.5
-32,'Yorkshire-fog (Holcus lanatus)',6.0
-32,'Marsh-marigold (Caltha palustris)',0.9
-32,'Cuckooflower (Cardamine pratensis)',7.7
-32,'Early Marsh-orchid (Dactylorhiza incarnata)',4.7
-32,'Purple Moor-grass (Molinia caerulea)',7.6
-32,'Common Mouse-ear (Cerastium fontanum)',5.5
-32,'Downy Oat-grass (Helictotrichon pubescens)',8.4
-32,'Selfheal (Prunella vulgaris)',0.3
-32,'Sweet Vernal-grass (Anthoxanthum odoratum)',3.3
-32,'Cowslip (Primula veris)',5.7
-32,'Tufted Hair-grass (Deschampsia cespitosa)',2.8
-32,'Lesser Pond-sedge (Carex acutiformis)',2.9
-32,'Marsh Thistle (Cirsium palustre)',7.6
-32,'Meadow Buttercup (Ranunculus acris)',3.7
-32,'Ragged-Robin (Lychnis flos-cuculi)',3.7
-32,'Smooth Meadow-grass (Poa pratensis)',1.8
-32,'Wild Angelica (Angelica sylvestris)',2.9
-32,'Field Wood-rush (Luzula campestris)',7.1
-32,'Devil's-bit Scabious (Succisa pratensis)',7.8
-32,'Marsh Horsetail (Equisetum palustre)',0.7
-33,'Crested Dog's-tail (Cynosurus cristatus)',1.7
-33,'Smooth Hawk's-beard (Crepis capillaris)',5.3
-33,'Cock's-foot (Dactylis glomerata)',3.1
-33,'Field Horsetail (Equisetum arvense)',0.8
-33,'Creeping Buttercup (Ranunculus repens)',4.6
-33,'Marsh Thistle (Cirsium palustre)',0.2
-33,'Meadowsweet (Filipendula ulmaria)',5.7
-33,'Red Clover (Trifolium pratense)',6.6
-33,'Brown Sedge (Carex disticha)',1.4
-33,'Lesser Pond-sedge (Carex acutiformis)',7.6
-33,'Selfheal (Prunella vulgaris)',1.1
-33,'Common Cottongrass (Eriophorum angustifolium)',1.1
-33,'Ragged-Robin (Lychnis flos-cuculi)',6.4
-33,'Field Wood-rush (Luzula campestris)',6.9
-33,'Cuckooflower (Cardamine pratensis)',3.7
-33,'Flea Sedge (Carex pulicaris)',0.5
-33,'Ribwort Plantain (Plantago lanceolata)',2.3
-33,'Euphrasia officinalis agg.',3.7
-33,'Upright Brome (Bromopsis erecta)',8.1
-33,'Common Sorrel (Rumex acetosa)',3.9
-33,'Sweet Vernal-grass (Anthoxanthum odoratum)',3.4
-33,'Common Mouse-ear (Cerastium fontanum)',0.5
-33,'Common Valerian (Valeriana officinalis)',5.9
-33,'Common Meadow-rue (Thalictrum flavum)',3.0
-33,'Meadow Buttercup (Ranunculus acris)',1.4
-33,'Wild Angelica (Angelica sylvestris)',3.7
-33,'Marsh Horsetail (Equisetum palustre)',6.0
-33,'Tufted Vetch (Vicia cracca)',4.6
-33,'Devil's-bit Scabious (Succisa pratensis)',5.8
-33,'Quaking-grass (Briza media)',7.0
-34,'Meadowsweet (Filipendula ulmaria)',7.4
-34,'Bladder-sedge (Carex vesicaria)',3.8
-34,'Marsh-marigold (Caltha palustris)',2.9
-34,'Glaucous Sedge (Carex flacca)',3.9
-34,'Common Meadow-rue (Thalictrum flavum)',2.0
-34,'Marsh-bedstraw (Galium palustre)',3.0
-34,'Cock's-foot (Dactylis glomerata)',7.1
-34,'Yellow Iris (Iris pseudacorus)',1.4
-34,'White Clover (Trifolium repens)',7.4
-34,'Rosebay Willowherb (Chamerion angustifolium)',1.8
-34,'Euphrasia officinalis agg.',8.9
-34,'Smooth Meadow-grass (Poa pratensis)',1.5
-34,'Wild Angelica (Angelica sylvestris)',8.7
-34,'Red Clover (Trifolium pratense)',8.3
-34,'Brown Sedge (Carex disticha)',6.3
-34,'Common Sedge (Carex nigra)',8.2
-34,'Cuckooflower (Cardamine pratensis)',0.4
-34,'Downy Oat-grass (Helictotrichon pubescens)',0.4
-34,'Marsh Thistle (Cirsium palustre)',5.7
-34,'Daisy (Bellis perennis)',5.2
-34,'Common Valerian (Valeriana officinalis)',6.7
-34,'Tufted Hair-grass (Deschampsia cespitosa)',1.0
-35,'Common Sorrel (Rumex acetosa)',6.9
-35,'Common Knapweed (Centaurea nigra)',7.5
-35,'Cowslip (Primula veris)',4.2
-35,'Smooth Hawk's-beard (Crepis capillaris)',4.5
-35,'Taraxacum aggregate',7.3
-35,'Ragged-Robin (Lychnis flos-cuculi)',5.3
-35,'Quaking-grass (Briza media)',2.3
-35,'Field Horsetail (Equisetum arvense)',1.3
-35,'False Oat-grass (Arrhenatherum elatius)',3.0
-35,'Lesser Pond-sedge (Carex acutiformis)',1.7
-35,'Rosebay Willowherb (Chamerion angustifolium)',2.5
-35,'Common Meadow-rue (Thalictrum flavum)',2.9
-35,'Meadow Foxtail (Alopecurus pratensis)',5.0
-35,'Tufted Vetch (Vicia cracca)',2.9
-35,'Upright Brome (Bromopsis erecta)',6.1
-35,'Red Fescue (Festuca rubra)',2.8
-35,'Common Cottongrass (Eriophorum angustifolium)',3.5
-35,'Carnation Sedge (Carex panicea)',3.0
-35,'Flea Sedge (Carex pulicaris)',3.0
-35,'Cuckooflower (Cardamine pratensis)',6.8
-35,'Red Clover (Trifolium pratense)',3.7
-35,'Bladder-sedge (Carex vesicaria)',3.7
-35,'Ribwort Plantain (Plantago lanceolata)',8.9
-36,'White Clover (Trifolium repens)',6.5
-36,'Taraxacum aggregate',0.2
-36,'Tufted Vetch (Vicia cracca)',5.6
-36,'Yellow Iris (Iris pseudacorus)',6.8
-36,'Meadow Thistle (Cirsium dissectum)',7.4
-36,'Glaucous Sedge (Carex flacca)',7.2
-36,'Purple Moor-grass (Molinia caerulea)',2.9
-36,'Yorkshire-fog (Holcus lanatus)',7.0
-36,'Bladder-sedge (Carex vesicaria)',5.6
-36,'Amphibious Bistort (Persicaria amphibia)',0.7
-36,'Common Knapweed (Centaurea nigra)',0.6
-36,'Daisy (Bellis perennis)',7.9
-36,'Field Horsetail (Equisetum arvense)',6.9
-36,'Carnation Sedge (Carex panicea)',8.9
-36,'Meadow Fescue (Festuca pratensis)',4.5
-36,'Common Sorrel (Rumex acetosa)',6.2
-36,'Common Mouse-ear (Cerastium fontanum)',7.3
-36,'Marsh-marigold (Caltha palustris)',6.1
-36,'Meadow Foxtail (Alopecurus pratensis)',7.3
-36,'Common Valerian (Valeriana officinalis)',5.3
-36,'Red Clover (Trifolium pratense)',8.1
-36,'Common Cottongrass (Eriophorum angustifolium)',4.4
-36,'Meadowsweet (Filipendula ulmaria)',4.0
-36,'Early Marsh-orchid (Dactylorhiza incarnata)',5.6
-36,'Marsh Thistle (Cirsium palustre)',0.6
-36,'Cock's-foot (Dactylis glomerata)',4.6
-36,'Common Meadow-rue (Thalictrum flavum)',4.2
-36,'Rosebay Willowherb (Chamerion angustifolium)',2.3
-36,'Downy Oat-grass (Helictotrichon pubescens)',3.3
-37,'Marsh Horsetail (Equisetum palustre)',6.7
-37,'Cuckooflower (Cardamine pratensis)',0.1
-37,'Devil's-bit Scabious (Succisa pratensis)',5.4
-37,'Common Sedge (Carex nigra)',3.9
-37,'Meadowsweet (Filipendula ulmaria)',6.3
-37,'Upright Brome (Bromopsis erecta)',6.9
-37,'Field Horsetail (Equisetum arvense)',1.4
-37,'Amphibious Bistort (Persicaria amphibia)',8.3
-37,'Field Wood-rush (Luzula campestris)',1.3
-37,'Meadow Fescue (Festuca pratensis)',1.9
-37,'Creeping Buttercup (Ranunculus repens)',3.8
-37,'White Clover (Trifolium repens)',7.0
-37,'Creeping Thistle (Cirsium arvense)',5.2
-37,'Ribwort Plantain (Plantago lanceolata)',6.0
-37,'Flea Sedge (Carex pulicaris)',3.8
-37,'Rosebay Willowherb (Chamerion angustifolium)',3.1
-37,'Common Meadow-rue (Thalictrum flavum)',3.6
-37,'Yorkshire-fog (Holcus lanatus)',8.6
-37,'Carnation Sedge (Carex panicea)',0.6
-37,'Yellow-rattle (Rhinanthus minor)',1.1
-37,'Red Clover (Trifolium pratense)',0.2
-38,'Marsh Thistle (Cirsium palustre)',0.3
-38,'Tufted Hair-grass (Deschampsia cespitosa)',1.8
-38,'Glaucous Sedge (Carex flacca)',1.0
-38,'Ribwort Plantain (Plantago lanceolata)',4.2
-38,'Marsh-marigold (Caltha palustris)',8.1
-38,'Rosebay Willowherb (Chamerion angustifolium)',3.1
-38,'Common Valerian (Valeriana officinalis)',6.5
-38,'Ragged-Robin (Lychnis flos-cuculi)',7.7
-38,'Bladder-sedge (Carex vesicaria)',2.0
-38,'Meadow Thistle (Cirsium dissectum)',3.3
-38,'Taraxacum aggregate',3.5
-38,'Devil's-bit Scabious (Succisa pratensis)',2.2
-38,'Meadow Buttercup (Ranunculus acris)',8.0
-38,'Meadow Foxtail (Alopecurus pratensis)',7.9
-38,'Marsh Horsetail (Equisetum palustre)',5.8
-38,'Meadow Fescue (Festuca pratensis)',8.2
-38,'Selfheal (Prunella vulgaris)',3.4
-38,'Yorkshire-fog (Holcus lanatus)',8.6
-38,'Meadowsweet (Filipendula ulmaria)',3.5
-38,'Common Mouse-ear (Cerastium fontanum)',6.1
-38,'Sweet Vernal-grass (Anthoxanthum odoratum)',0.3
-38,'Common Sedge (Carex nigra)',1.7
-39,'Common Bird's-foot-trefoil (Lotus corniculatus)',6.0
-39,'Daisy (Bellis perennis)',3.1
-39,'Selfheal (Prunella vulgaris)',3.1
-39,'Common Sedge (Carex nigra)',3.2
-39,'Red Fescue (Festuca rubra)',2.7
-39,'Ribwort Plantain (Plantago lanceolata)',1.3
-39,'Common Meadow-rue (Thalictrum flavum)',8.0
-39,'Ragged-Robin (Lychnis flos-cuculi)',0.7
-39,'Common Cottongrass (Eriophorum angustifolium)',2.9
-39,'Purple Moor-grass (Molinia caerulea)',7.6
-39,'Bladder-sedge (Carex vesicaria)',3.4
-39,'Glaucous Sedge (Carex flacca)',0.2
-39,'Yellow Iris (Iris pseudacorus)',2.0
-39,'Meadow Buttercup (Ranunculus acris)',8.1
-39,'Crested Dog's-tail (Cynosurus cristatus)',3.1
-39,'Wild Angelica (Angelica sylvestris)',2.0
-39,'Cock's-foot (Dactylis glomerata)',0.4
-39,'Downy Oat-grass (Helictotrichon pubescens)',5.4
-39,'Marsh Horsetail (Equisetum palustre)',0.7
-39,'Rosebay Willowherb (Chamerion angustifolium)',7.6
-39,'Early Marsh-orchid (Dactylorhiza incarnata)',6.3
-39,'Creeping Buttercup (Ranunculus repens)',8.2
-39,'Marsh-marigold (Caltha palustris)',7.9
-39,'Amphibious Bistort (Persicaria amphibia)',7.4
-39,'Red Clover (Trifolium pratense)',2.2
-39,'False Oat-grass (Arrhenatherum elatius)',2.9
-39,'Taraxacum aggregate',0.7
-39,'Common Mouse-ear (Cerastium fontanum)',4.9
-39,'Tufted Hair-grass (Deschampsia cespitosa)',6.7
-40,'Meadow Fescue (Festuca pratensis)',2.6
-40,'Common Knapweed (Centaurea nigra)',1.9
-40,'Red Fescue (Festuca rubra)',8.3
-40,'Marsh-marigold (Caltha palustris)',7.8
-40,'Yorkshire-fog (Holcus lanatus)',7.0
-40,'Meadow Foxtail (Alopecurus pratensis)',5.6
-40,'Early Marsh-orchid (Dactylorhiza incarnata)',4.0
-40,'Crested Dog's-tail (Cynosurus cristatus)',8.2
-40,'Amphibious Bistort (Persicaria amphibia)',5.2
-40,'Meadow Buttercup (Ranunculus acris)',0.4
-40,'Downy Oat-grass (Helictotrichon pubescens)',3.7
-40,'Upright Brome (Bromopsis erecta)',4.1
-40,'Tufted Hair-grass (Deschampsia cespitosa)',3.8
-40,'Marsh Thistle (Cirsium palustre)',8.1
-40,'Meadowsweet (Filipendula ulmaria)',0.8
-40,'Quaking-grass (Briza media)',0.4
-40,'Cock's-foot (Dactylis glomerata)',0.7
-40,'Marsh-bedstraw (Galium palustre)',8.1
-40,'Rosebay Willowherb (Chamerion angustifolium)',4.1
-40,'Field Horsetail (Equisetum arvense)',4.0
-40,'False Oat-grass (Arrhenatherum elatius)',1.4
-40,'Selfheal (Prunella vulgaris)',3.7
-40,'Brown Sedge (Carex disticha)',5.6
-40,'Field Wood-rush (Luzula campestris)',2.8
-40,'Wild Angelica (Angelica sylvestris)',8.5
-40,'Tufted Vetch (Vicia cracca)',0.2
-40,'Cowslip (Primula veris)',1.8
-40,'Common Cottongrass (Eriophorum angustifolium)',3.8
-41,'Selfheal (Prunella vulgaris)',6.0
-41,'Taraxacum aggregate',4.7
-41,'Field Horsetail (Equisetum arvense)',3.3
-41,'Wild Angelica (Angelica sylvestris)',2.7
-41,'Downy Oat-grass (Helictotrichon pubescens)',7.2
-41,'Glaucous Sedge (Carex flacca)',3.9
-41,'Meadow Thistle (Cirsium dissectum)',0.8
-41,'False Oat-grass (Arrhenatherum elatius)',7.6
-41,'Upright Brome (Bromopsis erecta)',4.3
-41,'Quaking-grass (Briza media)',2.6
-41,'Daisy (Bellis perennis)',6.3
-41,'Cuckooflower (Cardamine pratensis)',6.8
-41,'Sweet Vernal-grass (Anthoxanthum odoratum)',3.5
-41,'Rosebay Willowherb (Chamerion angustifolium)',4.3
-41,'Marsh-bedstraw (Galium palustre)',1.5
-41,'Early Marsh-orchid (Dactylorhiza incarnata)',0.2
-41,'Euphrasia officinalis agg.',4.6
-41,'Creeping Buttercup (Ranunculus repens)',0.7
-41,'Creeping Thistle (Cirsium arvense)',1.1
-41,'Field Wood-rush (Luzula campestris)',6.4
-41,'Red Clover (Trifolium pratense)',6.2
-41,'Hard Rush (Juncus inflexus)',8.2
-41,'Yorkshire-fog (Holcus lanatus)',1.3
-41,'Common Mouse-ear (Cerastium fontanum)',5.9
-41,'Brown Sedge (Carex disticha)',6.6
-41,'Common Sedge (Carex nigra)',2.9
-41,'Purple Moor-grass (Molinia caerulea)',3.2
-42,'Common Knapweed (Centaurea nigra)',5.9
-42,'Quaking-grass (Briza media)',6.7
-42,'Ragged-Robin (Lychnis flos-cuculi)',2.6
-42,'Cock's-foot (Dactylis glomerata)',0.5
-42,'Brown Sedge (Carex disticha)',3.6
-42,'Cowslip (Primula veris)',7.2
-42,'Amphibious Bistort (Persicaria amphibia)',0.6
-42,'Marsh Thistle (Cirsium palustre)',8.8
-42,'Common Sorrel (Rumex acetosa)',1.7
-42,'Common Sedge (Carex nigra)',3.8
-42,'Red Fescue (Festuca rubra)',2.7
-42,'Creeping Buttercup (Ranunculus repens)',5.0
-42,'Marsh Horsetail (Equisetum palustre)',2.0
-42,'Carnation Sedge (Carex panicea)',0.3
-42,'Sweet Vernal-grass (Anthoxanthum odoratum)',4.8
-42,'Cuckooflower (Cardamine pratensis)',5.9
-42,'Tufted Vetch (Vicia cracca)',7.0
-42,'Taraxacum aggregate',1.2
-42,'Field Wood-rush (Luzula campestris)',4.2
-42,'Marsh-bedstraw (Galium palustre)',6.8
-42,'Ribwort Plantain (Plantago lanceolata)',7.7
-42,'Marsh-marigold (Caltha palustris)',5.3
-42,'Purple Moor-grass (Molinia caerulea)',7.4
-42,'Creeping Thistle (Cirsium arvense)',1.2
-42,'Lesser Pond-sedge (Carex acutiformis)',1.3
-43,'Crested Dog's-tail (Cynosurus cristatus)',8.4
-43,'Taraxacum aggregate',3.5
-43,'Red Clover (Trifolium pratense)',5.3
-43,'False Oat-grass (Arrhenatherum elatius)',4.3
-43,'Field Wood-rush (Luzula campestris)',6.5
-43,'Carnation Sedge (Carex panicea)',2.5
-43,'Devil's-bit Scabious (Succisa pratensis)',7.1
-43,'Meadow Thistle (Cirsium dissectum)',1.7
-43,'Rosebay Willowherb (Chamerion angustifolium)',7.6
-43,'Cuckooflower (Cardamine pratensis)',3.3
-43,'Cock's-foot (Dactylis glomerata)',0.2
-43,'Smooth Hawk's-beard (Crepis capillaris)',4.7
-43,'Common Sorrel (Rumex acetosa)',2.8
-43,'Yellow-rattle (Rhinanthus minor)',5.7
-43,'Marsh Thistle (Cirsium palustre)',0.9
-43,'Quaking-grass (Briza media)',8.2
-43,'Euphrasia officinalis agg.',0.5
-43,'Downy Oat-grass (Helictotrichon pubescens)',4.0
-43,'Common Mouse-ear (Cerastium fontanum)',7.5
-43,'Marsh-marigold (Caltha palustris)',0.1
-43,'Amphibious Bistort (Persicaria amphibia)',2.6
-43,'Daisy (Bellis perennis)',0.3
-43,'Marsh-bedstraw (Galium palustre)',6.8
-43,'Smooth Meadow-grass (Poa pratensis)',1.6
-43,'Flea Sedge (Carex pulicaris)',4.8
-43,'Yellow Iris (Iris pseudacorus)',6.2
-43,'Common Cottongrass (Eriophorum angustifolium)',4.5
-44,'Field Horsetail (Equisetum arvense)',8.2
-44,'Common Knapweed (Centaurea nigra)',1.0
-44,'Flea Sedge (Carex pulicaris)',8.2
-44,'Glaucous Sedge (Carex flacca)',3.4
-44,'Meadow Foxtail (Alopecurus pratensis)',7.0
-44,'Cuckooflower (Cardamine pratensis)',7.5
-44,'Lesser Pond-sedge (Carex acutiformis)',3.0
-44,'Red Clover (Trifolium pratense)',6.1
-44,'Bladder-sedge (Carex vesicaria)',4.0
-44,'Daisy (Bellis perennis)',2.8
-44,'Quaking-grass (Briza media)',0.5
-44,'Upright Brome (Bromopsis erecta)',4.6
-44,'Meadow Buttercup (Ranunculus acris)',0.5
-44,'Smooth Hawk's-beard (Crepis capillaris)',7.7
-44,'Yellow-rattle (Rhinanthus minor)',3.8
-44,'Hard Rush (Juncus inflexus)',4.3
-44,'Marsh Thistle (Cirsium palustre)',2.7
-44,'Amphibious Bistort (Persicaria amphibia)',2.3
-44,'Yellow Iris (Iris pseudacorus)',3.6
-44,'Euphrasia officinalis agg.',5.6
-44,'Sweet Vernal-grass (Anthoxanthum odoratum)',2.6
-44,'Common Sorrel (Rumex acetosa)',1.3
-44,'Common Meadow-rue (Thalictrum flavum)',7.8
-44,'Common Sedge (Carex nigra)',0.2
-44,'Creeping Buttercup (Ranunculus repens)',1.1
-44,'Common Valerian (Valeriana officinalis)',8.5
-45,'Euphrasia officinalis agg.',8.6
-45,'Ribwort Plantain (Plantago lanceolata)',0.2
-45,'Common Bird's-foot-trefoil (Lotus corniculatus)',0.8
-45,'Sweet Vernal-grass (Anthoxanthum odoratum)',8.0
-45,'Field Wood-rush (Luzula campestris)',7.9
-45,'Early Marsh-orchid (Dactylorhiza incarnata)',3.5
-45,'Carnation Sedge (Carex panicea)',6.0
-45,'Amphibious Bistort (Persicaria amphibia)',3.2
-45,'Bladder-sedge (Carex vesicaria)',6.6
-45,'Common Sorrel (Rumex acetosa)',1.5
-45,'Red Clover (Trifolium pratense)',2.9
-45,'Taraxacum aggregate',6.0
-45,'Yorkshire-fog (Holcus lanatus)',4.1
-45,'Lesser Pond-sedge (Carex acutiformis)',2.2
-45,'Meadow Foxtail (Alopecurus pratensis)',8.6
-45,'Glaucous Sedge (Carex flacca)',8.3
-45,'Common Mouse-ear (Cerastium fontanum)',0.5
-45,'White Clover (Trifolium repens)',8.2
-45,'Marsh Horsetail (Equisetum palustre)',3.4
-45,'Common Knapweed (Centaurea nigra)',4.9
-45,'Upright Brome (Bromopsis erecta)',0.9
-45,'Creeping Thistle (Cirsium arvense)',4.0
-45,'Selfheal (Prunella vulgaris)',0.2
-45,'Red Fescue (Festuca rubra)',4.4
-45,'Smooth Meadow-grass (Poa pratensis)',2.3
-45,'Marsh Thistle (Cirsium palustre)',6.7
-45,'Cuckooflower (Cardamine pratensis)',3.8
-45,'Common Cottongrass (Eriophorum angustifolium)',7.6
-46,'Smooth Hawk's-beard (Crepis capillaris)',2.2
-46,'Ragged-Robin (Lychnis flos-cuculi)',6.3
-46,'Quaking-grass (Briza media)',1.8
-46,'Common Valerian (Valeriana officinalis)',7.1
-46,'Red Clover (Trifolium pratense)',7.3
-46,'Lesser Pond-sedge (Carex acutiformis)',6.7
-46,'Common Sorrel (Rumex acetosa)',3.9
-46,'Field Wood-rush (Luzula campestris)',3.7
-46,'Daisy (Bellis perennis)',7.2
-46,'Common Cottongrass (Eriophorum angustifolium)',7.6
-46,'Bladder-sedge (Carex vesicaria)',6.7
-46,'Meadow Fescue (Festuca pratensis)',8.8
-46,'Brown Sedge (Carex disticha)',4.9
-46,'Cock's-foot (Dactylis glomerata)',7.6
-46,'Ribwort Plantain (Plantago lanceolata)',8.2
-46,'Glaucous Sedge (Carex flacca)',8.1
-46,'Meadow Foxtail (Alopecurus pratensis)',6.2
-46,'False Oat-grass (Arrhenatherum elatius)',5.8
-46,'Taraxacum aggregate',8.4
-46,'Wild Angelica (Angelica sylvestris)',4.2
-46,'Smooth Meadow-grass (Poa pratensis)',1.7
-46,'Meadow Thistle (Cirsium dissectum)',6.9
-47,'Common Bird's-foot-trefoil (Lotus corniculatus)',0.6
-47,'Rosebay Willowherb (Chamerion angustifolium)',7.2
-47,'Cock's-foot (Dactylis glomerata)',6.2
-47,'Smooth Meadow-grass (Poa pratensis)',5.9
-47,'Cowslip (Primula veris)',1.2
-47,'Daisy (Bellis perennis)',0.5
-47,'Tufted Vetch (Vicia cracca)',1.7
-47,'Creeping Thistle (Cirsium arvense)',4.8
-47,'Upright Brome (Bromopsis erecta)',4.9
-47,'Cuckooflower (Cardamine pratensis)',6.7
-47,'Downy Oat-grass (Helictotrichon pubescens)',4.1
-47,'Euphrasia officinalis agg.',0.9
-47,'Marsh-bedstraw (Galium palustre)',4.8
-47,'Carnation Sedge (Carex panicea)',5.4
-47,'Crested Dog's-tail (Cynosurus cristatus)',0.4
-47,'Common Cottongrass (Eriophorum angustifolium)',8.1
-47,'Common Meadow-rue (Thalictrum flavum)',3.9
-47,'Field Wood-rush (Luzula campestris)',8.1
-47,'Meadow Foxtail (Alopecurus pratensis)',6.6
-47,'Smooth Hawk's-beard (Crepis capillaris)',6.5
-47,'Yorkshire-fog (Holcus lanatus)',8.7
-47,'Marsh-marigold (Caltha palustris)',0.6
-47,'Field Horsetail (Equisetum arvense)',2.0
-47,'Taraxacum aggregate',6.2
-47,'Ribwort Plantain (Plantago lanceolata)',3.1
-47,'Wild Angelica (Angelica sylvestris)',0.8
-47,'Meadowsweet (Filipendula ulmaria)',8.2
-48,'Common Meadow-rue (Thalictrum flavum)',0.4
-48,'Creeping Thistle (Cirsium arvense)',2.3
-48,'Daisy (Bellis perennis)',6.5
-48,'Hard Rush (Juncus inflexus)',5.6
-48,'Brown Sedge (Carex disticha)',3.2
-48,'Meadow Buttercup (Ranunculus acris)',1.3
-48,'Taraxacum aggregate',2.7
-48,'Creeping Buttercup (Ranunculus repens)',0.7
-48,'Common Bird's-foot-trefoil (Lotus corniculatus)',6.6
-48,'Rosebay Willowherb (Chamerion angustifolium)',2.4
-48,'Common Knapweed (Centaurea nigra)',2.1
-48,'Marsh Horsetail (Equisetum palustre)',1.1
-48,'Yellow Iris (Iris pseudacorus)',6.5
-48,'Purple Moor-grass (Molinia caerulea)',2.2
-48,'Early Marsh-orchid (Dactylorhiza incarnata)',0.4
-48,'Smooth Hawk's-beard (Crepis capillaris)',5.7
-48,'Tufted Hair-grass (Deschampsia cespitosa)',2.4
-48,'Yorkshire-fog (Holcus lanatus)',3.4
-48,'Meadowsweet (Filipendula ulmaria)',5.6
-48,'False Oat-grass (Arrhenatherum elatius)',3.3
-48,'Flea Sedge (Carex pulicaris)',5.3
-48,'Lesser Pond-sedge (Carex acutiformis)',6.6
-48,'Cuckooflower (Cardamine pratensis)',7.3
-49,'Carnation Sedge (Carex panicea)',3.7
-49,'Early Marsh-orchid (Dactylorhiza incarnata)',8.1
-49,'Cowslip (Primula veris)',7.5
-49,'Tufted Hair-grass (Deschampsia cespitosa)',1.7
-49,'Hard Rush (Juncus inflexus)',2.3
-49,'Field Wood-rush (Luzula campestris)',4.4
-49,'Devil's-bit Scabious (Succisa pratensis)',2.0
-49,'Selfheal (Prunella vulgaris)',4.1
-49,'Common Valerian (Valeriana officinalis)',1.4
-49,'Tufted Vetch (Vicia cracca)',4.2
-49,'Marsh-marigold (Caltha palustris)',6.7
-49,'Ribwort Plantain (Plantago lanceolata)',7.7
-49,'Marsh-bedstraw (Galium palustre)',0.1
-49,'Lesser Pond-sedge (Carex acutiformis)',6.7
-49,'Cuckooflower (Cardamine pratensis)',1.2
-49,'Amphibious Bistort (Persicaria amphibia)',1.3
-49,'Quaking-grass (Briza media)',7.9
-49,'Creeping Buttercup (Ranunculus repens)',8.2
-49,'White Clover (Trifolium repens)',3.3
-49,'Ragged-Robin (Lychnis flos-cuculi)',8.1
-49,'Yorkshire-fog (Holcus lanatus)',8.0
-49,'Marsh Thistle (Cirsium palustre)',8.7
-49,'Cock's-foot (Dactylis glomerata)',3.4
-49,'Purple Moor-grass (Molinia caerulea)',2.7
-49,'Daisy (Bellis perennis)',3.5
-49,'Red Clover (Trifolium pratense)',0.3
-49,'Meadow Thistle (Cirsium dissectum)',5.3
-50,'Common Sedge (Carex nigra)',7.0
-50,'Hard Rush (Juncus inflexus)',4.3
-50,'Common Sorrel (Rumex acetosa)',3.0
-50,'Meadow Thistle (Cirsium dissectum)',3.1
-50,'Lesser Pond-sedge (Carex acutiformis)',8.1
-50,'Creeping Buttercup (Ranunculus repens)',3.0
-50,'Euphrasia officinalis agg.',4.3
-50,'Common Meadow-rue (Thalictrum flavum)',1.2
-50,'Meadow Foxtail (Alopecurus pratensis)',0.2
-50,'Meadowsweet (Filipendula ulmaria)',6.3
-50,'Upright Brome (Bromopsis erecta)',2.9
-50,'Yorkshire-fog (Holcus lanatus)',4.8
-50,'Tufted Hair-grass (Deschampsia cespitosa)',7.9
-50,'Smooth Meadow-grass (Poa pratensis)',7.3
-50,'Cuckooflower (Cardamine pratensis)',5.8
-50,'Marsh-bedstraw (Galium palustre)',5.7
-50,'Crested Dog's-tail (Cynosurus cristatus)',8.1
-50,'Smooth Hawk's-beard (Crepis capillaris)',5.4
-50,'Purple Moor-grass (Molinia caerulea)',7.3
-50,'Carnation Sedge (Carex panicea)',1.1
-50,'Red Fescue (Festuca rubra)',4.3
-50,'Early Marsh-orchid (Dactylorhiza incarnata)',8.0
-50,'Meadow Fescue (Festuca pratensis)',1.7
-50,'Sweet Vernal-grass (Anthoxanthum odoratum)',6.4
-50,'Common Valerian (Valeriana officinalis)',4.1
-51,'Red Clover (Trifolium pratense)',7.1
-51,'Common Valerian (Valeriana officinalis)',4.9
-51,'Creeping Thistle (Cirsium arvense)',6.6
-51,'Meadow Thistle (Cirsium dissectum)',4.2
-51,'Hard Rush (Juncus inflexus)',6.6
-51,'Common Mouse-ear (Cerastium fontanum)',4.0
-51,'Yorkshire-fog (Holcus lanatus)',5.5
-51,'Common Meadow-rue (Thalictrum flavum)',7.0
-51,'Common Knapweed (Centaurea nigra)',0.8
-51,'Brown Sedge (Carex disticha)',6.9
-51,'Amphibious Bistort (Persicaria amphibia)',2.5
-51,'Marsh-bedstraw (Galium palustre)',0.9
-51,'Marsh-marigold (Caltha palustris)',4.8
-51,'Field Wood-rush (Luzula campestris)',1.2
-51,'Sweet Vernal-grass (Anthoxanthum odoratum)',5.4
-51,'Rosebay Willowherb (Chamerion angustifolium)',0.8
-51,'Crested Dog's-tail (Cynosurus cristatus)',4.3
-51,'Selfheal (Prunella vulgaris)',8.8
-51,'Common Sorrel (Rumex acetosa)',6.3
-51,'Daisy (Bellis perennis)',4.6
-51,'Meadow Fescue (Festuca pratensis)',4.2
-51,'Purple Moor-grass (Molinia caerulea)',3.7
-51,'Bladder-sedge (Carex vesicaria)',1.3
-52,'Cuckooflower (Cardamine pratensis)',2.6
-52,'Common Valerian (Valeriana officinalis)',8.9
-52,'Meadow Buttercup (Ranunculus acris)',1.4
-52,'Brown Sedge (Carex disticha)',4.8
-52,'Red Clover (Trifolium pratense)',3.1
-52,'Common Cottongrass (Eriophorum angustifolium)',5.9
-52,'Common Bird's-foot-trefoil (Lotus corniculatus)',6.6
-52,'Field Horsetail (Equisetum arvense)',7.3
-52,'Euphrasia officinalis agg.',2.5
-52,'Creeping Buttercup (Ranunculus repens)',5.7
-52,'Hard Rush (Juncus inflexus)',3.6
-52,'Amphibious Bistort (Persicaria amphibia)',5.0
-52,'Downy Oat-grass (Helictotrichon pubescens)',0.6
-52,'Cock's-foot (Dactylis glomerata)',6.1
-52,'Flea Sedge (Carex pulicaris)',8.1
-52,'Ribwort Plantain (Plantago lanceolata)',0.9
-52,'Common Sedge (Carex nigra)',4.5
-52,'Early Marsh-orchid (Dactylorhiza incarnata)',7.1
-52,'Meadow Fescue (Festuca pratensis)',3.0
-52,'Common Mouse-ear (Cerastium fontanum)',8.5
-52,'Purple Moor-grass (Molinia caerulea)',1.5
-52,'Marsh-bedstraw (Galium palustre)',3.1
-52,'Ragged-Robin (Lychnis flos-cuculi)',5.2
-52,'Cowslip (Primula veris)',0.6
-52,'Creeping Thistle (Cirsium arvense)',8.7
-53,'Common Bird's-foot-trefoil (Lotus corniculatus)',0.6
-53,'Common Sedge (Carex nigra)',7.1
-53,'Purple Moor-grass (Molinia caerulea)',3.9
-53,'Smooth Meadow-grass (Poa pratensis)',4.3
-53,'Carnation Sedge (Carex panicea)',8.5
-53,'Early Marsh-orchid (Dactylorhiza incarnata)',5.9
-53,'Selfheal (Prunella vulgaris)',2.1
-53,'Downy Oat-grass (Helictotrichon pubescens)',8.6
-53,'Devil's-bit Scabious (Succisa pratensis)',2.7
-53,'Marsh Thistle (Cirsium palustre)',7.7
-53,'Amphibious Bistort (Persicaria amphibia)',4.0
-53,'Red Clover (Trifolium pratense)',2.0
-53,'Common Valerian (Valeriana officinalis)',8.8
-53,'Meadow Foxtail (Alopecurus pratensis)',3.6
-53,'Meadow Thistle (Cirsium dissectum)',2.2
-53,'Field Wood-rush (Luzula campestris)',4.6
-53,'Ribwort Plantain (Plantago lanceolata)',8.0
-53,'Hard Rush (Juncus inflexus)',5.8
-53,'Cowslip (Primula veris)',7.9
-53,'Daisy (Bellis perennis)',2.1
-53,'Marsh Horsetail (Equisetum palustre)',5.5
-53,'Yellow Iris (Iris pseudacorus)',3.2
-53,'Bladder-sedge (Carex vesicaria)',7.6
-53,'Rosebay Willowherb (Chamerion angustifolium)',8.4
-53,'Crested Dog's-tail (Cynosurus cristatus)',5.5
-53,'Yorkshire-fog (Holcus lanatus)',8.4
-54,'Field Wood-rush (Luzula campestris)',1.8
-54,'Lesser Pond-sedge (Carex acutiformis)',0.7
-54,'Field Horsetail (Equisetum arvense)',0.5
-54,'Rosebay Willowherb (Chamerion angustifolium)',4.4
-54,'Downy Oat-grass (Helictotrichon pubescens)',6.1
-54,'Taraxacum aggregate',5.5
-54,'Meadow Thistle (Cirsium dissectum)',8.0
-54,'Crested Dog's-tail (Cynosurus cristatus)',1.8
-54,'Marsh-marigold (Caltha palustris)',1.0
-54,'Common Meadow-rue (Thalictrum flavum)',6.6
-54,'Meadowsweet (Filipendula ulmaria)',6.1
-54,'Amphibious Bistort (Persicaria amphibia)',0.9
-54,'Bladder-sedge (Carex vesicaria)',6.8
-54,'Cock's-foot (Dactylis glomerata)',6.2
-54,'Creeping Buttercup (Ranunculus repens)',3.6
-54,'Common Mouse-ear (Cerastium fontanum)',6.8
-54,'Marsh Horsetail (Equisetum palustre)',2.4
-54,'Sweet Vernal-grass (Anthoxanthum odoratum)',0.3
-54,'Daisy (Bellis perennis)',4.7
-54,'Upright Brome (Bromopsis erecta)',5.8
-54,'Common Sedge (Carex nigra)',8.3
-54,'Smooth Hawk's-beard (Crepis capillaris)',8.6
-54,'Meadow Foxtail (Alopecurus pratensis)',7.9
-54,'Ribwort Plantain (Plantago lanceolata)',0.6
-54,'Quaking-grass (Briza media)',0.2
-54,'Purple Moor-grass (Molinia caerulea)',6.2
-54,'Early Marsh-orchid (Dactylorhiza incarnata)',7.9
-54,'Common Bird's-foot-trefoil (Lotus corniculatus)',3.9
-54,'Devil's-bit Scabious (Succisa pratensis)',2.6
-55,'Upright Brome (Bromopsis erecta)',1.8
-55,'Hard Rush (Juncus inflexus)',6.5
-55,'Tufted Hair-grass (Deschampsia cespitosa)',6.5
-55,'White Clover (Trifolium repens)',8.1
-55,'Bladder-sedge (Carex vesicaria)',3.4
-55,'Sweet Vernal-grass (Anthoxanthum odoratum)',2.1
-55,'Yellow Iris (Iris pseudacorus)',2.6
-55,'Field Horsetail (Equisetum arvense)',6.3
-55,'Creeping Buttercup (Ranunculus repens)',2.0
-55,'Meadow Thistle (Cirsium dissectum)',3.3
-55,'Lesser Pond-sedge (Carex acutiformis)',8.4
-55,'Taraxacum aggregate',0.6
-55,'Common Cottongrass (Eriophorum angustifolium)',4.4
-55,'Brown Sedge (Carex disticha)',2.6
-55,'Smooth Hawk's-beard (Crepis capillaris)',2.1
-55,'Selfheal (Prunella vulgaris)',7.2
-55,'Marsh Thistle (Cirsium palustre)',3.4
-55,'Common Meadow-rue (Thalictrum flavum)',3.0
-55,'Crested Dog's-tail (Cynosurus cristatus)',6.4
-55,'Common Sedge (Carex nigra)',6.4
-56,'Meadow Fescue (Festuca pratensis)',3.3
-56,'Rosebay Willowherb (Chamerion angustifolium)',6.1
-56,'Tufted Hair-grass (Deschampsia cespitosa)',6.2
-56,'Ribwort Plantain (Plantago lanceolata)',1.7
-56,'Cuckooflower (Cardamine pratensis)',1.3
-56,'Marsh Horsetail (Equisetum palustre)',1.5
-56,'Meadowsweet (Filipendula ulmaria)',6.7
-56,'Meadow Foxtail (Alopecurus pratensis)',3.4
-56,'Yellow Iris (Iris pseudacorus)',4.1
-56,'Yorkshire-fog (Holcus lanatus)',7.8
-56,'Lesser Pond-sedge (Carex acutiformis)',3.3
-56,'Common Sedge (Carex nigra)',7.8
-56,'Marsh-bedstraw (Galium palustre)',5.5
-56,'Red Fescue (Festuca rubra)',6.3
-56,'Field Horsetail (Equisetum arvense)',8.0
-56,'Hard Rush (Juncus inflexus)',0.8
-56,'Taraxacum aggregate',8.8
-56,'Tufted Vetch (Vicia cracca)',4.9
-56,'Carnation Sedge (Carex panicea)',3.8
-56,'Common Meadow-rue (Thalictrum flavum)',1.4
-56,'Marsh-marigold (Caltha palustris)',8.5
-56,'Selfheal (Prunella vulgaris)',1.1
-56,'Common Cottongrass (Eriophorum angustifolium)',2.4
-56,'Yellow-rattle (Rhinanthus minor)',6.7
-56,'Ragged-Robin (Lychnis flos-cuculi)',3.2
-56,'Red Clover (Trifolium pratense)',4.0
-56,'Daisy (Bellis perennis)',1.9
-56,'Bladder-sedge (Carex vesicaria)',5.6
-56,'Common Knapweed (Centaurea nigra)',8.9
-57,'Crested Dog's-tail (Cynosurus cristatus)',7.8
-57,'Euphrasia officinalis agg.',0.3
-57,'Quaking-grass (Briza media)',3.4
-57,'Meadow Thistle (Cirsium dissectum)',7.2
-57,'Common Meadow-rue (Thalictrum flavum)',7.8
-57,'Cowslip (Primula veris)',4.0
-57,'Marsh-marigold (Caltha palustris)',3.4
-57,'Devil's-bit Scabious (Succisa pratensis)',2.1
-57,'Daisy (Bellis perennis)',7.1
-57,'Marsh-bedstraw (Galium palustre)',5.3
-57,'Tufted Hair-grass (Deschampsia cespitosa)',6.7
-57,'Common Mouse-ear (Cerastium fontanum)',5.5
-57,'Field Wood-rush (Luzula campestris)',3.1
-57,'Smooth Hawk's-beard (Crepis capillaris)',7.4
-57,'Marsh Thistle (Cirsium palustre)',8.7
-57,'Taraxacum aggregate',4.1
-57,'Sweet Vernal-grass (Anthoxanthum odoratum)',3.7
-57,'Ragged-Robin (Lychnis flos-cuculi)',0.3
-57,'Field Horsetail (Equisetum arvense)',7.1
-57,'Yellow Iris (Iris pseudacorus)',0.4
-57,'Red Fescue (Festuca rubra)',3.4
-57,'Carnation Sedge (Carex panicea)',6.5
-57,'Creeping Buttercup (Ranunculus repens)',6.4
-57,'Bladder-sedge (Carex vesicaria)',1.2
-57,'Wild Angelica (Angelica sylvestris)',6.8
-58,'Meadow Buttercup (Ranunculus acris)',5.7
-58,'Smooth Hawk's-beard (Crepis capillaris)',3.9
-58,'Daisy (Bellis perennis)',0.6
-58,'Hard Rush (Juncus inflexus)',3.2
-58,'Taraxacum aggregate',6.8
-58,'Amphibious Bistort (Persicaria amphibia)',4.9
-58,'Tufted Hair-grass (Deschampsia cespitosa)',5.2
-58,'Early Marsh-orchid (Dactylorhiza incarnata)',0.4
-58,'White Clover (Trifolium repens)',2.4
-58,'Bladder-sedge (Carex vesicaria)',4.8
-58,'Downy Oat-grass (Helictotrichon pubescens)',6.0
-58,'False Oat-grass (Arrhenatherum elatius)',7.6
-58,'Marsh Thistle (Cirsium palustre)',8.2
-58,'Marsh-marigold (Caltha palustris)',5.1
-58,'Creeping Buttercup (Ranunculus repens)',7.5
-58,'Devil's-bit Scabious (Succisa pratensis)',7.7
-58,'Common Valerian (Valeriana officinalis)',7.0
-58,'Rosebay Willowherb (Chamerion angustifolium)',2.1
-58,'Common Bird's-foot-trefoil (Lotus corniculatus)',7.1
-58,'Marsh Horsetail (Equisetum palustre)',6.2
-58,'Common Sedge (Carex nigra)',0.3
-58,'Yellow-rattle (Rhinanthus minor)',8.9
-58,'Carnation Sedge (Carex panicea)',5.4
-58,'Euphrasia officinalis agg.',0.4
-59,'Common Valerian (Valeriana officinalis)',4.5
-59,'Creeping Thistle (Cirsium arvense)',2.4
-59,'Cuckooflower (Cardamine pratensis)',7.8
-59,'Marsh-marigold (Caltha palustris)',7.7
-59,'Common Sorrel (Rumex acetosa)',0.7
-59,'Smooth Hawk's-beard (Crepis capillaris)',2.4
-59,'Ragged-Robin (Lychnis flos-cuculi)',1.8
-59,'Yorkshire-fog (Holcus lanatus)',0.8
-59,'Amphibious Bistort (Persicaria amphibia)',7.6
-59,'Carnation Sedge (Carex panicea)',0.9
-59,'Flea Sedge (Carex pulicaris)',7.5
-59,'Cock's-foot (Dactylis glomerata)',7.3
-59,'Hard Rush (Juncus inflexus)',2.7
-59,'Brown Sedge (Carex disticha)',4.5
-59,'Smooth Meadow-grass (Poa pratensis)',8.3
-59,'Common Mouse-ear (Cerastium fontanum)',5.4
-59,'Lesser Pond-sedge (Carex acutiformis)',2.6
-59,'Bladder-sedge (Carex vesicaria)',7.1
-59,'False Oat-grass (Arrhenatherum elatius)',5.1
-59,'Red Fescue (Festuca rubra)',5.2
-59,'Daisy (Bellis perennis)',0.6
-59,'Common Meadow-rue (Thalictrum flavum)',8.4
-59,'Purple Moor-grass (Molinia caerulea)',7.2
-59,'Meadow Fescue (Festuca pratensis)',0.2
-59,'Glaucous Sedge (Carex flacca)',3.7
-59,'Common Cottongrass (Eriophorum angustifolium)',5.0
-59,'Red Clover (Trifolium pratense)',6.0
-59,'Early Marsh-orchid (Dactylorhiza incarnata)',7.2
-59,'Yellow Iris (Iris pseudacorus)',6.5
-59,'Meadow Thistle (Cirsium dissectum)',6.3
+10,'Purple Moor-grass (Molinia caerulea)',0.3
+10,'Upright Brome (Bromopsis erecta)',96.0
+10,'Meadow Foxtail (Alopecurus pratensis)',0.5
+10,'Yorkshire-fog (Holcus lanatus)',42.0
+10,'Smooth Meadow-grass (Poa pratensis)',63.0
+10,'Tufted Hair-grass (Deschampsia cespitosa)',83.0
+10,'Quaking-grass (Briza media)',30.0
+11,'Sweet Vernal-grass (Anthoxanthum odoratum)',8.0
+11,'Tufted Hair-grass (Deschampsia cespitosa)',63.0
+11,'Purple Moor-grass (Molinia caerulea)',18.0
+11,'Yorkshire-fog (Holcus lanatus)',63.0
+11,'Smooth Meadow-grass (Poa pratensis)',30.0
+11,'Upright Brome (Bromopsis erecta)',18.0
+11,'Crested Dog's-tail (Cynosurus cristatus)',0.1
+11,'False Oat-grass (Arrhenatherum elatius)',96.0
+11,'Quaking-grass (Briza media)',63.0
+11,'Downy Oat-grass (Helictotrichon pubescens)',0.5
+11,'Meadow Fescue (Festuca pratensis)',0.1
+11,'Cock's-foot (Dactylis glomerata)',83.0
+12,'Sweet Vernal-grass (Anthoxanthum odoratum)',42.0
+12,'Smooth Meadow-grass (Poa pratensis)',8.0
+12,'False Oat-grass (Arrhenatherum elatius)',0.1
+12,'Meadow Foxtail (Alopecurus pratensis)',0.5
+12,'Crested Dog's-tail (Cynosurus cristatus)',0.1
+12,'Upright Brome (Bromopsis erecta)',42.0
+12,'Meadow Fescue (Festuca pratensis)',0.5
+12,'Yorkshire-fog (Holcus lanatus)',0.1
+12,'Downy Oat-grass (Helictotrichon pubescens)',83.0
+12,'Cock's-foot (Dactylis glomerata)',42.0
+12,'Quaking-grass (Briza media)',63.0
+12,'Tufted Hair-grass (Deschampsia cespitosa)',18.0
+13,'False Oat-grass (Arrhenatherum elatius)',83.0
+13,'Crested Dog's-tail (Cynosurus cristatus)',0.5
+13,'Yorkshire-fog (Holcus lanatus)',63.0
+13,'Cock's-foot (Dactylis glomerata)',0.3
+13,'Meadow Foxtail (Alopecurus pratensis)',3.0
+13,'Downy Oat-grass (Helictotrichon pubescens)',0.3
+13,'Purple Moor-grass (Molinia caerulea)',3.0
+13,'Upright Brome (Bromopsis erecta)',3.0
+13,'Smooth Meadow-grass (Poa pratensis)',18.0
+13,'Sweet Vernal-grass (Anthoxanthum odoratum)',3.0
+13,'Meadow Fescue (Festuca pratensis)',96.0
+14,'Purple Moor-grass (Molinia caerulea)',3.0
+14,'Sweet Vernal-grass (Anthoxanthum odoratum)',63.0
+14,'Quaking-grass (Briza media)',30.0
+14,'Tufted Hair-grass (Deschampsia cespitosa)',0.3
+14,'Yorkshire-fog (Holcus lanatus)',18.0
+14,'Meadow Foxtail (Alopecurus pratensis)',8.0
+14,'Upright Brome (Bromopsis erecta)',63.0
+14,'Downy Oat-grass (Helictotrichon pubescens)',0.5
+14,'False Oat-grass (Arrhenatherum elatius)',30.0
+14,'Meadow Fescue (Festuca pratensis)',3.0
+14,'Smooth Meadow-grass (Poa pratensis)',96.0
+14,'Cock's-foot (Dactylis glomerata)',83.0
+15,'Crested Dog's-tail (Cynosurus cristatus)',0.3
+15,'Sweet Vernal-grass (Anthoxanthum odoratum)',18.0
+15,'Quaking-grass (Briza media)',0.3
+15,'Cock's-foot (Dactylis glomerata)',3.0
+15,'Meadow Fescue (Festuca pratensis)',96.0
+15,'Yorkshire-fog (Holcus lanatus)',8.0
+15,'Smooth Meadow-grass (Poa pratensis)',0.3
+15,'Upright Brome (Bromopsis erecta)',3.0
+15,'Purple Moor-grass (Molinia caerulea)',96.0
+15,'Tufted Hair-grass (Deschampsia cespitosa)',18.0
+15,'False Oat-grass (Arrhenatherum elatius)',83.0
+16,'Downy Oat-grass (Helictotrichon pubescens)',18.0
+16,'Meadow Fescue (Festuca pratensis)',8.0
+16,'Quaking-grass (Briza media)',0.3
+16,'Tufted Hair-grass (Deschampsia cespitosa)',30.0
+16,'Crested Dog's-tail (Cynosurus cristatus)',3.0
+16,'Yorkshire-fog (Holcus lanatus)',3.0
+16,'Cock's-foot (Dactylis glomerata)',63.0
+16,'Purple Moor-grass (Molinia caerulea)',63.0
+16,'Smooth Meadow-grass (Poa pratensis)',3.0
+16,'Sweet Vernal-grass (Anthoxanthum odoratum)',0.3
+17,'Smooth Meadow-grass (Poa pratensis)',30.0
+17,'Purple Moor-grass (Molinia caerulea)',83.0
+17,'Meadow Foxtail (Alopecurus pratensis)',42.0
+17,'Sweet Vernal-grass (Anthoxanthum odoratum)',3.0
+17,'Meadow Fescue (Festuca pratensis)',0.3
+17,'Downy Oat-grass (Helictotrichon pubescens)',63.0
+17,'Crested Dog's-tail (Cynosurus cristatus)',83.0
+17,'Yorkshire-fog (Holcus lanatus)',8.0
+17,'Cock's-foot (Dactylis glomerata)',0.5
+17,'Quaking-grass (Briza media)',30.0
+17,'Upright Brome (Bromopsis erecta)',96.0
+18,'Quaking-grass (Briza media)',30.0
+18,'Meadow Foxtail (Alopecurus pratensis)',3.0
+18,'Downy Oat-grass (Helictotrichon pubescens)',96.0
+18,'Tufted Hair-grass (Deschampsia cespitosa)',8.0
+18,'Smooth Meadow-grass (Poa pratensis)',83.0
+18,'Meadow Fescue (Festuca pratensis)',18.0
+18,'False Oat-grass (Arrhenatherum elatius)',0.5
+18,'Purple Moor-grass (Molinia caerulea)',42.0
+18,'Crested Dog's-tail (Cynosurus cristatus)',63.0
+18,'Cock's-foot (Dactylis glomerata)',0.1
+18,'Yorkshire-fog (Holcus lanatus)',42.0
+19,'Cock's-foot (Dactylis glomerata)',30.0
+19,'Crested Dog's-tail (Cynosurus cristatus)',0.1
+19,'Upright Brome (Bromopsis erecta)',8.0
+19,'Purple Moor-grass (Molinia caerulea)',42.0
+19,'Smooth Meadow-grass (Poa pratensis)',0.3
+19,'Sweet Vernal-grass (Anthoxanthum odoratum)',0.1
+19,'Meadow Foxtail (Alopecurus pratensis)',63.0
+19,'Meadow Fescue (Festuca pratensis)',83.0
+19,'Quaking-grass (Briza media)',30.0
+19,'Yorkshire-fog (Holcus lanatus)',42.0
+19,'False Oat-grass (Arrhenatherum elatius)',42.0
+19,'Downy Oat-grass (Helictotrichon pubescens)',83.0
+21,"'1588,68,3,""Rumex acetosa"",2'",63.0
+21,"'1563,68,3,""Anthoxanthum odoratum"",4'",3.0
+21,"'1582,68,3,""Luzula campestris"",1'",96.0
+21,"'1561,68,2,""Trifolium pratense"",2'",42.0
+21,"'1585,68,3,""Prunella vulgaris"",1'",96.0
+21,"'1522,68,1,""Brachythecium mildeanum"",3'",96.0
+21,"'1597,68,4,""Crepis capillaris"",2'",42.0
+21,"'1599,68,4,""Equisetum species"",2'",0.3
+21,"'1553,68,2,""Filipendula ulmaria"",4'",42.0
+21,"'1530,68,1,""Cirsium dissectum"",5'",0.1
+21,"'1562,68,2,""Valeriana officinalis"",2'",8.0
+21,"'1550,68,2,""Equisetum species"",2'",63.0
+21,"'1570,68,3,""Centaurea nigra"",6'",18.0
+21,"'1526,68,1,""Carex disticha"",5'",0.3
+21,"'1559,68,2,""Succisa pratensis"",6'",0.3
+21,"'1601,68,4,""Filipendula ulmaria"",6'",63.0
+21,"'1603,68,4,""Iris pseudacorus"",0.1'",63.0
+21,"'1575,68,3,""Equisetum species"",2'",63.0
+21,"'1571,68,3,""Cerastium fontanum"",2'",0.1
+21,"'1610,68,4,""Trifolium repens"",1'",30.0
+21,"'1529,68,1,""Centaurea nigra"",3'",63.0
+21,"'1605,68,4,""Plantago lanceolata"",6'",8.0
+21,"'1547,68,2,""Carex panicea"",6'",96.0
+21,"'1557,68,2,""Plantago lanceolata"",3'",42.0
+21,"'1586,68,3,""Ranunculus acris"",5'",18.0
+22,"'1586,68,3,""Ranunculus acris"",5'",83.0
+22,"'1538,68,1,""Primula veris"",2'",18.0
+22,"'1594,68,4,""Centaurea nigra"",3'",3.0
+22,"'1590,68,4,""Angelica sylvestris"",2'",83.0
+22,"'1534,68,1,""Euphrasia officinalis ag."",2'",3.0
+22,"'1547,68,2,""Carex panicea"",6'",0.5
+22,"'1588,68,3,""Rumex acetosa"",2'",3.0
+22,"'1546,68,2,""Calliergonella cuspidata"",3'",0.5
+22,"'1579,68,3,""Filipendula ulmaria"",6'",0.3
+22,"'1530,68,1,""Cirsium dissectum"",5'",83.0
+22,"'1556,68,2,""Molinia caerulea"",7'",0.1
+22,"'1523,68,1,""Briza media"",2'",63.0
+22,"'1574,68,3,""Cynosurus cristatus"",6'",96.0
+22,"'1572,68,3,""Cirsium dissectum"",5'",63.0
+22,"'1539,68,1,""Ranunculus acris"",3'",63.0
+22,"'1595,68,4,""Cirsium dissectum"",2'",8.0
+22,"'1566,68,3,""Bromopsis erecta"",5'",18.0
+22,"'1525,68,1,""Campylium stellatum v. protensum"",0.1'",8.0
+22,"'1521,68,1,""Angelica sylvestris"",3'",3.0
+22,"'1529,68,1,""Centaurea nigra"",3'",8.0
+22,"'1537,68,1,""Plantago lanceolata"",3'",96.0
+22,"'1544,68,1,""Trifolium pratense"",2'",30.0
+22,"'1587,68,3,""Rhinanthus minor"",2'",96.0
+22,"'1564,68,3,""Bellis perennis"",2'",42.0
+22,"'1532,68,1,""Dactylis glomerata"",2'",8.0
+23,"'1584,68,3,""Plantago lanceolata"",5'",18.0
+23,"'1541,68,1,""Rhinanthus minor"",2'",0.5
+23,"'1576,68,3,""Euphrasia officinalis ag."",2'",83.0
+23,"'1532,68,1,""Dactylis glomerata"",2'",63.0
+23,"'1527,68,1,""Carex flacca"",6'",0.5
+23,"'1526,68,1,""Carex disticha"",5'",18.0
+23,"'1525,68,1,""Campylium stellatum v. protensum"",0.1'",42.0
+23,"'1548,68,2,""Carex pulicaris"",5'",42.0
+23,"'1559,68,2,""Succisa pratensis"",6'",42.0
+23,"'1557,68,2,""Plantago lanceolata"",3'",96.0
+23,"'1551,68,2,""Euphrasia officinalis ag."",2'",8.0
+23,"'1562,68,2,""Valeriana officinalis"",2'",0.5
+23,"'1602,68,4,""Holcus lanatus"",3'",18.0
+23,"'1524,68,1,""Calliergonella cuspidata"",4'",83.0
+23,"'1552,68,2,""Festuca rubra"",5'",0.3
+23,"'1593,68,4,""Carex pulicaris"",0.1'",0.1
+23,"'1571,68,3,""Cerastium fontanum"",2'",3.0
+23,"'1569,68,3,""Carex panicea"",4'",0.3
+23,"'1609,68,4,""Thalictrum flavum"",2'",96.0
+23,"'1603,68,4,""Iris pseudacorus"",0.1'",3.0
+23,"'1595,68,4,""Cirsium dissectum"",2'",83.0
+23,"'1565,68,3,""Briza media"",2'",18.0
+24,"'1559,68,2,""Succisa pratensis"",6'",42.0
+24,"'1527,68,1,""Carex flacca"",6'",83.0
+24,"'1574,68,3,""Cynosurus cristatus"",6'",63.0
+24,"'1557,68,2,""Plantago lanceolata"",3'",63.0
+24,"'1585,68,3,""Prunella vulgaris"",1'",63.0
+24,"'1606,68,4,""Ranunculus acris"",2'",96.0
+24,"'1583,68,3,""Lychnis flos-cuculi"",1'",42.0
+24,"'1610,68,4,""Trifolium repens"",1'",42.0
+24,"'1599,68,4,""Equisetum species"",2'",96.0
+24,"'1537,68,1,""Plantago lanceolata"",3'",18.0
+24,"'1572,68,3,""Cirsium dissectum"",5'",0.3
+24,"'1544,68,1,""Trifolium pratense"",2'",8.0
+24,"'1,68,1,""Achillea millefolium"",2'",0.5
+24,"'1607,68,4,""Succisa pratensis"",3'",42.0
+24,"'1543,68,1,""Thalictrum flavum"",3'",42.0
+24,"'1531,68,1,""Cirsium palustre"",1'",42.0
+24,"'1538,68,1,""Primula veris"",2'",96.0
+24,"'1561,68,2,""Trifolium pratense"",2'",0.3
+24,"'1591,68,4,""Anthoxanthum odoratum"",3'",96.0
+24,"'1567,68,3,""Calliergonella cuspidata"",1'",42.0
+25,"'1607,68,4,""Succisa pratensis"",3'",0.5
+25,"'1589,68,3,""Trifolium pratense"",6'",0.1
+25,"'1598,68,4,""Deschampsia cespitosa"",2'",83.0
+25,"'1571,68,3,""Cerastium fontanum"",2'",0.1
+25,"'1525,68,1,""Campylium stellatum v. protensum"",0.1'",18.0
+25,"'1606,68,4,""Ranunculus acris"",2'",96.0
+25,"'1537,68,1,""Plantago lanceolata"",3'",30.0
+25,"'1576,68,3,""Euphrasia officinalis ag."",2'",63.0
+25,"'1531,68,1,""Cirsium palustre"",1'",8.0
+25,"'1550,68,2,""Equisetum species"",2'",0.1
+25,"'1559,68,2,""Succisa pratensis"",6'",83.0
+25,"'1534,68,1,""Euphrasia officinalis ag."",2'",18.0
+25,"'1569,68,3,""Carex panicea"",4'",42.0
+25,"'1601,68,4,""Filipendula ulmaria"",6'",0.3
+25,"'1532,68,1,""Dactylis glomerata"",2'",63.0
+25,"'1585,68,3,""Prunella vulgaris"",1'",0.1
+25,"'1547,68,2,""Carex panicea"",6'",83.0
+25,"'1554,68,2,""Fissidens adianthoides"",0.1'",3.0
+25,"'1584,68,3,""Plantago lanceolata"",5'",83.0
+25,"'1587,68,3,""Rhinanthus minor"",2'",96.0
+25,"'1523,68,1,""Briza media"",2'",63.0
+25,"'1521,68,1,""Angelica sylvestris"",3'",83.0
+25,"'1603,68,4,""Iris pseudacorus"",0.1'",96.0
+26,"'1564,68,3,""Bellis perennis"",2'",18.0
+26,"'1539,68,1,""Ranunculus acris"",3'",8.0
+26,"'1585,68,3,""Prunella vulgaris"",1'",0.3
+26,"'1595,68,4,""Cirsium dissectum"",2'",18.0
+26,"'1596,68,4,""Cirsium palustre"",1'",83.0
+26,"'1557,68,2,""Plantago lanceolata"",3'",18.0
+26,"'1604,68,4,""Molinia caerulea"",3'",0.3
+26,"'1536,68,1,""Helictotrichon pubescens"",4'",0.5
+26,"'1565,68,3,""Briza media"",2'",18.0
+26,"'1588,68,3,""Rumex acetosa"",2'",63.0
+26,"'1561,68,2,""Trifolium pratense"",2'",96.0
+26,"'1601,68,4,""Filipendula ulmaria"",6'",63.0
+26,"'1605,68,4,""Plantago lanceolata"",6'",18.0
+26,"'1528,68,1,""Carex panicea"",6'",42.0
+26,"'1534,68,1,""Euphrasia officinalis ag."",2'",96.0
+26,"'1544,68,1,""Trifolium pratense"",2'",0.1
+26,"'1540,68,1,""Ranunculus repens"",3'",42.0
+26,"'1562,68,2,""Valeriana officinalis"",2'",63.0
+26,"'1556,68,2,""Molinia caerulea"",7'",8.0
+26,"'1574,68,3,""Cynosurus cristatus"",6'",42.0
+26,"'1592,68,4,""Carex panicea"",6'",18.0
+27,"'1560,68,2,""Thalictrum flavum"",2'",0.3
+27,"'1607,68,4,""Succisa pratensis"",3'",63.0
+27,"'1570,68,3,""Centaurea nigra"",6'",63.0
+27,"'1575,68,3,""Equisetum species"",2'",63.0
+27,"'1584,68,3,""Plantago lanceolata"",5'",42.0
+27,"'1577,68,3,""Festuca pratensis"",5'",42.0
+27,"'1525,68,1,""Campylium stellatum v. protensum"",0.1'",83.0
+27,"'1562,68,2,""Valeriana officinalis"",2'",42.0
+27,"'1553,68,2,""Filipendula ulmaria"",4'",96.0
+27,"'1586,68,3,""Ranunculus acris"",5'",18.0
+27,"'1580,68,3,""Helictotrichon pubescens"",2'",3.0
+27,"'1596,68,4,""Cirsium palustre"",1'",83.0
+27,"'1551,68,2,""Euphrasia officinalis ag."",2'",18.0
+27,"'1587,68,3,""Rhinanthus minor"",2'",42.0
+27,"'1581,68,3,""Holcus lanatus"",3'",0.1
+27,"'1583,68,3,""Lychnis flos-cuculi"",1'",63.0
+27,"'1529,68,1,""Centaurea nigra"",3'",83.0
+27,"'1544,68,1,""Trifolium pratense"",2'",0.1
+27,"'1555,68,2,""Lophocolea bidentata"",0.1'",8.0
+27,"'1597,68,4,""Crepis capillaris"",2'",63.0
+27,"'1547,68,2,""Carex panicea"",6'",30.0
+28,"'1599,68,4,""Equisetum species"",2'",30.0
+28,"'1531,68,1,""Cirsium palustre"",1'",63.0
+28,"'1537,68,1,""Plantago lanceolata"",3'",3.0
+28,"'1601,68,4,""Filipendula ulmaria"",6'",63.0
+28,"'1587,68,3,""Rhinanthus minor"",2'",96.0
+28,"'1539,68,1,""Ranunculus acris"",3'",18.0
+28,"'1533,68,1,""Equisetum species"",2'",0.5
+28,"'1611,68,4,""Valeriana officinalis"",5'",0.3
+28,"'1534,68,1,""Euphrasia officinalis ag."",2'",0.1
+28,"'1552,68,2,""Festuca rubra"",5'",18.0
+28,"'1579,68,3,""Filipendula ulmaria"",6'",96.0
+28,"'1575,68,3,""Equisetum species"",2'",0.5
+28,"'1568,68,3,""Cardamine pratensis"",1'",0.5
+28,"'1582,68,3,""Luzula campestris"",1'",18.0
+28,"'1567,68,3,""Calliergonella cuspidata"",1'",3.0
+28,"'1524,68,1,""Calliergonella cuspidata"",4'",96.0
+28,"'1,68,1,""Achillea millefolium"",2'",30.0
+28,"'1600,68,4,""Festuca rubra"",6'",18.0
+28,"'1577,68,3,""Festuca pratensis"",5'",83.0
+28,"'1576,68,3,""Euphrasia officinalis ag."",2'",3.0
+28,"'1583,68,3,""Lychnis flos-cuculi"",1'",83.0
+28,"'1596,68,4,""Cirsium palustre"",1'",30.0
+28,"'1522,68,1,""Brachythecium mildeanum"",3'",83.0
+28,"'1544,68,1,""Trifolium pratense"",2'",63.0
+28,"'1556,68,2,""Molinia caerulea"",7'",42.0
+28,"'1574,68,3,""Cynosurus cristatus"",6'",0.5
+28,"'1527,68,1,""Carex flacca"",6'",0.3
+28,"'1538,68,1,""Primula veris"",2'",96.0
+29,"'1563,68,3,""Anthoxanthum odoratum"",4'",63.0
+29,"'1569,68,3,""Carex panicea"",4'",18.0
+29,"'1593,68,4,""Carex pulicaris"",0.1'",18.0
+29,"'1556,68,2,""Molinia caerulea"",7'",8.0
+29,"'1535,68,1,""Filipendula ulmaria"",4'",83.0
+29,"'1604,68,4,""Molinia caerulea"",3'",0.1
+29,"'1528,68,1,""Carex panicea"",6'",18.0
+29,"'1590,68,4,""Angelica sylvestris"",2'",18.0
+29,"'1568,68,3,""Cardamine pratensis"",1'",3.0
+29,"'1541,68,1,""Rhinanthus minor"",2'",42.0
+29,"'1,68,1,""Achillea millefolium"",2'",96.0
+29,"'1549,68,2,""Centaurea nigra"",4'",0.3
+29,"'1599,68,4,""Equisetum species"",2'",96.0
+29,"'1565,68,3,""Briza media"",2'",96.0
+29,"'1576,68,3,""Euphrasia officinalis ag."",2'",18.0
+29,"'1539,68,1,""Ranunculus acris"",3'",18.0
+29,"'1611,68,4,""Valeriana officinalis"",5'",30.0
+29,"'1522,68,1,""Brachythecium mildeanum"",3'",0.3
+29,"'1601,68,4,""Filipendula ulmaria"",6'",30.0
+29,"'1582,68,3,""Luzula campestris"",1'",0.3
+29,"'1557,68,2,""Plantago lanceolata"",3'",8.0
+29,"'1570,68,3,""Centaurea nigra"",6'",83.0
+29,"'1555,68,2,""Lophocolea bidentata"",0.1'",42.0
+29,"'1562,68,2,""Valeriana officinalis"",2'",42.0
+30,"'1569,68,3,""Carex panicea"",4'",96.0
+30,"'1579,68,3,""Filipendula ulmaria"",6'",18.0
+30,"'1559,68,2,""Succisa pratensis"",6'",63.0
+30,"'1562,68,2,""Valeriana officinalis"",2'",83.0
+30,"'1610,68,4,""Trifolium repens"",1'",63.0
+30,"'1589,68,3,""Trifolium pratense"",6'",3.0
+30,"'1568,68,3,""Cardamine pratensis"",1'",30.0
+30,"'1567,68,3,""Calliergonella cuspidata"",1'",83.0
+30,"'1545,68,2,""Brachythecium mildeanum"",0.1'",18.0
+30,"'1543,68,1,""Thalictrum flavum"",3'",42.0
+30,"'1552,68,2,""Festuca rubra"",5'",63.0
+30,"'1588,68,3,""Rumex acetosa"",2'",0.5
+30,"'1549,68,2,""Centaurea nigra"",4'",30.0
+30,"'1570,68,3,""Centaurea nigra"",6'",0.1
+30,"'1574,68,3,""Cynosurus cristatus"",6'",3.0
+30,"'1554,68,2,""Fissidens adianthoides"",0.1'",30.0
+30,"'1538,68,1,""Primula veris"",2'",0.1
+30,"'1541,68,1,""Rhinanthus minor"",2'",18.0
+30,"'1580,68,3,""Helictotrichon pubescens"",2'",96.0
+30,"'1564,68,3,""Bellis perennis"",2'",18.0
+30,"'1542,68,1,""Rhytidiadelphus squarrosus"",3'",18.0
+31,"'1571,68,3,""Cerastium fontanum"",2'",63.0
+31,"'1599,68,4,""Equisetum species"",2'",0.3
+31,"'1589,68,3,""Trifolium pratense"",6'",96.0
+31,"'1558,68,2,""Rhytidiadelphus squarrosus"",3'",0.5
+31,"'1556,68,2,""Molinia caerulea"",7'",18.0
+31,"'1524,68,1,""Calliergonella cuspidata"",4'",30.0
+31,"'1546,68,2,""Calliergonella cuspidata"",3'",30.0
+31,"'1530,68,1,""Cirsium dissectum"",5'",0.5
+31,"'1562,68,2,""Valeriana officinalis"",2'",8.0
+31,"'1566,68,3,""Bromopsis erecta"",5'",0.3
+31,"'1534,68,1,""Euphrasia officinalis ag."",2'",18.0
+31,"'1543,68,1,""Thalictrum flavum"",3'",96.0
+31,"'1572,68,3,""Cirsium dissectum"",5'",63.0
+31,"'1568,68,3,""Cardamine pratensis"",1'",63.0
+31,"'1600,68,4,""Festuca rubra"",6'",0.5
+31,"'1523,68,1,""Briza media"",2'",30.0
+31,"'1574,68,3,""Cynosurus cristatus"",6'",83.0
+31,"'1586,68,3,""Ranunculus acris"",5'",30.0
+31,"'1577,68,3,""Festuca pratensis"",5'",30.0
+31,"'1537,68,1,""Plantago lanceolata"",3'",3.0
+31,"'1,68,1,""Achillea millefolium"",2'",96.0
+31,"'1549,68,2,""Centaurea nigra"",4'",0.5
+31,"'1527,68,1,""Carex flacca"",6'",0.5
+31,"'1595,68,4,""Cirsium dissectum"",2'",30.0
+31,"'1596,68,4,""Cirsium palustre"",1'",0.3
+31,"'1521,68,1,""Angelica sylvestris"",3'",8.0
+32,"'1562,68,2,""Valeriana officinalis"",2'",30.0
+32,"'1581,68,3,""Holcus lanatus"",3'",0.3
+32,"'1578,68,3,""Festuca rubra"",5'",63.0
+32,"'1563,68,3,""Anthoxanthum odoratum"",4'",0.5
+32,"'1591,68,4,""Anthoxanthum odoratum"",3'",96.0
+32,"'1559,68,2,""Succisa pratensis"",6'",42.0
+32,"'1599,68,4,""Equisetum species"",2'",96.0
+32,"'1523,68,1,""Briza media"",2'",63.0
+32,"'1531,68,1,""Cirsium palustre"",1'",0.5
+32,"'1553,68,2,""Filipendula ulmaria"",4'",18.0
+32,"'1526,68,1,""Carex disticha"",5'",0.3
+32,"'1546,68,2,""Calliergonella cuspidata"",3'",83.0
+32,"'1566,68,3,""Bromopsis erecta"",5'",42.0
+32,"'1597,68,4,""Crepis capillaris"",2'",83.0
+32,"'1605,68,4,""Plantago lanceolata"",6'",8.0
+32,"'1,68,1,""Achillea millefolium"",2'",0.1
+32,"'1569,68,3,""Carex panicea"",4'",3.0
+32,"'1524,68,1,""Calliergonella cuspidata"",4'",0.3
+32,"'1529,68,1,""Centaurea nigra"",3'",83.0
+32,"'1545,68,2,""Brachythecium mildeanum"",0.1'",18.0
+32,"'1577,68,3,""Festuca pratensis"",5'",18.0
+32,"'1537,68,1,""Plantago lanceolata"",3'",63.0
+32,"'1604,68,4,""Molinia caerulea"",3'",96.0
+32,"'1538,68,1,""Primula veris"",2'",30.0
+32,"'1568,68,3,""Cardamine pratensis"",1'",8.0
+32,"'1608,68,4,""Taraxacum officinale ag."",1'",18.0
+32,"'1567,68,3,""Calliergonella cuspidata"",1'",0.3
+32,"'1575,68,3,""Equisetum species"",2'",0.5
+32,"'1541,68,1,""Rhinanthus minor"",2'",63.0
+33,"'1531,68,1,""Cirsium palustre"",1'",18.0
+33,"'1542,68,1,""Rhytidiadelphus squarrosus"",3'",30.0
+33,"'1575,68,3,""Equisetum species"",2'",42.0
+33,"'1592,68,4,""Carex panicea"",6'",0.1
+33,"'1570,68,3,""Centaurea nigra"",6'",96.0
+33,"'1565,68,3,""Briza media"",2'",0.1
+33,"'1532,68,1,""Dactylis glomerata"",2'",96.0
+33,"'1522,68,1,""Brachythecium mildeanum"",3'",96.0
+33,"'1577,68,3,""Festuca pratensis"",5'",96.0
+33,"'1607,68,4,""Succisa pratensis"",3'",96.0
+33,"'1601,68,4,""Filipendula ulmaria"",6'",42.0
+33,"'1567,68,3,""Calliergonella cuspidata"",1'",42.0
+33,"'1545,68,2,""Brachythecium mildeanum"",0.1'",18.0
+33,"'1539,68,1,""Ranunculus acris"",3'",63.0
+33,"'1572,68,3,""Cirsium dissectum"",5'",83.0
+33,"'1543,68,1,""Thalictrum flavum"",3'",0.3
+33,"'1541,68,1,""Rhinanthus minor"",2'",96.0
+33,"'1546,68,2,""Calliergonella cuspidata"",3'",0.1
+33,"'1547,68,2,""Carex panicea"",6'",8.0
+33,"'1596,68,4,""Cirsium palustre"",1'",83.0
+33,"'1536,68,1,""Helictotrichon pubescens"",4'",18.0
+33,"'1579,68,3,""Filipendula ulmaria"",6'",96.0
+33,"'1600,68,4,""Festuca rubra"",6'",30.0
+33,"'1528,68,1,""Carex panicea"",6'",42.0
+33,"'1578,68,3,""Festuca rubra"",5'",18.0
+34,"'1547,68,2,""Carex panicea"",6'",0.1
+34,"'1606,68,4,""Ranunculus acris"",2'",42.0
+34,"'1565,68,3,""Briza media"",2'",18.0
+34,"'1526,68,1,""Carex disticha"",5'",30.0
+34,"'1577,68,3,""Festuca pratensis"",5'",83.0
+34,"'1523,68,1,""Briza media"",2'",0.1
+34,"'1538,68,1,""Primula veris"",2'",8.0
+34,"'1534,68,1,""Euphrasia officinalis ag."",2'",8.0
+34,"'1592,68,4,""Carex panicea"",6'",18.0
+34,"'1529,68,1,""Centaurea nigra"",3'",18.0
+34,"'1583,68,3,""Lychnis flos-cuculi"",1'",83.0
+34,"'1588,68,3,""Rumex acetosa"",2'",96.0
+34,"'1562,68,2,""Valeriana officinalis"",2'",96.0
+34,"'1579,68,3,""Filipendula ulmaria"",6'",96.0
+34,"'1540,68,1,""Ranunculus repens"",3'",63.0
+34,"'1527,68,1,""Carex flacca"",6'",96.0
+34,"'1602,68,4,""Holcus lanatus"",3'",0.3
+34,"'1530,68,1,""Cirsium dissectum"",5'",63.0
+34,"'1555,68,2,""Lophocolea bidentata"",0.1'",18.0
+34,"'1580,68,3,""Helictotrichon pubescens"",2'",63.0
+34,"'1521,68,1,""Angelica sylvestris"",3'",8.0
+34,"'1584,68,3,""Plantago lanceolata"",5'",96.0
+34,"'1549,68,2,""Centaurea nigra"",4'",18.0
+34,"'1596,68,4,""Cirsium palustre"",1'",63.0
+34,"'1536,68,1,""Helictotrichon pubescens"",4'",8.0
+34,"'1533,68,1,""Equisetum species"",2'",30.0
+34,"'1532,68,1,""Dactylis glomerata"",2'",96.0
+34,"'1589,68,3,""Trifolium pratense"",6'",96.0
+35,"'1562,68,2,""Valeriana officinalis"",2'",96.0
+35,"'1572,68,3,""Cirsium dissectum"",5'",8.0
+35,"'1561,68,2,""Trifolium pratense"",2'",3.0
+35,"'1542,68,1,""Rhytidiadelphus squarrosus"",3'",30.0
+35,"'1536,68,1,""Helictotrichon pubescens"",4'",42.0
+35,"'1545,68,2,""Brachythecium mildeanum"",0.1'",63.0
+35,"'1575,68,3,""Equisetum species"",2'",83.0
+35,"'1552,68,2,""Festuca rubra"",5'",83.0
+35,"'1593,68,4,""Carex pulicaris"",0.1'",42.0
+35,"'1590,68,4,""Angelica sylvestris"",2'",30.0
+35,"'1580,68,3,""Helictotrichon pubescens"",2'",30.0
+35,"'1535,68,1,""Filipendula ulmaria"",4'",8.0
+35,"'1527,68,1,""Carex flacca"",6'",96.0
+35,"'1543,68,1,""Thalictrum flavum"",3'",96.0
+35,"'1566,68,3,""Bromopsis erecta"",5'",30.0
+35,"'1596,68,4,""Cirsium palustre"",1'",63.0
+35,"'1553,68,2,""Filipendula ulmaria"",4'",96.0
+35,"'1532,68,1,""Dactylis glomerata"",2'",96.0
+35,"'1538,68,1,""Primula veris"",2'",3.0
+35,"'1606,68,4,""Ranunculus acris"",2'",18.0
+36,"'1569,68,3,""Carex panicea"",4'",42.0
+36,"'1585,68,3,""Prunella vulgaris"",1'",83.0
+36,"'1525,68,1,""Campylium stellatum v. protensum"",0.1'",96.0
+36,"'1600,68,4,""Festuca rubra"",6'",0.3
+36,"'1571,68,3,""Cerastium fontanum"",2'",18.0
+36,"'1552,68,2,""Festuca rubra"",5'",42.0
+36,"'1575,68,3,""Equisetum species"",2'",3.0
+36,"'1559,68,2,""Succisa pratensis"",6'",18.0
+36,"'1586,68,3,""Ranunculus acris"",5'",30.0
+36,"'1536,68,1,""Helictotrichon pubescens"",4'",83.0
+36,"'1572,68,3,""Cirsium dissectum"",5'",96.0
+36,"'1522,68,1,""Brachythecium mildeanum"",3'",18.0
+36,"'1555,68,2,""Lophocolea bidentata"",0.1'",83.0
+36,"'1582,68,3,""Luzula campestris"",1'",0.5
+36,"'1547,68,2,""Carex panicea"",6'",63.0
+36,"'1529,68,1,""Centaurea nigra"",3'",18.0
+36,"'1546,68,2,""Calliergonella cuspidata"",3'",0.3
+36,"'1601,68,4,""Filipendula ulmaria"",6'",30.0
+36,"'1573,68,3,""Crepis capillaris"",4'",3.0
+36,"'1521,68,1,""Angelica sylvestris"",3'",63.0
+36,"'1587,68,3,""Rhinanthus minor"",2'",63.0
+36,"'1563,68,3,""Anthoxanthum odoratum"",4'",3.0
+36,"'1605,68,4,""Plantago lanceolata"",6'",0.3
+36,"'1580,68,3,""Helictotrichon pubescens"",2'",0.1
+37,"'1549,68,2,""Centaurea nigra"",4'",0.5
+37,"'1551,68,2,""Euphrasia officinalis ag."",2'",63.0
+37,"'1583,68,3,""Lychnis flos-cuculi"",1'",0.5
+37,"'1563,68,3,""Anthoxanthum odoratum"",4'",42.0
+37,"'1533,68,1,""Equisetum species"",2'",96.0
+37,"'1523,68,1,""Briza media"",2'",42.0
+37,"'1529,68,1,""Centaurea nigra"",3'",0.5
+37,"'1574,68,3,""Cynosurus cristatus"",6'",3.0
+37,"'1538,68,1,""Primula veris"",2'",83.0
+37,"'1585,68,3,""Prunella vulgaris"",1'",42.0
+37,"'1579,68,3,""Filipendula ulmaria"",6'",63.0
+37,"'1586,68,3,""Ranunculus acris"",5'",0.3
+37,"'1599,68,4,""Equisetum species"",2'",18.0
+37,"'1569,68,3,""Carex panicea"",4'",96.0
+37,"'1602,68,4,""Holcus lanatus"",3'",18.0
+37,"'1589,68,3,""Trifolium pratense"",6'",18.0
+37,"'1567,68,3,""Calliergonella cuspidata"",1'",42.0
+37,"'1603,68,4,""Iris pseudacorus"",0.1'",83.0
+37,"'1539,68,1,""Ranunculus acris"",3'",0.5
+37,"'1545,68,2,""Brachythecium mildeanum"",0.1'",3.0
+37,"'1571,68,3,""Cerastium fontanum"",2'",83.0
+37,"'1561,68,2,""Trifolium pratense"",2'",96.0
+37,"'1610,68,4,""Trifolium repens"",1'",96.0
+38,"'1535,68,1,""Filipendula ulmaria"",4'",96.0
+38,"'1575,68,3,""Equisetum species"",2'",42.0
+38,"'1587,68,3,""Rhinanthus minor"",2'",8.0
+38,"'1533,68,1,""Equisetum species"",2'",18.0
+38,"'1571,68,3,""Cerastium fontanum"",2'",96.0
+38,"'1570,68,3,""Centaurea nigra"",6'",83.0
+38,"'1603,68,4,""Iris pseudacorus"",0.1'",0.3
+38,"'1564,68,3,""Bellis perennis"",2'",0.3
+38,"'1583,68,3,""Lychnis flos-cuculi"",1'",3.0
+38,"'1572,68,3,""Cirsium dissectum"",5'",30.0
+38,"'1584,68,3,""Plantago lanceolata"",5'",0.5
+38,"'1608,68,4,""Taraxacum officinale ag."",1'",3.0
+38,"'1561,68,2,""Trifolium pratense"",2'",83.0
+38,"'1607,68,4,""Succisa pratensis"",3'",42.0
+38,"'1581,68,3,""Holcus lanatus"",3'",96.0
+38,"'1565,68,3,""Briza media"",2'",30.0
+38,"'1591,68,4,""Anthoxanthum odoratum"",3'",18.0
+38,"'1611,68,4,""Valeriana officinalis"",5'",3.0
+38,"'1582,68,3,""Luzula campestris"",1'",0.5
+38,"'1560,68,2,""Thalictrum flavum"",2'",3.0
+38,"'1546,68,2,""Calliergonella cuspidata"",3'",96.0
+38,"'1596,68,4,""Cirsium palustre"",1'",0.1
+39,"'1602,68,4,""Holcus lanatus"",3'",30.0
+39,"'1590,68,4,""Angelica sylvestris"",2'",18.0
+39,"'1551,68,2,""Euphrasia officinalis ag."",2'",8.0
+39,"'1605,68,4,""Plantago lanceolata"",6'",0.1
+39,"'1565,68,3,""Briza media"",2'",96.0
+39,"'1609,68,4,""Thalictrum flavum"",2'",63.0
+39,"'1571,68,3,""Cerastium fontanum"",2'",96.0
+39,"'1587,68,3,""Rhinanthus minor"",2'",96.0
+39,"'1580,68,3,""Helictotrichon pubescens"",2'",30.0
+39,"'1547,68,2,""Carex panicea"",6'",96.0
+39,"'1546,68,2,""Calliergonella cuspidata"",3'",42.0
+39,"'1578,68,3,""Festuca rubra"",5'",42.0
+39,"'1607,68,4,""Succisa pratensis"",3'",0.3
+39,"'1525,68,1,""Campylium stellatum v. protensum"",0.1'",8.0
+39,"'1593,68,4,""Carex pulicaris"",0.1'",96.0
+39,"'1589,68,3,""Trifolium pratense"",6'",0.3
+39,"'1521,68,1,""Angelica sylvestris"",3'",83.0
+39,"'1537,68,1,""Plantago lanceolata"",3'",18.0
+39,"'1606,68,4,""Ranunculus acris"",2'",3.0
+39,"'1610,68,4,""Trifolium repens"",1'",63.0
+39,"'1548,68,2,""Carex pulicaris"",5'",3.0
+39,"'1534,68,1,""Euphrasia officinalis ag."",2'",0.5
+39,"'1540,68,1,""Ranunculus repens"",3'",30.0
+39,"'1554,68,2,""Fissidens adianthoides"",0.1'",42.0
+39,"'1568,68,3,""Cardamine pratensis"",1'",18.0
+39,"'1552,68,2,""Festuca rubra"",5'",18.0
+39,"'1570,68,3,""Centaurea nigra"",6'",63.0
+39,"'1,68,1,""Achillea millefolium"",2'",0.5
+39,"'1563,68,3,""Anthoxanthum odoratum"",4'",0.1
+39,"'1533,68,1,""Equisetum species"",2'",42.0
+40,"'1539,68,1,""Ranunculus acris"",3'",8.0
+40,"'1608,68,4,""Taraxacum officinale ag."",1'",83.0
+40,"'1599,68,4,""Equisetum species"",2'",96.0
+40,"'1532,68,1,""Dactylis glomerata"",2'",42.0
+40,"'1535,68,1,""Filipendula ulmaria"",4'",63.0
+40,"'1554,68,2,""Fissidens adianthoides"",0.1'",0.1
+40,"'1543,68,1,""Thalictrum flavum"",3'",30.0
+40,"'1551,68,2,""Euphrasia officinalis ag."",2'",18.0
+40,"'1564,68,3,""Bellis perennis"",2'",42.0
+40,"'1567,68,3,""Calliergonella cuspidata"",1'",0.5
+40,"'1609,68,4,""Thalictrum flavum"",2'",0.3
+40,"'1541,68,1,""Rhinanthus minor"",2'",83.0
+40,"'1591,68,4,""Anthoxanthum odoratum"",3'",83.0
+40,"'1582,68,3,""Luzula campestris"",1'",0.3
+40,"'1571,68,3,""Cerastium fontanum"",2'",96.0
+40,"'1577,68,3,""Festuca pratensis"",5'",18.0
+40,"'1594,68,4,""Centaurea nigra"",3'",63.0
+40,"'1580,68,3,""Helictotrichon pubescens"",2'",18.0
+40,"'1586,68,3,""Ranunculus acris"",5'",42.0
+40,"'1557,68,2,""Plantago lanceolata"",3'",0.1
+40,"'1579,68,3,""Filipendula ulmaria"",6'",30.0
+40,"'1530,68,1,""Cirsium dissectum"",5'",30.0
+40,"'1602,68,4,""Holcus lanatus"",3'",63.0
+40,"'1544,68,1,""Trifolium pratense"",2'",0.5
+40,"'1534,68,1,""Euphrasia officinalis ag."",2'",96.0
+40,"'1550,68,2,""Equisetum species"",2'",96.0
+41,"'1590,68,4,""Angelica sylvestris"",2'",83.0
+41,"'1532,68,1,""Dactylis glomerata"",2'",30.0
+41,"'1528,68,1,""Carex panicea"",6'",18.0
+41,"'1550,68,2,""Equisetum species"",2'",8.0
+41,"'1583,68,3,""Lychnis flos-cuculi"",1'",3.0
+41,"'1530,68,1,""Cirsium dissectum"",5'",8.0
+41,"'1558,68,2,""Rhytidiadelphus squarrosus"",3'",18.0
+41,"'1592,68,4,""Carex panicea"",6'",18.0
+41,"'1609,68,4,""Thalictrum flavum"",2'",83.0
+41,"'1600,68,4,""Festuca rubra"",6'",0.5
+41,"'1589,68,3,""Trifolium pratense"",6'",63.0
+41,"'1527,68,1,""Carex flacca"",6'",0.5
+41,"'1598,68,4,""Deschampsia cespitosa"",2'",63.0
+41,"'1526,68,1,""Carex disticha"",5'",83.0
+41,"'1540,68,1,""Ranunculus repens"",3'",18.0
+41,"'1578,68,3,""Festuca rubra"",5'",0.5
+41,"'1560,68,2,""Thalictrum flavum"",2'",83.0
+41,"'1543,68,1,""Thalictrum flavum"",3'",0.5
+41,"'1586,68,3,""Ranunculus acris"",5'",42.0
+41,"'1604,68,4,""Molinia caerulea"",3'",96.0
+41,"'1551,68,2,""Euphrasia officinalis ag."",2'",96.0
+41,"'1599,68,4,""Equisetum species"",2'",8.0
+41,"'1577,68,3,""Festuca pratensis"",5'",96.0
+41,"'1597,68,4,""Crepis capillaris"",2'",8.0
+41,"'1533,68,1,""Equisetum species"",2'",63.0
+41,"'1594,68,4,""Centaurea nigra"",3'",63.0
+41,"'1595,68,4,""Cirsium dissectum"",2'",42.0
+41,"'1541,68,1,""Rhinanthus minor"",2'",18.0
+41,"'1573,68,3,""Crepis capillaris"",4'",96.0
+42,"'1542,68,1,""Rhytidiadelphus squarrosus"",3'",42.0
+42,"'1571,68,3,""Cerastium fontanum"",2'",18.0
+42,"'1597,68,4,""Crepis capillaris"",2'",83.0
+42,"'1566,68,3,""Bromopsis erecta"",5'",96.0
+42,"'1609,68,4,""Thalictrum flavum"",2'",30.0
+42,"'1588,68,3,""Rumex acetosa"",2'",0.3
+42,"'1601,68,4,""Filipendula ulmaria"",6'",8.0
+42,"'1604,68,4,""Molinia caerulea"",3'",18.0
+42,"'1524,68,1,""Calliergonella cuspidata"",4'",30.0
+42,"'1579,68,3,""Filipendula ulmaria"",6'",18.0
+42,"'1525,68,1,""Campylium stellatum v. protensum"",0.1'",63.0
+42,"'1586,68,3,""Ranunculus acris"",5'",83.0
+42,"'1,68,1,""Achillea millefolium"",2'",3.0
+42,"'1536,68,1,""Helictotrichon pubescens"",4'",63.0
+42,"'1539,68,1,""Ranunculus acris"",3'",42.0
+42,"'1576,68,3,""Euphrasia officinalis ag."",2'",63.0
+42,"'1522,68,1,""Brachythecium mildeanum"",3'",18.0
+42,"'1580,68,3,""Helictotrichon pubescens"",2'",30.0
+42,"'1548,68,2,""Carex pulicaris"",5'",42.0
+42,"'1526,68,1,""Carex disticha"",5'",83.0
+42,"'1572,68,3,""Cirsium dissectum"",5'",63.0
+42,"'1561,68,2,""Trifolium pratense"",2'",63.0
+43,"'1598,68,4,""Deschampsia cespitosa"",2'",30.0
+43,"'1581,68,3,""Holcus lanatus"",3'",0.1
+43,"'1521,68,1,""Angelica sylvestris"",3'",42.0
+43,"'1555,68,2,""Lophocolea bidentata"",0.1'",96.0
+43,"'1558,68,2,""Rhytidiadelphus squarrosus"",3'",63.0
+43,"'1585,68,3,""Prunella vulgaris"",1'",83.0
+43,"'1,68,1,""Achillea millefolium"",2'",30.0
+43,"'1582,68,3,""Luzula campestris"",1'",42.0
+43,"'1536,68,1,""Helictotrichon pubescens"",4'",3.0
+43,"'1597,68,4,""Crepis capillaris"",2'",63.0
+43,"'1565,68,3,""Briza media"",2'",18.0
+43,"'1535,68,1,""Filipendula ulmaria"",4'",18.0
+43,"'1561,68,2,""Trifolium pratense"",2'",42.0
+43,"'1576,68,3,""Euphrasia officinalis ag."",2'",96.0
+43,"'1584,68,3,""Plantago lanceolata"",5'",96.0
+43,"'1592,68,4,""Carex panicea"",6'",3.0
+43,"'1571,68,3,""Cerastium fontanum"",2'",83.0
+43,"'1608,68,4,""Taraxacum officinale ag."",1'",42.0
+43,"'1577,68,3,""Festuca pratensis"",5'",30.0
+43,"'1557,68,2,""Plantago lanceolata"",3'",0.1
+43,"'1543,68,1,""Thalictrum flavum"",3'",96.0
+43,"'1578,68,3,""Festuca rubra"",5'",83.0
+43,"'1551,68,2,""Euphrasia officinalis ag."",2'",8.0
+44,"'1583,68,3,""Lychnis flos-cuculi"",1'",83.0
+44,"'1527,68,1,""Carex flacca"",6'",83.0
+44,"'1601,68,4,""Filipendula ulmaria"",6'",0.1
+44,"'1550,68,2,""Equisetum species"",2'",42.0
+44,"'1580,68,3,""Helictotrichon pubescens"",2'",30.0
+44,"'1547,68,2,""Carex panicea"",6'",18.0
+44,"'1523,68,1,""Briza media"",2'",8.0
+44,"'1529,68,1,""Centaurea nigra"",3'",0.3
+44,"'1530,68,1,""Cirsium dissectum"",5'",30.0
+44,"'1552,68,2,""Festuca rubra"",5'",8.0
+44,"'1526,68,1,""Carex disticha"",5'",83.0
+44,"'1554,68,2,""Fissidens adianthoides"",0.1'",96.0
+44,"'1525,68,1,""Campylium stellatum v. protensum"",0.1'",42.0
+44,"'1541,68,1,""Rhinanthus minor"",2'",42.0
+44,"'1551,68,2,""Euphrasia officinalis ag."",2'",96.0
+44,"'1566,68,3,""Bromopsis erecta"",5'",63.0
+44,"'1546,68,2,""Calliergonella cuspidata"",3'",42.0
+44,"'1599,68,4,""Equisetum species"",2'",96.0
+44,"'1577,68,3,""Festuca pratensis"",5'",18.0
+44,"'1576,68,3,""Euphrasia officinalis ag."",2'",96.0
+45,"'1536,68,1,""Helictotrichon pubescens"",4'",30.0
+45,"'1594,68,4,""Centaurea nigra"",3'",63.0
+45,"'1555,68,2,""Lophocolea bidentata"",0.1'",0.3
+45,"'1553,68,2,""Filipendula ulmaria"",4'",3.0
+45,"'1545,68,2,""Brachythecium mildeanum"",0.1'",0.3
+45,"'1569,68,3,""Carex panicea"",4'",83.0
+45,"'1589,68,3,""Trifolium pratense"",6'",42.0
+45,"'1542,68,1,""Rhytidiadelphus squarrosus"",3'",0.1
+45,"'1579,68,3,""Filipendula ulmaria"",6'",8.0
+45,"'1604,68,4,""Molinia caerulea"",3'",0.3
+45,"'1601,68,4,""Filipendula ulmaria"",6'",42.0
+45,"'1559,68,2,""Succisa pratensis"",6'",96.0
+45,"'1562,68,2,""Valeriana officinalis"",2'",0.3
+45,"'1583,68,3,""Lychnis flos-cuculi"",1'",30.0
+45,"'1607,68,4,""Succisa pratensis"",3'",3.0
+45,"'1611,68,4,""Valeriana officinalis"",5'",63.0
+45,"'1582,68,3,""Luzula campestris"",1'",30.0
+45,"'1535,68,1,""Filipendula ulmaria"",4'",42.0
+45,"'1530,68,1,""Cirsium dissectum"",5'",0.5
+45,"'1610,68,4,""Trifolium repens"",1'",63.0
+45,"'1528,68,1,""Carex panicea"",6'",3.0
+45,"'1547,68,2,""Carex panicea"",6'",63.0
+46,"'1571,68,3,""Cerastium fontanum"",2'",42.0
+46,"'1525,68,1,""Campylium stellatum v. protensum"",0.1'",3.0
+46,"'1595,68,4,""Cirsium dissectum"",2'",0.1
+46,"'1565,68,3,""Briza media"",2'",63.0
+46,"'1530,68,1,""Cirsium dissectum"",5'",30.0
+46,"'1593,68,4,""Carex pulicaris"",0.1'",30.0
+46,"'1559,68,2,""Succisa pratensis"",6'",8.0
+46,"'1604,68,4,""Molinia caerulea"",3'",63.0
+46,"'1552,68,2,""Festuca rubra"",5'",18.0
+46,"'1545,68,2,""Brachythecium mildeanum"",0.1'",63.0
+46,"'1553,68,2,""Filipendula ulmaria"",4'",30.0
+46,"'1561,68,2,""Trifolium pratense"",2'",0.1
+46,"'1574,68,3,""Cynosurus cristatus"",6'",42.0
+46,"'1558,68,2,""Rhytidiadelphus squarrosus"",3'",3.0
+46,"'1531,68,1,""Cirsium palustre"",1'",30.0
+46,"'1601,68,4,""Filipendula ulmaria"",6'",96.0
+46,"'1586,68,3,""Ranunculus acris"",5'",30.0
+46,"'1575,68,3,""Equisetum species"",2'",30.0
+46,"'1577,68,3,""Festuca pratensis"",5'",30.0
+46,"'1566,68,3,""Bromopsis erecta"",5'",96.0
+46,"'1580,68,3,""Helictotrichon pubescens"",2'",42.0
+46,"'1582,68,3,""Luzula campestris"",1'",0.1
+46,"'1555,68,2,""Lophocolea bidentata"",0.1'",8.0
+47,"'1537,68,1,""Plantago lanceolata"",3'",18.0
+47,"'1569,68,3,""Carex panicea"",4'",30.0
+47,"'1532,68,1,""Dactylis glomerata"",2'",8.0
+47,"'1535,68,1,""Filipendula ulmaria"",4'",0.3
+47,"'1600,68,4,""Festuca rubra"",6'",30.0
+47,"'1526,68,1,""Carex disticha"",5'",96.0
+47,"'1562,68,2,""Valeriana officinalis"",2'",3.0
+47,"'1552,68,2,""Festuca rubra"",5'",63.0
+47,"'1603,68,4,""Iris pseudacorus"",0.1'",0.3
+47,"'1525,68,1,""Campylium stellatum v. protensum"",0.1'",0.3
+47,"'1571,68,3,""Cerastium fontanum"",2'",3.0
+47,"'1559,68,2,""Succisa pratensis"",6'",3.0
+47,"'1587,68,3,""Rhinanthus minor"",2'",18.0
+47,"'1555,68,2,""Lophocolea bidentata"",0.1'",0.5
+47,"'1522,68,1,""Brachythecium mildeanum"",3'",30.0
+47,"'1540,68,1,""Ranunculus repens"",3'",0.3
+47,"'1542,68,1,""Rhytidiadelphus squarrosus"",3'",83.0
+47,"'1595,68,4,""Cirsium dissectum"",2'",18.0
+47,"'1566,68,3,""Bromopsis erecta"",5'",3.0
+47,"'1597,68,4,""Crepis capillaris"",2'",83.0
+47,"'1582,68,3,""Luzula campestris"",1'",42.0
+47,"'1534,68,1,""Euphrasia officinalis ag."",2'",0.5
+47,"'1581,68,3,""Holcus lanatus"",3'",83.0
+47,"'1523,68,1,""Briza media"",2'",96.0
+47,"'1590,68,4,""Angelica sylvestris"",2'",83.0
+47,"'1533,68,1,""Equisetum species"",2'",96.0
+47,"'1574,68,3,""Cynosurus cristatus"",6'",63.0
+47,"'1521,68,1,""Angelica sylvestris"",3'",83.0
+47,"'1583,68,3,""Lychnis flos-cuculi"",1'",63.0
+48,"'1542,68,1,""Rhytidiadelphus squarrosus"",3'",83.0
+48,"'1561,68,2,""Trifolium pratense"",2'",63.0
+48,"'1587,68,3,""Rhinanthus minor"",2'",63.0
+48,"'1590,68,4,""Angelica sylvestris"",2'",30.0
+48,"'1588,68,3,""Rumex acetosa"",2'",63.0
+48,"'1521,68,1,""Angelica sylvestris"",3'",83.0
+48,"'1547,68,2,""Carex panicea"",6'",63.0
+48,"'1546,68,2,""Calliergonella cuspidata"",3'",18.0
+48,"'1567,68,3,""Calliergonella cuspidata"",1'",18.0
+48,"'1569,68,3,""Carex panicea"",4'",96.0
+48,"'1573,68,3,""Crepis capillaris"",4'",30.0
+48,"'1556,68,2,""Molinia caerulea"",7'",0.3
+48,"'1531,68,1,""Cirsium palustre"",1'",96.0
+48,"'1603,68,4,""Iris pseudacorus"",0.1'",0.5
+48,"'1578,68,3,""Festuca rubra"",5'",0.1
+48,"'1526,68,1,""Carex disticha"",5'",96.0
+48,"'1528,68,1,""Carex panicea"",6'",42.0
+48,"'1585,68,3,""Prunella vulgaris"",1'",18.0
+48,"'1586,68,3,""Ranunculus acris"",5'",96.0
+48,"'1535,68,1,""Filipendula ulmaria"",4'",42.0
+48,"'1540,68,1,""Ranunculus repens"",3'",0.3
+48,"'1534,68,1,""Euphrasia officinalis ag."",2'",0.3
+48,"'1580,68,3,""Helictotrichon pubescens"",2'",0.3
+48,"'1593,68,4,""Carex pulicaris"",0.1'",18.0
+48,"'1594,68,4,""Centaurea nigra"",3'",8.0
+49,"'1564,68,3,""Bellis perennis"",2'",42.0
+49,"'1529,68,1,""Centaurea nigra"",3'",42.0
+49,"'1580,68,3,""Helictotrichon pubescens"",2'",83.0
+49,"'1565,68,3,""Briza media"",2'",0.3
+49,"'1592,68,4,""Carex panicea"",6'",0.5
+49,"'1549,68,2,""Centaurea nigra"",4'",96.0
+49,"'1601,68,4,""Filipendula ulmaria"",6'",83.0
+49,"'1610,68,4,""Trifolium repens"",1'",63.0
+49,"'1589,68,3,""Trifolium pratense"",6'",0.1
+49,"'1534,68,1,""Euphrasia officinalis ag."",2'",30.0
+49,"'1591,68,4,""Anthoxanthum odoratum"",3'",63.0
+49,"'1555,68,2,""Lophocolea bidentata"",0.1'",63.0
+49,"'1521,68,1,""Angelica sylvestris"",3'",0.5
+49,"'1527,68,1,""Carex flacca"",6'",30.0
+49,"'1608,68,4,""Taraxacum officinale ag."",1'",18.0
+49,"'1584,68,3,""Plantago lanceolata"",5'",18.0
+49,"'1598,68,4,""Deschampsia cespitosa"",2'",42.0
+49,"'1572,68,3,""Cirsium dissectum"",5'",96.0
+49,"'1594,68,4,""Centaurea nigra"",3'",83.0
+49,"'1530,68,1,""Cirsium dissectum"",5'",96.0
+49,"'1532,68,1,""Dactylis glomerata"",2'",0.5
+49,"'1581,68,3,""Holcus lanatus"",3'",3.0
+49,"'1522,68,1,""Brachythecium mildeanum"",3'",30.0
+49,"'1606,68,4,""Ranunculus acris"",2'",30.0
+49,"'1577,68,3,""Festuca pratensis"",5'",42.0
+49,"'1525,68,1,""Campylium stellatum v. protensum"",0.1'",30.0
+49,"'1593,68,4,""Carex pulicaris"",0.1'",42.0
+49,"'1541,68,1,""Rhinanthus minor"",2'",83.0
+49,"'1590,68,4,""Angelica sylvestris"",2'",30.0
+50,"'1551,68,2,""Euphrasia officinalis ag."",2'",63.0
+50,"'1603,68,4,""Iris pseudacorus"",0.1'",8.0
+50,"'1541,68,1,""Rhinanthus minor"",2'",18.0
+50,"'1552,68,2,""Festuca rubra"",5'",30.0
+50,"'1586,68,3,""Ranunculus acris"",5'",0.3
+50,"'1608,68,4,""Taraxacum officinale ag."",1'",96.0
+50,"'1573,68,3,""Crepis capillaris"",4'",3.0
+50,"'1529,68,1,""Centaurea nigra"",3'",83.0
+50,"'1582,68,3,""Luzula campestris"",1'",0.3
+50,"'1569,68,3,""Carex panicea"",4'",3.0
+50,"'1525,68,1,""Campylium stellatum v. protensum"",0.1'",83.0
+50,"'1592,68,4,""Carex panicea"",6'",18.0
+50,"'1584,68,3,""Plantago lanceolata"",5'",63.0
+50,"'1588,68,3,""Rumex acetosa"",2'",63.0
+50,"'1557,68,2,""Plantago lanceolata"",3'",96.0
+50,"'1558,68,2,""Rhytidiadelphus squarrosus"",3'",30.0
+50,"'1578,68,3,""Festuca rubra"",5'",8.0
+50,"'1598,68,4,""Deschampsia cespitosa"",2'",96.0
+50,"'1539,68,1,""Ranunculus acris"",3'",0.1
+50,"'1597,68,4,""Crepis capillaris"",2'",63.0
+50,"'1542,68,1,""Rhytidiadelphus squarrosus"",3'",83.0
+50,"'1572,68,3,""Cirsium dissectum"",5'",83.0
+50,"'1546,68,2,""Calliergonella cuspidata"",3'",96.0
+50,"'1527,68,1,""Carex flacca"",6'",83.0
+50,"'1553,68,2,""Filipendula ulmaria"",4'",30.0
+50,"'1601,68,4,""Filipendula ulmaria"",6'",83.0
+50,"'1530,68,1,""Cirsium dissectum"",5'",0.1
+50,"'1604,68,4,""Molinia caerulea"",3'",3.0
+50,"'1607,68,4,""Succisa pratensis"",3'",63.0
+51,"'1536,68,1,""Helictotrichon pubescens"",4'",0.1
+51,"'1576,68,3,""Euphrasia officinalis ag."",2'",18.0
+51,"'1582,68,3,""Luzula campestris"",1'",96.0
+51,"'1526,68,1,""Carex disticha"",5'",42.0
+51,"'1534,68,1,""Euphrasia officinalis ag."",2'",30.0
+51,"'1601,68,4,""Filipendula ulmaria"",6'",30.0
+51,"'1606,68,4,""Ranunculus acris"",2'",0.1
+51,"'1568,68,3,""Cardamine pratensis"",1'",96.0
+51,"'1523,68,1,""Briza media"",2'",0.1
+51,"'1545,68,2,""Brachythecium mildeanum"",0.1'",42.0
+51,"'1599,68,4,""Equisetum species"",2'",96.0
+51,"'1537,68,1,""Plantago lanceolata"",3'",83.0
+51,"'1600,68,4,""Festuca rubra"",6'",42.0
+51,"'1558,68,2,""Rhytidiadelphus squarrosus"",3'",96.0
+51,"'1575,68,3,""Equisetum species"",2'",0.1
+51,"'1524,68,1,""Calliergonella cuspidata"",4'",0.1
+51,"'1562,68,2,""Valeriana officinalis"",2'",0.3
+51,"'1552,68,2,""Festuca rubra"",5'",0.5
+51,"'1561,68,2,""Trifolium pratense"",2'",3.0
+51,"'1535,68,1,""Filipendula ulmaria"",4'",0.1
+51,"'1543,68,1,""Thalictrum flavum"",3'",8.0
+51,"'1584,68,3,""Plantago lanceolata"",5'",63.0
+51,"'1604,68,4,""Molinia caerulea"",3'",30.0
+51,"'1550,68,2,""Equisetum species"",2'",30.0
+51,"'1553,68,2,""Filipendula ulmaria"",4'",83.0
+51,"'1554,68,2,""Fissidens adianthoides"",0.1'",0.3
+51,"'1548,68,2,""Carex pulicaris"",5'",96.0
+51,"'1527,68,1,""Carex flacca"",6'",30.0
+51,"'1579,68,3,""Filipendula ulmaria"",6'",83.0
+51,"'1521,68,1,""Angelica sylvestris"",3'",30.0
+52,"'1551,68,2,""Euphrasia officinalis ag."",2'",83.0
+52,"'1521,68,1,""Angelica sylvestris"",3'",30.0
+52,"'1557,68,2,""Plantago lanceolata"",3'",96.0
+52,"'1526,68,1,""Carex disticha"",5'",83.0
+52,"'1605,68,4,""Plantago lanceolata"",6'",8.0
+52,"'1529,68,1,""Centaurea nigra"",3'",96.0
+52,"'1607,68,4,""Succisa pratensis"",3'",8.0
+52,"'1549,68,2,""Centaurea nigra"",4'",30.0
+52,"'1524,68,1,""Calliergonella cuspidata"",4'",63.0
+52,"'1568,68,3,""Cardamine pratensis"",1'",83.0
+52,"'1592,68,4,""Carex panicea"",6'",0.1
+52,"'1611,68,4,""Valeriana officinalis"",5'",83.0
+52,"'1600,68,4,""Festuca rubra"",6'",83.0
+52,"'1561,68,2,""Trifolium pratense"",2'",0.1
+52,"'1603,68,4,""Iris pseudacorus"",0.1'",0.3
+52,"'1564,68,3,""Bellis perennis"",2'",0.1
+52,"'1550,68,2,""Equisetum species"",2'",30.0
+52,"'1593,68,4,""Carex pulicaris"",0.1'",0.5
+52,"'1555,68,2,""Lophocolea bidentata"",0.1'",42.0
+52,"'1553,68,2,""Filipendula ulmaria"",4'",63.0
+52,"'1581,68,3,""Holcus lanatus"",3'",83.0
+53,"'1552,68,2,""Festuca rubra"",5'",30.0
+53,"'1546,68,2,""Calliergonella cuspidata"",3'",83.0
+53,"'1541,68,1,""Rhinanthus minor"",2'",0.3
+53,"'1602,68,4,""Holcus lanatus"",3'",8.0
+53,"'1565,68,3,""Briza media"",2'",30.0
+53,"'1566,68,3,""Bromopsis erecta"",5'",3.0
+53,"'1579,68,3,""Filipendula ulmaria"",6'",0.1
+53,"'1521,68,1,""Angelica sylvestris"",3'",8.0
+53,"'1597,68,4,""Crepis capillaris"",2'",96.0
+53,"'1523,68,1,""Briza media"",2'",96.0
+53,"'1572,68,3,""Cirsium dissectum"",5'",96.0
+53,"'1594,68,4,""Centaurea nigra"",3'",96.0
+53,"'1529,68,1,""Centaurea nigra"",3'",3.0
+53,"'1585,68,3,""Prunella vulgaris"",1'",0.1
+53,"'1537,68,1,""Plantago lanceolata"",3'",96.0
+53,"'1553,68,2,""Filipendula ulmaria"",4'",83.0
+53,"'1533,68,1,""Equisetum species"",2'",96.0
+53,"'1605,68,4,""Plantago lanceolata"",6'",63.0
+53,"'1545,68,2,""Brachythecium mildeanum"",0.1'",63.0
+53,"'1527,68,1,""Carex flacca"",6'",3.0
+53,"'1590,68,4,""Angelica sylvestris"",2'",83.0
+53,"'1608,68,4,""Taraxacum officinale ag."",1'",42.0
+53,"'1547,68,2,""Carex panicea"",6'",0.1
+53,"'1571,68,3,""Cerastium fontanum"",2'",30.0
+53,"'1550,68,2,""Equisetum species"",2'",18.0
+53,"'1560,68,2,""Thalictrum flavum"",2'",8.0
+54,"'1535,68,1,""Filipendula ulmaria"",4'",83.0
+54,"'1555,68,2,""Lophocolea bidentata"",0.1'",3.0
+54,"'1531,68,1,""Cirsium palustre"",1'",30.0
+54,"'1572,68,3,""Cirsium dissectum"",5'",0.1
+54,"'1582,68,3,""Luzula campestris"",1'",42.0
+54,"'1526,68,1,""Carex disticha"",5'",96.0
+54,"'1523,68,1,""Briza media"",2'",0.1
+54,"'1604,68,4,""Molinia caerulea"",3'",3.0
+54,"'1596,68,4,""Cirsium palustre"",1'",42.0
+54,"'1603,68,4,""Iris pseudacorus"",0.1'",63.0
+54,"'1574,68,3,""Cynosurus cristatus"",6'",0.5
+54,"'1552,68,2,""Festuca rubra"",5'",42.0
+54,"'1541,68,1,""Rhinanthus minor"",2'",63.0
+54,"'1573,68,3,""Crepis capillaris"",4'",63.0
+54,"'1559,68,2,""Succisa pratensis"",6'",83.0
+54,"'1524,68,1,""Calliergonella cuspidata"",4'",30.0
+54,"'1598,68,4,""Deschampsia cespitosa"",2'",96.0
+54,"'1565,68,3,""Briza media"",2'",42.0
+54,"'1594,68,4,""Centaurea nigra"",3'",42.0
+54,"'1533,68,1,""Equisetum species"",2'",0.1
+54,"'1534,68,1,""Euphrasia officinalis ag."",2'",3.0
+54,"'1589,68,3,""Trifolium pratense"",6'",83.0
+55,"'1574,68,3,""Cynosurus cristatus"",6'",96.0
+55,"'1560,68,2,""Thalictrum flavum"",2'",18.0
+55,"'1577,68,3,""Festuca pratensis"",5'",83.0
+55,"'1599,68,4,""Equisetum species"",2'",8.0
+55,"'1595,68,4,""Cirsium dissectum"",2'",42.0
+55,"'1572,68,3,""Cirsium dissectum"",5'",3.0
+55,"'1542,68,1,""Rhytidiadelphus squarrosus"",3'",0.5
+55,"'1523,68,1,""Briza media"",2'",30.0
+55,"'1550,68,2,""Equisetum species"",2'",30.0
+55,"'1592,68,4,""Carex panicea"",6'",0.5
+55,"'1604,68,4,""Molinia caerulea"",3'",63.0
+55,"'1611,68,4,""Valeriana officinalis"",5'",30.0
+55,"'1591,68,4,""Anthoxanthum odoratum"",3'",18.0
+55,"'1562,68,2,""Valeriana officinalis"",2'",30.0
+55,"'1540,68,1,""Ranunculus repens"",3'",83.0
+55,"'1594,68,4,""Centaurea nigra"",3'",18.0
+55,"'1578,68,3,""Festuca rubra"",5'",3.0
+55,"'1570,68,3,""Centaurea nigra"",6'",8.0
+55,"'1538,68,1,""Primula veris"",2'",96.0
+55,"'1558,68,2,""Rhytidiadelphus squarrosus"",3'",83.0
+55,"'1556,68,2,""Molinia caerulea"",7'",83.0
+55,"'1576,68,3,""Euphrasia officinalis ag."",2'",8.0
+55,"'1593,68,4,""Carex pulicaris"",0.1'",30.0
+56,"'1534,68,1,""Euphrasia officinalis ag."",2'",30.0
+56,"'1525,68,1,""Campylium stellatum v. protensum"",0.1'",0.1
+56,"'1607,68,4,""Succisa pratensis"",3'",18.0
+56,"'1592,68,4,""Carex panicea"",6'",3.0
+56,"'1563,68,3,""Anthoxanthum odoratum"",4'",18.0
+56,"'1583,68,3,""Lychnis flos-cuculi"",1'",63.0
+56,"'1554,68,2,""Fissidens adianthoides"",0.1'",83.0
+56,"'1611,68,4,""Valeriana officinalis"",5'",18.0
+56,"'1550,68,2,""Equisetum species"",2'",0.3
+56,"'1555,68,2,""Lophocolea bidentata"",0.1'",30.0
+56,"'1581,68,3,""Holcus lanatus"",3'",63.0
+56,"'1580,68,3,""Helictotrichon pubescens"",2'",96.0
+56,"'1597,68,4,""Crepis capillaris"",2'",0.1
+56,"'1544,68,1,""Trifolium pratense"",2'",42.0
+56,"'1553,68,2,""Filipendula ulmaria"",4'",63.0
+56,"'1556,68,2,""Molinia caerulea"",7'",63.0
+56,"'1595,68,4,""Cirsium dissectum"",2'",30.0
+56,"'1543,68,1,""Thalictrum flavum"",3'",83.0
+56,"'1606,68,4,""Ranunculus acris"",2'",96.0
+56,"'1562,68,2,""Valeriana officinalis"",2'",0.5
+56,"'1586,68,3,""Ranunculus acris"",5'",0.1
+56,"'1552,68,2,""Festuca rubra"",5'",83.0
+56,"'1531,68,1,""Cirsium palustre"",1'",0.3
+56,"'1546,68,2,""Calliergonella cuspidata"",3'",42.0
+56,"'1536,68,1,""Helictotrichon pubescens"",4'",83.0
+56,"'1590,68,4,""Angelica sylvestris"",2'",96.0
+56,"'1582,68,3,""Luzula campestris"",1'",0.1
+57,"'1523,68,1,""Briza media"",2'",8.0
+57,"'1601,68,4,""Filipendula ulmaria"",6'",0.3
+57,"'1550,68,2,""Equisetum species"",2'",18.0
+57,"'1596,68,4,""Cirsium palustre"",1'",18.0
+57,"'1548,68,2,""Carex pulicaris"",5'",18.0
+57,"'1606,68,4,""Ranunculus acris"",2'",30.0
+57,"'1576,68,3,""Euphrasia officinalis ag."",2'",3.0
+57,"'1536,68,1,""Helictotrichon pubescens"",4'",30.0
+57,"'1544,68,1,""Trifolium pratense"",2'",63.0
+57,"'1525,68,1,""Campylium stellatum v. protensum"",0.1'",42.0
+57,"'1559,68,2,""Succisa pratensis"",6'",83.0
+57,"'1589,68,3,""Trifolium pratense"",6'",42.0
+57,"'1552,68,2,""Festuca rubra"",5'",63.0
+57,"'1541,68,1,""Rhinanthus minor"",2'",83.0
+57,"'1599,68,4,""Equisetum species"",2'",63.0
+57,"'1561,68,2,""Trifolium pratense"",2'",83.0
+57,"'1566,68,3,""Bromopsis erecta"",5'",83.0
+57,"'1565,68,3,""Briza media"",2'",63.0
+57,"'1556,68,2,""Molinia caerulea"",7'",0.1
+57,"'1611,68,4,""Valeriana officinalis"",5'",42.0
+57,"'1602,68,4,""Holcus lanatus"",3'",96.0
+57,"'1575,68,3,""Equisetum species"",2'",0.5
+57,"'1534,68,1,""Euphrasia officinalis ag."",2'",83.0
+57,"'1542,68,1,""Rhytidiadelphus squarrosus"",3'",18.0
+58,"'1,68,1,""Achillea millefolium"",2'",18.0
+58,"'1581,68,3,""Holcus lanatus"",3'",96.0
+58,"'1602,68,4,""Holcus lanatus"",3'",83.0
+58,"'1534,68,1,""Euphrasia officinalis ag."",2'",83.0
+58,"'1521,68,1,""Angelica sylvestris"",3'",18.0
+58,"'1611,68,4,""Valeriana officinalis"",5'",63.0
+58,"'1604,68,4,""Molinia caerulea"",3'",96.0
+58,"'1543,68,1,""Thalictrum flavum"",3'",8.0
+58,"'1568,68,3,""Cardamine pratensis"",1'",42.0
+58,"'1569,68,3,""Carex panicea"",4'",0.5
+58,"'1564,68,3,""Bellis perennis"",2'",18.0
+58,"'1588,68,3,""Rumex acetosa"",2'",0.1
+58,"'1572,68,3,""Cirsium dissectum"",5'",30.0
+58,"'1563,68,3,""Anthoxanthum odoratum"",4'",18.0
+58,"'1580,68,3,""Helictotrichon pubescens"",2'",30.0
+58,"'1531,68,1,""Cirsium palustre"",1'",63.0
+58,"'1524,68,1,""Calliergonella cuspidata"",4'",83.0
+58,"'1541,68,1,""Rhinanthus minor"",2'",83.0
+58,"'1535,68,1,""Filipendula ulmaria"",4'",0.1
+58,"'1585,68,3,""Prunella vulgaris"",1'",3.0
+58,"'1542,68,1,""Rhytidiadelphus squarrosus"",3'",96.0
+59,"'1599,68,4,""Equisetum species"",2'",42.0
+59,"'1548,68,2,""Carex pulicaris"",5'",96.0
+59,"'1529,68,1,""Centaurea nigra"",3'",18.0
+59,"'1582,68,3,""Luzula campestris"",1'",83.0
+59,"'1551,68,2,""Euphrasia officinalis ag."",2'",0.1
+59,"'1543,68,1,""Thalictrum flavum"",3'",0.1
+59,"'1524,68,1,""Calliergonella cuspidata"",4'",0.3
+59,"'1610,68,4,""Trifolium repens"",1'",8.0
+59,"'1590,68,4,""Angelica sylvestris"",2'",30.0
+59,"'1544,68,1,""Trifolium pratense"",2'",42.0
+59,"'1559,68,2,""Succisa pratensis"",6'",42.0
+59,"'1594,68,4,""Centaurea nigra"",3'",42.0
+59,"'1585,68,3,""Prunella vulgaris"",1'",42.0
+59,"'1536,68,1,""Helictotrichon pubescens"",4'",63.0
+59,"'1561,68,2,""Trifolium pratense"",2'",63.0
+59,"'1578,68,3,""Festuca rubra"",5'",0.1
+59,"'1570,68,3,""Centaurea nigra"",6'",0.3
+59,"'1547,68,2,""Carex panicea"",6'",96.0
+59,"'1606,68,4,""Ranunculus acris"",2'",18.0
+59,"'1538,68,1,""Primula veris"",2'",63.0
