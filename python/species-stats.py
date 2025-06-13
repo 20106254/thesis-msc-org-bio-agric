@@ -1,5 +1,6 @@
 import csv
 import sys
+import json
 from collections import defaultdict
 from datetime import datetime
 from pathlib import Path
@@ -14,7 +15,7 @@ def analyze_species_data(file_path):
     total_domin_score = 0.0
     
     try:
-        with open(file_path, mode='r') as csvfile:
+        with open(file_path, mode='r', encoding='utf-8') as csvfile:
             reader = csv.DictReader(csvfile)
             if not all(field in reader.fieldnames for field in ['RELEVE_ID', 'SPECIES_NAME', 'DOMIN']):
                 raise ValueError("CSV file must contain RELEVE_ID, SPECIES_NAME, and DOMIN columns")
@@ -67,52 +68,71 @@ def analyze_species_data(file_path):
     }
 
 def generate_html_report(results, input_filename, output_dir="../docs"):
-    """Generate an HTML report in the specified docs directory."""
+    """Generate an HTML report with pie charts for each relevé."""
     try:
-        # Create output directory if it doesn't exist
+        # Create output directory
         output_path = Path(output_dir)
         output_path.mkdir(exist_ok=True)
-        
-        # Create output filename
         input_path = Path(input_filename)
         output_file = output_path / f"{input_path.stem}_report.html"
 
         survey_data = []
         for releve_id, species_set in results['species_per_releve'].items():
-            max_info = results['max_per_survey'][releve_id]
+            # Calculate species proportions for pie chart
+            species_scores = {species: results['species_scores'][species] 
+                            for species in species_set}
+            total_score = sum(species_scores.values())
+            species_proportions = {k: (v/total_score)*100 
+                                 for k,v in species_scores.items()}
+            
             survey_data.append({
-                'id': int(releve_id),  # Convert to integer for sorting
+                'id': int(releve_id),
                 'count': len(species_set),
-                'species': ', '.join(sorted(species_set)),
-                'max_domin': max_info['score'],
-                'max_species': max_info['species']
+                'species_data': species_proportions,
+                'max_domin': max(species_scores.values()),
+                'max_species': max(species_scores.items(), 
+                                 key=lambda x: x[1])[0]
             })
         
-        # Numeric sort by Survey ID
+        # Numeric sort by Relevé ID
         survey_data.sort(key=lambda x: x['id'])
         
-        # Convert back to strings for display
-        for item in survey_data:
-            item['id'] = str(item['id'])
-        
+        # Generate table rows with pie charts
         table_rows = []
         for item in survey_data:
+            # Convert species data to JSON for JavaScript
+            species_json = json.dumps([
+                {'species': k, 'percentage': round(v, 2)} 
+                for k,v in sorted(item['species_data'].items(), 
+                                key=lambda x: -x[1])
+            ])
+            
             table_rows.append(
                 f"<tr>"
                 f"<td>{item['id']}</td>"
                 f"<td>{item['count']}</td>"
                 f"<td class='domin-score'>{item['max_domin']:.1f} ({item['max_species']})</td>"
-                f"<td>{item['species']}</td>"
+                f"<td><div id='pie-{item['id']}' class='pie-container'></div></td>"
+                f"<script>"
+                f"Plotly.newPlot('pie-{item['id']}', [{{"
+                f"values: {species_json}.map(x => x.percentage),"
+                f"labels: {species_json}.map(x => x.species),"
+                f"type: 'pie',"
+                f"textinfo: 'percent',"
+                f"hoverinfo: 'label+percent+value',"
+                f"}}], {{margin: {{t:0, b:0, l:0, r:0}}, showlegend: false}});"
+                f"</script>"
                 f"</tr>"
             )
         table_rows_html = "".join(table_rows)
-       
+        
         html_content = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Species Analysis Report</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <style>
         body {{
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -144,10 +164,6 @@ def generate_html_report(results, input_filename, output_dir="../docs"):
             flex: 1;
             min-width: 200px;
         }}
-        .highlight-card {{
-            background: #e3f2fd;
-            border-left: 4px solid #3498db;
-        }}
         table {{
             width: 100%;
             border-collapse: collapse;
@@ -161,19 +177,6 @@ def generate_html_report(results, input_filename, output_dir="../docs"):
         th {{
             background-color: #3498db;
             color: white;
-            cursor: pointer;
-            position: relative;
-        }}
-        th:hover {{
-            background-color: #2980b9;
-        }}
-        th.sort-asc::after {{
-            content: " ↑";
-            font-weight: bold;
-        }}
-        th.sort-desc::after {{
-            content: " ↓";
-            font-weight: bold;
         }}
         tr:nth-child(even) {{
             background-color: #f2f2f2;
@@ -181,6 +184,10 @@ def generate_html_report(results, input_filename, output_dir="../docs"):
         .domin-score {{
             font-weight: bold;
             color: #e53935;
+        }}
+        .pie-container {{
+            width: 300px;
+            height: 200px;
         }}
     </style>
 </head>
@@ -190,96 +197,38 @@ def generate_html_report(results, input_filename, output_dir="../docs"):
     
     <div class="summary-cards">
         <div class="card">
-            <h3>Total Surveys</h3>
+            <h3>Total Relevés</h3>
             <div class="card-value">{len(results['unique_releve_ids'])}</div>
         </div>
         <div class="card">
             <h3>Unique Species</h3>
             <div class="card-value">{len(results['unique_species'])}</div>
         </div>
-        <div class="card highlight-card">
+        <div class="card">
             <h3>Highest DOMIN Overall</h3>
             <div class="card-value">{results['top_species']}</div>
             <div class="domin-score">Score: {results['top_score']:.1f}</div>
         </div>
     </div>
     
-    <h2>Survey Summary</h2>
-    <table id="surveyTable">
+    <h2>Relevé Summary</h2>
+    <table>
         <thead>
             <tr>
-                <th onclick="sortTable(0)">Survey ID</th>
-                <th onclick="sortTable(1, true)">Unique Species Count</th>
-                <th onclick="sortTable(2, true)">Max DOMIN Score</th>
-                <th>Species List</th>
+                <th>Relevé ID</th>
+                <th>Species Count</th>
+                <th>Max DOMIN Score</th>
+                <th>Species Composition</th>
             </tr>
         </thead>
         <tbody>
             {table_rows_html}
         </tbody>
     </table>
-
-    <script>
-        let currentSortColumn = null;
-        let isAscending = true;
-        
-        function sortTable(column, isNumeric = false) {{
-            const table = document.getElementById("surveyTable");
-            const tbody = table.querySelector("tbody");
-            const rows = Array.from(tbody.querySelectorAll("tr"));
-            const headers = table.querySelectorAll("th");
-            
-            headers.forEach(header => {{
-                header.classList.remove("sort-asc", "sort-desc");
-            }});
-            
-            if (currentSortColumn === column) {{
-                isAscending = !isAscending;
-            }} else {{
-                currentSortColumn = column;
-                isAscending = true;
-            }}
-            
-            rows.sort((a, b) => {{
-                let aVal = a.cells[column].textContent.trim();
-                let bVal = b.cells[column].textContent.trim();
-                
-                if (column === 0) {{
-                    // Special handling for Survey ID
-                    aVal = parseInt(aVal);
-                    bVal = parseInt(bVal);
-                    return isAscending ? aVal - bVal : bVal - aVal;
-                }}
-                else if (column === 1 || column === 2) {{
-                    // For counts and DOMIN scores
-                    if (column === 2) {{
-                        aVal = parseFloat(aVal.split(' ')[0]);
-                        bVal = parseFloat(bVal.split(' ')[0]);
-                    }} else {{
-                        aVal = parseInt(aVal);
-                        bVal = parseInt(bVal);
-                    }}
-                    return isAscending ? aVal - bVal : bVal - aVal;
-                }}
-                
-                return isAscending 
-                    ? aVal.localeCompare(bVal) 
-                    : bVal.localeCompare(aVal);
-            }});
-            
-            rows.forEach(row => tbody.appendChild(row));
-            headers[column].classList.add(isAscending ? "sort-asc" : "sort-desc");
-        }}
-        
-        // Initial sort by Max DOMIN score (descending)
-        document.addEventListener('DOMContentLoaded', function() {{
-            sortTable(2, true);
-        }});
-    </script>
 </body>
-</html>"""       
+</html>"""
         
-        with open(output_file, 'w') as f:
+        with open(output_file, 'w', encoding='utf-8') as f:
             f.write(html_content)
         
         print(f"Successfully generated report: {output_file}")
@@ -302,11 +251,15 @@ if __name__ == "__main__":
             sys.exit(1)
             
         results = analyze_species_data(input_file)
+        if not results:
+            print("Error: No results returned from analysis")
+            sys.exit(1)
+            
         output_file = generate_html_report(results, input_file)
         
         if output_file:
             print("Report generation completed successfully!")
-            print(f"GitHub Pages URL: https://<your-username>.github.io/<repo-name>/docs/{input_path.stem}_report.html")
+            print(f"Open file://{Path(output_file).absolute()} in your browser")
         else:
             print("Report generation failed")
             sys.exit(1)
