@@ -7,8 +7,8 @@ from pathlib import Path
 
 def analyze_species_data(file_path):
     """Analyze species data and return comprehensive statistics."""
-    species_data = defaultdict(list)
-    species_scores = defaultdict(float)
+    species_data = defaultdict(list)  # Store raw records per relevé
+    species_scores = defaultdict(float)  # For overall species totals
     unique_species = set()
     species_per_releve = defaultdict(set)
     unique_releve_ids = set()
@@ -25,11 +25,13 @@ def analyze_species_data(file_path):
                 species_name = row['SPECIES_NAME']
                 domin_score = float(row['DOMIN'])
                 
+                # Store raw records for each relevé
                 species_data[releve_id].append({
                     'name': species_name,
                     'score': domin_score
                 })
                 
+                # Update overall statistics
                 species_scores[species_name] += domin_score
                 unique_species.add(species_name)
                 unique_releve_ids.add(releve_id)
@@ -43,18 +45,24 @@ def analyze_species_data(file_path):
     if not species_scores:
         raise ValueError("No valid data found in the file")
     
-    max_per_survey = {}
+    # Calculate max DOMIN and proportions PER RELEVÉ
+    releve_stats = {}
     for releve_id, records in species_data.items():
+        total_releve_score = sum(r['score'] for r in records)
         max_record = max(records, key=lambda x: x['score'])
-        max_per_survey[releve_id] = {
-            'species': max_record['name'],
-            'score': max_record['score']
+        
+        releve_stats[releve_id] = {
+            'species_proportions': {r['name']: r['score'] for r in records},
+            'max_domin': max_record['score'],
+            'max_species': max_record['name'],
+            'total_releve_score': total_releve_score
         }
     
     max_species = max(species_scores.items(), key=lambda x: x[1])
     avg_domin_per_species = total_domin_score / len(unique_species) if unique_species else 0
     
     return {
+        'releve_stats': releve_stats,
         'species_scores': species_scores,
         'top_species': max_species[0],
         'top_score': max_species[1],
@@ -63,35 +71,27 @@ def analyze_species_data(file_path):
         'unique_releve_ids': unique_releve_ids,
         'total_domin_score': total_domin_score,
         'avg_domin_per_species': avg_domin_per_species,
-        'timestamp': datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
-        'max_per_survey': max_per_survey
+        'timestamp': datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     }
 
 def generate_html_report(results, input_filename, output_dir="../docs"):
-    """Generate an HTML report with pie charts for each relevé."""
+    """Generate an HTML report with accurate pie charts for each relevé."""
     try:
-        # Create output directory
         output_path = Path(output_dir)
         output_path.mkdir(exist_ok=True)
         input_path = Path(input_filename)
         output_file = output_path / f"{input_path.stem}_report.html"
 
+        # Prepare survey data using per-relevé statistics
         survey_data = []
-        for releve_id, species_set in results['species_per_releve'].items():
-            # Calculate species proportions for pie chart
-            species_scores = {species: results['species_scores'][species] 
-                            for species in species_set}
-            total_score = sum(species_scores.values())
-            species_proportions = {k: (v/total_score)*100 
-                                 for k,v in species_scores.items()}
-            
+        for releve_id, stats in results['releve_stats'].items():
             survey_data.append({
                 'id': int(releve_id),
-                'count': len(species_set),
-                'species_data': species_proportions,
-                'max_domin': max(species_scores.values()),
-                'max_species': max(species_scores.items(), 
-                                 key=lambda x: x[1])[0]
+                'count': len(stats['species_proportions']),
+                'species_data': stats['species_proportions'],
+                'max_domin': stats['max_domin'],
+                'max_species': stats['max_species'],
+                'total_score': stats['total_releve_score']
             })
         
         # Numeric sort by Relevé ID
@@ -100,11 +100,14 @@ def generate_html_report(results, input_filename, output_dir="../docs"):
         # Generate table rows with pie charts
         table_rows = []
         for item in survey_data:
-            # Convert species data to JSON for JavaScript
+            # Sort species by dominance and convert to JSON
+            sorted_species = sorted(
+                item['species_data'].items(),
+                key=lambda x: -x[1]
+            )
             species_json = json.dumps([
-                {'species': k, 'percentage': round(v, 2)} 
-                for k,v in sorted(item['species_data'].items(), 
-                                key=lambda x: -x[1])
+                {'species': k, 'score': v} 
+                for k,v in sorted_species
             ])
             
             table_rows.append(
@@ -115,7 +118,7 @@ def generate_html_report(results, input_filename, output_dir="../docs"):
                 f"<td><div id='pie-{item['id']}' class='pie-container'></div></td>"
                 f"<script>"
                 f"Plotly.newPlot('pie-{item['id']}', [{{"
-                f"values: {species_json}.map(x => x.percentage),"
+                f"values: {species_json}.map(x => x.score),"
                 f"labels: {species_json}.map(x => x.species),"
                 f"type: 'pie',"
                 f"textinfo: 'percent',"
@@ -251,10 +254,6 @@ if __name__ == "__main__":
             sys.exit(1)
             
         results = analyze_species_data(input_file)
-        if not results:
-            print("Error: No results returned from analysis")
-            sys.exit(1)
-            
         output_file = generate_html_report(results, input_file)
         
         if output_file:
