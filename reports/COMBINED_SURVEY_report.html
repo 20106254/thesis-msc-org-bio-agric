@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Species Analysis Report</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        h1 {
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        .summary-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 20px;
+            flex: 1;
+            min-width: 200px;
+        }
+        .highlight-card {
+            background: #e3f2fd;
+            border-left: 4px solid #3498db;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+            cursor: pointer;
+            position: relative;
+        }
+        th:hover {
+            background-color: #2980b9;
+        }
+        th.sort-asc::after {
+            content: " ↑";
+            font-weight: bold;
+        }
+        th.sort-desc::after {
+            content: " ↓";
+            font-weight: bold;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .domin-score {
+            font-weight: bold;
+            color: #e53935;
+        }
+    </style>
+</head>
+<body>
+    <h1>Species Analysis Report</h1>
+    <p>Generated on: 2025-06-13 20:17:26</p>
+    
+    <div class="summary-cards">
+        <div class="card">
+            <h3>Total Surveys</h3>
+            <div class="card-value">55</div>
+        </div>
+        <div class="card">
+            <h3>Unique Species</h3>
+            <div class="card-value">84</div>
+        </div>
+        <div class="card highlight-card">
+            <h3>Highest DOMIN Overall</h3>
+            <div class="card-value">Filipendula ulmaria</div>
+            <div class="domin-score">Score: 164.4</div>
+        </div>
+    </div>
+    
+    <h2>Survey Summary</h2>
+    <table id="surveyTable">
+        <thead>
+            <tr>
+                <th onclick="sortTable(0)">Survey ID</th>
+                <th onclick="sortTable(1, true)">Unique Species Count</th>
+                <th onclick="sortTable(2, true)">Max DOMIN Score</th>
+                <th>Species List</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>1</td><td>6</td><td class='domin-score'>7.0 (Agrostis Stolonifera)</td><td>Agrostis Stolonifera, Dactylis Glomerata, Lolium Perenne, Ranunculus Repens, Stellaria Media, Taraxacum Aggregate</td></tr><tr><td>2</td><td>7</td><td class='domin-score'>9.0 (Agrostis Stolonifera)</td><td>Agrostis Stolonifera, Cerastium Fontanum, Lolium Perenne, Ranunculus Acris, Ranunculus Repens, Rumex Obtusifolius, Taraxacum Aggregate</td></tr><tr><td>3</td><td>7</td><td class='domin-score'>8.0 (Phragmites Australis)</td><td>Agrostis Stolonifera, Dactylis Glomerata, Deschampsia Cepitosa, Juncus Inflexus, Phragmites Australis, Poa Trivialis, Ranunculus repens</td></tr><tr><td>4</td><td>4</td><td class='domin-score'>8.0 (Agrostis Stolonifera)</td><td>Agrostis Stolonifera, Lolium Perenne, Phragmites Australis, Rumex Obtusifolius</td></tr><tr><td>5</td><td>6</td><td class='domin-score'>6.0 (Agrostis Capillaris)</td><td>Agrostis Capillaris, Agrostis Stolonifera, Cerastium Fontanum, Cirsium Arvense, Ranunculus Acris, Taraxacum Aggregate</td></tr><tr><td>6</td><td>4</td><td class='domin-score'>9.0 (Agrostis Stolonifera)</td><td>Agrostis Stolonifera, Cerastium Fontanum, Lolium Perenne, Ranunculus Repens</td></tr><tr><td>7</td><td>3</td><td class='domin-score'>9.0 (Agrostis Stolonifera)</td><td>Agrostis Stolonifera, Lolium Perenne, Taraxacum aggregate</td></tr><tr><td>8</td><td>9</td><td class='domin-score'>7.0 (Agrostis Stolonifera)</td><td>Agrostis Stolonifera, Cerastium Fontanum, Cirsium Arvense, Lolium Perenne, Poa Annua, Ranunculus Acris, Ranunculus Repens, Taraxacum Aggregate, Trifolium Repens</td></tr><tr><td>9</td><td>5</td><td class='domin-score'>5.0 (Holcus Lanatus)</td><td>Cirsium Arvense, Festuca Rubra, Holcus Lanatus, Molinea Cerulea, Rumex Obtusifolius</td></tr><tr><td>10</td><td>4</td><td class='domin-score'>8.0 (Alopercurus Pratensis)</td><td>Agrostis Stolonifera, Alopercurus Pratensis, Cirsium Arvense, Ranunculus Repens</td></tr><tr><td>28</td><td>7</td><td class='domin-score'>7.0 (Holcus lanatus)</td><td>Anthoxanthum odoratum, Bromus hordeaceus, Cardamine pratensis, Holcus lanatus, Lolium perenne, Poa pratensis, Ranunculus repens</td></tr><tr><td>30</td><td>8</td><td class='domin-score'>8.0 (Bromus hordeaceus)</td><td>Anthoxanthum odoratum, Bromus hordeaceus, Cardamine pratensis, Cerastium fontanum, Holcus lanatus, Lolium perenne, Poa trivialis, Ranunculus repens</td></tr><tr><td>31</td><td>10</td><td class='domin-score'>8.0 (Anthoxanthum odoratum)</td><td>Anthoxanthum odoratum, Cardamine pratensis, Cerastium fontanum, Festuca rubra, Holcus lanatus, Lolium perenne, Poa trivialis, Ranunculus repens, Rumex acetosa, Taraxacum officinale</td></tr><tr><td>32</td><td>6</td><td class='domin-score'>8.0 (Holcus lanatus)</td><td>Alopecurus pratensis, Anthoxanthum odoratum, Cardamine pratensis, Dactylis glomerata, Holcus lanatus, Poa trivialis</td></tr><tr><td>33</td><td>8</td><td class='domin-score'>8.0 (Anthoxanthum odoratum)</td><td>Anthoxanthum odoratum, Cardamine pratensis, Carex dioica, Cerastium fontanum, Festuca rubra, Filipendula ulmaria, Holcus lanatus, Ranunculus repens</td></tr><tr><td>34</td><td>3</td><td class='domin-score'>9.0 (Phragmites australis)</td><td>Phragmites australis, Poa trivialis, Ranunculus repens</td></tr><tr><td>35</td><td>6</td><td class='domin-score'>9.0 (Holcus lanatus)</td><td>Bromus hordeaceus, Cardamine pratensis, Holcus lanatus, Poa trivialis, Rumex obtusifolius, Taraxacum officinale</td></tr><tr><td>36</td><td>7</td><td class='domin-score'>9.0 (Holcus lanatus)</td><td>Bromus hordeaceus, Cardamine pratensis, Filipendula ulmaria, Holcus lanatus, Poa pratensis, Ranunculus repens, Taraxacum officinale</td></tr><tr><td>37</td><td>4</td><td class='domin-score'>9.0 (Holcus lanatus)</td><td>Bromus hordeaceus, Holcus lanatus, Poa trivialis, Ranunculus repens</td></tr><tr><td>38</td><td>8</td><td class='domin-score'>7.0 (Holcus lanatus)</td><td>Anthoxanthum odoratum, Bromus hordeaceus, Cerastium fontanum, Filipendula ulmaria, Holcus lanatus, Lolium multiflorum, Poa trivialis, Ranunculus acris</td></tr><tr><td>39</td><td>7</td><td class='domin-score'>7.0 (Filipendula ulmaria)</td><td>Carex flacca, Eupatorium cannabinum, Festuca rubra, Filipendula ulmaria, Plantago lanceolata, Ranunculus acris, Silene vulgaris</td></tr><tr><td>40</td><td>10</td><td class='domin-score'>7.0 (Carex acutiformis)</td><td>Anthoxanthum odoratum, Caltha palustris, Cardamine pratensis, Carex acutiformis, Carex nigra, Festuca rubra, Filipendula ulmaria, Galium palustre, Holcus lanatus, Phragmites australis</td></tr><tr><td>41</td><td>8</td><td class='domin-score'>8.0 (Carex flacca)</td><td>Anthoxanthum odoratum, Carex flacca, Centaurea nigra, Festuca rubra, Filipendula ulmaria, Hypochaeris radicata, Plantago lanceolata, Taraxacum officinale</td></tr><tr><td>42</td><td>5</td><td class='domin-score'>8.0 (Carex flacca)</td><td>Anthoxanthum odoratum, Carex flacca, Festuca rubra, Filipendula ulmaria, Veronica chamaedrys</td></tr><tr><td>43</td><td>5</td><td class='domin-score'>7.0 (Festuca rubra)</td><td>Anthoxanthum odoratum, Festuca rubra, Filipendula ulmaria, Plantago lanceolata, Plantago major</td></tr><tr><td>44</td><td>6</td><td class='domin-score'>8.0 (Festuca rubra)</td><td>Caltha palustris, Festuca rubra, Filipendula ulmaria, Galium palustre, Juncus acutiflorus, Phragmites australis</td></tr><tr><td>45</td><td>6</td><td class='domin-score'>9.0 (Festuca rubra)</td><td>Cirsium palustre, Equisetum palustre, Festuca rubra, Filipendula ulmaria, Iris pseudacorus, Plantago lanceolata</td></tr><tr><td>46</td><td>8</td><td class='domin-score'>7.0 (Filipendula ulmaria)</td><td>Anthoxanthum odoratum, Carex flacca, Centaurea nigra, Cirsium palustre, Festuca rubra, Filipendula ulmaria, Holcus lanatus, Plantago lanceolata</td></tr><tr><td>47</td><td>7</td><td class='domin-score'>7.0 (Festuca rubra)</td><td>Carex nigra, Cirsium dissectum, Festuca rubra, Filipendula ulmaria, Holcus lanatus, Plantago lanceolata, Poa trivialis</td></tr><tr><td>48</td><td>8</td><td class='domin-score'>7.0 (Filipendula ulmaria)</td><td>Anthoxanthum odoratum, Carex flacca, Centaurea nigra, Equisetum palustre, Festuca rubra, Filipendula ulmaria, Plantago lanceolata, Taraxacum officinale</td></tr><tr><td>49</td><td>7</td><td class='domin-score'>7.0 (Festuca rubra)</td><td>Anthoxanthum odoratum, Carex flacca, Centaurea nigra, Equisetum palustre, Festuca rubra, Filipendula ulmaria, Holcus lanatus</td></tr><tr><td>50</td><td>13</td><td class='domin-score'>5.0 (Filipendula ulmaria)</td><td>Anthoxanthum odoratum, Cardamine pratensis, Carex acutiformis, Carex flacca, Cerastium fontanum, Festuca rubra, Filipendula ulmaria, Holcus lanatus, Plantago lanceolata, Ranunculus acris, Ranunculus repens, Rumex acetosa, Taraxacum officinale</td></tr><tr><td>51</td><td>17</td><td class='domin-score'>8.0 (Cirsium dissectum)</td><td>Anthoxanthum odoratum, Briza media, Carex acutiformis, Carex flacca, Centaurea nigra, Cirsium dissectum, Dactylis glomerata, Equisetum arvense, Filipendula ulmaria, Holcus lanatus, Ophioglossum vulgatum, Plantago lanceolata, Poa pratensis, Ranunculus acris, Ranunculus repens, Trifolium repens, Valeriana officinalis</td></tr><tr><td>52</td><td>15</td><td class='domin-score'>6.0 (Filipendula ulmaria)</td><td>Anthoxanthum odoratum, Bromus hordeaceus, Carex flacca, Centaurea nigra, Cirsium palustre, Equisetum arvense, Filipendula ulmaria, Holcus lanatus, Juncus acutiflorus, Ophioglossum vulgatum, Plantago lanceolata, Ranunculus acris, Silene flos-cuculi, Taraxacum officinale, Thalictrum flavum</td></tr><tr><td>53</td><td>15</td><td class='domin-score'>9.0 (Carex flacca)</td><td>Anthoxanthum odoratum, Carex flacca, Carex nigra, Cirsium dissectum, Deschampsia cespitosa, Equisetum arvense, Equisetum palustre, Filipendula ulmaria, Holcus lanatus, Plantago lanceolata, Ranunculus flammula, Ranunculus repens, Succisa pratensis, Taraxacum officinale, Thalictrum flavum</td></tr><tr><td>54</td><td>13</td><td class='domin-score'>7.0 (Carex flacca)</td><td>Arrhenatherum elatius, Caltha palustris, Carex flacca, Carex nigra, Centaurea nigra, Equisetum arvense, Filipendula ulmaria, Iris pseudacorus, Ophioglossum vulgatum, Phragmites australis, Plantago lanceolata, Ranunculus flammula, Thalictrum flavum</td></tr><tr><td>55</td><td>14</td><td class='domin-score'>8.0 (Carex flacca)</td><td>Anthoxanthum odoratum, Briza media, Carex flacca, Carex nigra, Centaurea nigra, Cirsium dissectum, Equisetum arvense, Filipendula ulmaria, Holcus lanatus, Ophioglossum vulgatum, Phragmites australis, Plantago lanceolata, Ranunculus repens, Trifolium repens</td></tr><tr><td>56</td><td>12</td><td class='domin-score'>9.0 (Carex flacca)</td><td>Anthoxanthum odoratum, Carex flacca, Centaurea nigra, Equisetum arvense, Filipendula ulmaria, Galium palustre, Holcus lanatus, Ophioglossum vulgatum, Plantago lanceolata, Ranunculus acris, Succisa pratensis, Valeriana officinalis</td></tr><tr><td>57</td><td>11</td><td class='domin-score'>7.0 (Carex flacca)</td><td>Anthoxanthum odoratum, Cardamine pratensis, Carex flacca, Carex nigra, Filipendula ulmaria, Holcus lanatus, Juncus effusus, Phragmites australis, Ranunculus acris, Ranunculus repens, Rhinanthus minor</td></tr><tr><td>58</td><td>13</td><td class='domin-score'>7.0 (Filipendula ulmaria)</td><td>Anthoxanthum odoratum, Cardamine pratensis, Carex flacca, Carex nigra, Cirsium dissectum, Filipendula ulmaria, Galium palustre, Holcus lanatus, Juncus effusus, Poa trivialis, Ranunculus acris, Ranunculus flammula, Ranunculus repens</td></tr><tr><td>59</td><td>18</td><td class='domin-score'>6.0 (Filipendula ulmaria)</td><td>Anthoxanthum odoratum, Caltha palustris, Carex flacca, Centaurea nigra, Equisetum arvense, Festuca rubra, Filipendula ulmaria, Holcus lanatus, Iris pseudacorus, Juncus effusus, Lychnis flos-cuculi, Ophioglossum vulgatum, Plantago lanceolata, Poa pratensis, Ranunculus flammula, Ranunculus repens, Taraxacum officinale, Trifolium repens</td></tr><tr><td>60</td><td>15</td><td class='domin-score'>8.0 (Filipendula ulmaria)</td><td>Anthoxanthum odoratum, Caltha palustris, Cardamine pratensis, Carex flacca, Carex nigra, Cerastium fontanum, Equisetum arvense, Filipendula ulmaria, Galium palustre, Holcus lanatus, Lychnis flos-cuculi, Plantago lanceolata, Ranunculus acris, Ranunculus repens, Trifolium repens</td></tr><tr><td>61</td><td>12</td><td class='domin-score'>7.0 (Carex flacca)</td><td>Anthoxanthum odoratum, Cardamine pratensis, Carex flacca, Cirsium dissectum, Equisetum arvense, Filipendula ulmaria, Holcus lanatus, Plantago lanceolata, Poa trivialis, Ranunculus acris, Thalictrum flavum, Trifolium repens</td></tr><tr><td>62</td><td>15</td><td class='domin-score'>8.0 (Plantago lanceolata)</td><td>Anthoxanthum odoratum, Carex flacca, Centaurea nigra, Cerastium fontanum, Cynosurus cristatus, Dactylis glomerata, Filipendula ulmaria, Galium palustre, Holcus lanatus, Plantago lanceolata, Poa pratensis, Poa trivialis, Ranunculus acris, Ranunculus repens, Trifolium repens</td></tr><tr><td>63</td><td>18</td><td class='domin-score'>6.0 (Filipendula ulmaria)</td><td>Bromopsis ramosa, Carex flacca, Centaurea nigra, Cerastium fontanum, Cirsium dissectum, Dactylis glomerata, Equisetum arvense, Festuca rubra, Filipendula ulmaria, Holcus lanatus, Juncus effusus, Juncus inflexus, Orchis mascula, Plantago lanceolata, Poa pratensis, Ranunculus acris, Ranunculus repens, Trifolium repens</td></tr><tr><td>64</td><td>14</td><td class='domin-score'>7.0 (Carex flacca)</td><td>Anthoxanthum odoratum, Briza media, Carex flacca, Cerastium fontanum, Cirsium dissectum, Equisetum palustre, Festuca rubra, Filipendula ulmaria, Holcus lanatus, Plantago lanceolata, Poa pratensis, Ranunculus acris, Ranunculus repens, Trifolium repens</td></tr><tr><td>65</td><td>10</td><td class='domin-score'>8.0 (Holcus lanatus)</td><td>Anthoxanthum odoratum, Bromus hordeaceus, Centaurea nigra, Filipendula ulmaria, Holcus lanatus, Plantago lanceolata, Poa pratensis, Ranunculus acris, Ranunculus repens, Taraxacum officinale</td></tr><tr><td>66</td><td>16</td><td class='domin-score'>8.0 (Holcus lanatus)</td><td>Anthoxanthum odoratum, Briza media, Bromus hordeaceus, Carex flacca, Cirsium dissectum, Dactylis glomerata, Dactylorhiza fuchsii, Equisetum arvense, Filipendula ulmaria, Holcus lanatus, Plantago lanceolata, Poa trivialis, Ranunculus acris, Scorzoneroides autumnalis, Taraxacum officinale, Trifolium repens</td></tr><tr><td>67</td><td>15</td><td class='domin-score'>7.0 (Holcus lanatus)</td><td>Anthoxanthum odoratum, Briza media, Carex flacca, Centaurea nigra, Cirsium dissectum, Dactylis glomerata, Dactylorhiza fuchsii, Filipendula ulmaria, Holcus lanatus, Plantago lanceolata, Poa trivialis, Ranunculus bulbosus, Ranunculus repens, Taraxacum officinale, Trifolium repens</td></tr><tr><td>68</td><td>15</td><td class='domin-score'>6.0 (Plantago lanceolata)</td><td>Angelica sylvestris, Anthoxanthum odoratum, Briza media, Carex flacca, Centaurea nigra, Dactylis glomerata, Equisetum arvense, Festuca rubra, Filipendula ulmaria, Holcus lanatus, Hypochaeris radicata, Plantago lanceolata, Succisa pratensis, Trifolium repens, Valeriana officinalis</td></tr><tr><td>69</td><td>15</td><td class='domin-score'>8.0 (Holcus lanatus)</td><td>Angelica sylvestris, Anthoxanthum odoratum, Briza media, Carex flacca, Centaurea nigra, Dactylis glomerata, Deschampsia cespitosa, Equisetum arvense, Festuca rubra, Filipendula ulmaria, Holcus lanatus, Lotus corniculatus, Plantago lanceolata, Primula veris, Succisa pratensis</td></tr><tr><td>70</td><td>14</td><td class='domin-score'>8.0 (Plantago lanceolata)</td><td>Angelica sylvestris, Anthoxanthum odoratum, Carex flacca, Centaurea nigra, Dactylis glomerata, Festuca rubra, Filipendula ulmaria, Holcus lanatus, Lotus corniculatus, Plantago lanceolata, Poa pratensis, Ranunculus acris, Succisa pratensis, Taraxacum officinale</td></tr><tr><td>71</td><td>16</td><td class='domin-score'>6.0 (Ranunculus repens)</td><td>Anthoxanthum odoratum, Carex flacca, Centaurea nigra, Dactylis glomerata, Equisetum arvense, Festuca rubra, Filipendula ulmaria, Holcus lanatus, Linum catharticum, Lotus corniculatus, Plantago lanceolata, Poa trivialis, Ranunculus acris, Ranunculus repens, Taraxacum officinale, Valeriana officinalis</td></tr><tr><td>72</td><td>21</td><td class='domin-score'>6.0 (Carex flacca)</td><td>Angelica sylvestris, Briza media, Carex flacca, Centaurea nigra, Cirsium dissectum, Cirsium palustre, Dactylis glomerata, Dactylorhiza fuchsii, Equisetum arvense, Festuca rubra, Filipendula ulmaria, Holcus lanatus, Linum catharticum, Plantago lanceolata, Poa pratensis, Primula veris, Ranunculus acris, Ranunculus repens, Succisa pratensis, Trifolium repens, Valeriana officinalis</td></tr><tr><td>73</td><td>17</td><td class='domin-score'>7.0 (Briza media)</td><td>Angelica sylvestris, Anthoxanthum odoratum, Briza media, Carex flacca, Cirsium dissectum, Dactylorhiza fuchsii, Equisetum arvense, Festuca rubra, Filipendula ulmaria, Holcus lanatus, Lotus corniculatus, Ophioglossum vulgatum, Plantago lanceolata, Ranunculus acris, Ranunculus repens, Succisa pratensis, Trifolium repens</td></tr>
+        </tbody>
+    </table>
+
+    <script>
+        let currentSortColumn = null;
+        let isAscending = true;
+        
+        function sortTable(column, isNumeric = false) {
+            const table = document.getElementById("surveyTable");
+            const tbody = table.querySelector("tbody");
+            const rows = Array.from(tbody.querySelectorAll("tr"));
+            const headers = table.querySelectorAll("th");
+            
+            // Reset all headers
+            headers.forEach(header => {
+                header.classList.remove("sort-asc", "sort-desc");
+            });
+            
+            // If clicking same column, reverse direction
+            if (currentSortColumn === column) {
+                isAscending = !isAscending;
+            } else {
+                currentSortColumn = column;
+                isAscending = true;
+            }
+            
+            // Sort the rows
+            rows.sort((a, b) => {
+                let aVal = a.cells[column].textContent.trim();
+                let bVal = b.cells[column].textContent.trim();
+                
+                // For Max DOMIN column, extract just the numeric value
+                if (column === 2) {
+                    aVal = aVal.split(' ')[0];
+                    bVal = bVal.split(' ')[0];
+                }
+                
+                if (isNumeric || column === 2) {
+                    return isAscending 
+                        ? Number(aVal) - Number(bVal) 
+                        : Number(bVal) - Number(aVal);
+                } else {
+                    return isAscending 
+                        ? aVal.localeCompare(bVal) 
+                        : bVal.localeCompare(aVal);
+                }
+            });
+            
+            // Rebuild the table
+            rows.forEach(row => tbody.appendChild(row));
+            
+            // Update the header
+            headers[column].classList.add(isAscending ? "sort-asc" : "sort-desc");
+        }
+        
+        // Initial sort by Max DOMIN score (descending)
+        document.addEventListener('DOMContentLoaded', function() {
+            sortTable(2, true);
+        });
+    </script>
+</body>
+</html>

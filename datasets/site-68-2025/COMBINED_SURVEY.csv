@@ -1,59 +1,59 @@
 RELEVE_ID,SPECIES_NAME,GRID_NO,DOMIN
-1,'Cock's Foot (Dactylis Glomerata)',1,4
-1,'Creeping Bentgrass (Agrostis Stolonifera)',1,7
-1,'Perennial Ryegrass (Lolium Perenne)',1,7
-1,'Creeping Buttercup (Ranunculus Repens)',1,0.1
-1,'Chickweed (Stellaria Media),1,0.1
-1,'Dandelion (Taraxacum Aggregate),1,0.1
-2,'Creeping Bentgrass (Agrostis Stolonifera)',1,9
-2,'Perennial Ryegrass (Lolium Perenne)',1,3
-2,'Dock (Rumex Obtusifolius)',1,5
-2,'Creeping Buttercup (Ranunculus Repens)',1,0.1
-2,'Dandelion (Taraxacum Aggregate),1,4
-2,'Meadow Buttercup (Ranunculus Acris),1,0.1
-2,'Mouse Ear (Cerastium Fontanum),1,0.1
-3,'Tufted Hair-grass (Deschampsia Cepitosa),2,3
-3,'Creeping Bentgrass (Agrostis Stolonifera)',2,6
-3,'Common Reed (Phragmites Australis)',2,8
-3,'Rough Meadowgrass (Poa Trivialis)',2,3
-3,'Cock's Foot (Dactylis Glomerata)',2,3
-3,'Creeping Buttercup (Ranunculus repens)',2,0.1
-3,'Hard Rush (Juncus Inflexus)',2,8
-4,'Common Reed (Phragmites Australis)',2,3
-4,'Perennial Ryegrass (Lolium Perenne)',2,4
-4,'Dock (Rumex Obtusifolius)',2,0.1
-4,'Creeping Bentgrass (Agrostis Stolonifera)',2,8
-5,'Creeping Bentgrass (Agrostis Stolonifera)',2,4
-5,'Common Bent (Agrostis Capillaris)',2,6
-5,'Creeping Thistle (Cirsium Arvense)',2,6
-5,'Meadow Buttercup (Ranunculus Acris),2,0.1
-5,'Mouse Ear (Cerastium Fontanum),2,0.1
-5,'Dandelion (Taraxacum Aggregate),2,4 
-6,'Creeping Bentgrass (Agrostis Stolonifera)',3,9
-6,'Perennial Ryegrass (Lolium Perenne)',3,5
-6,'Mouse Ear (Cerastium Fontanum),3,0.1
-6,'Creeping Buttercup (Ranunculus Repens)',3,0.1
-7,'Creeping Bentgrass (Agrostis Stolonifera)',4,9
-7,'Perennial Ryegrass (Lolium Perenne)',4,5
-7,'Dandelion (Taraxacum aggregate),4,3
-8,'Creeping Bentgrass (Agrostis Stolonifera)',5,7
-8,'White Clover (Trifolium Repens),5,5
-8,'Annual Meadow Grass (Poa Annua),5,4
-8,'Perennial Ryegrass (Lolium Perenne)',5,7
-8,'Creeping Buttercup (Ranunculus Repens)',5,0.1
-8,'Creeping Thistle (Cirsium Arvense)',5,0.1
-8,'Mouse Rar (Cerastium Fontanum),5,0.1
-8,'Dandelion (Taraxacum Aggregate),5,0.1
-8,'Meadow Buttercup (Ranunculus Acris),5,0.1
-9,'Yorkshire Fog (Holcus Lanatus)',6,5
-9,'Purple Moor Grass (Molinea Cerulea)',6,4
-9,'Red Fescue (Festuca Rubra),6,4
-9,'Dock (Rumex Obtusifolius)',6,2
-9,'Creeping Thistle (Cirsium Arvense)',6,3
-10,'Meadow Foxtail (Alopercurus Pratensis)',6,8
-10,'Creeping Bentgrass (Agrostis Stolonifera)',6,3
-10,'Creeping Thistle (Cirsium Arvense)',6,3
-10,'Creeping Buttercup (Ranunculus Repens)',6,7
+1,Dactylis Glomerata,1,4
+1,Agrostis Stolonifera,1,7
+1,Lolium Perenne,1,7
+1,Ranunculus Repens,1,0.1
+1,Stellaria Media,1,0.1
+1,Taraxacum Aggregate,1,0.1
+2,Agrostis Stolonifera,1,9
+2,Lolium Perenne,1,3
+2,Rumex Obtusifolius,1,5
+2,Ranunculus Repens,1,0.1
+2,Taraxacum Aggregate,1,4
+2,Ranunculus Acris,1,0.1
+2,Cerastium Fontanum,1,0.1
+3,Deschampsia Cepitosa,2,3
+3,Agrostis Stolonifera,2,6
+3,Phragmites Australis,2,8
+3,Poa Trivialis,2,3
+3,Dactylis Glomerata,2,3
+3,Ranunculus repens,2,0.1
+3,Juncus Inflexus,2,8
+4,Phragmites Australis,2,3
+4,Lolium Perenne,2,4
+4,Rumex Obtusifolius,2,0.1
+4,Agrostis Stolonifera,2,8
+5,Agrostis Stolonifera,2,4
+5,Agrostis Capillaris,2,6
+5,Cirsium Arvense,2,6
+5,Ranunculus Acris,2,0.1
+5,Cerastium Fontanum,2,0.1
+5,Taraxacum Aggregate,2,4 
+6,Agrostis Stolonifera,3,9
+6,Lolium Perenne,3,5
+6,Cerastium Fontanum,3,0.1
+6,Ranunculus Repens,3,0.1
+7,Agrostis Stolonifera,4,9
+7,Lolium Perenne,4,5
+7,Taraxacum aggregate,4,3
+8,Agrostis Stolonifera,5,7
+8,Trifolium Repens,5,5
+8,Poa Annua,5,4
+8,Lolium Perenne,5,7
+8,Ranunculus Repens,5,0.1
+8,Cirsium Arvense,5,0.1
+8,Cerastium Fontanum,5,0.1
+8,Taraxacum Aggregate,5,0.1
+8,Ranunculus Acris,5,0.1
+9,Holcus Lanatus,6,5
+9,Molinea Cerulea,6,4
+9,Festuca Rubra,6,4
+9,Rumex Obtusifolius,6,2
+9,Cirsium Arvense,6,3
+10,Alopercurus Pratensis,6,8
+10,Agrostis Stolonifera,6,3
+10,Cirsium Arvense,6,3
+10,Ranunculus Repens,6,7
 28,Anthoxanthum odoratum,2,4
 28,Holcus lanatus,2,7
 28,Poa pratensis,2,0.1
