@@ -77,7 +77,7 @@
 </head>
 <body>
     <h1>Species Analysis Report</h1>
-    <p>Generated on: 2025-06-13 20:17:26</p>
+    <p>Generated on: 2025-06-13 21:04:05</p>
     
     <div class="summary-cards">
         <div class="card">
@@ -120,12 +120,10 @@
             const rows = Array.from(tbody.querySelectorAll("tr"));
             const headers = table.querySelectorAll("th");
             
-            // Reset all headers
             headers.forEach(header => {
                 header.classList.remove("sort-asc", "sort-desc");
             });
             
-            // If clicking same column, reverse direction
             if (currentSortColumn === column) {
                 isAscending = !isAscending;
             } else {
@@ -133,32 +131,34 @@
                 isAscending = true;
             }
             
-            // Sort the rows
             rows.sort((a, b) => {
                 let aVal = a.cells[column].textContent.trim();
                 let bVal = b.cells[column].textContent.trim();
                 
-                // For Max DOMIN column, extract just the numeric value
-                if (column === 2) {
-                    aVal = aVal.split(' ')[0];
-                    bVal = bVal.split(' ')[0];
+                if (column === 0) {
+                    // Special handling for Survey ID
+                    aVal = parseInt(aVal);
+                    bVal = parseInt(bVal);
+                    return isAscending ? aVal - bVal : bVal - aVal;
+                }
+                else if (column === 1 || column === 2) {
+                    // For counts and DOMIN scores
+                    if (column === 2) {
+                        aVal = parseFloat(aVal.split(' ')[0]);
+                        bVal = parseFloat(bVal.split(' ')[0]);
+                    } else {
+                        aVal = parseInt(aVal);
+                        bVal = parseInt(bVal);
+                    }
+                    return isAscending ? aVal - bVal : bVal - aVal;
                 }
                 
-                if (isNumeric || column === 2) {
-                    return isAscending 
-                        ? Number(aVal) - Number(bVal) 
-                        : Number(bVal) - Number(aVal);
-                } else {
-                    return isAscending 
-                        ? aVal.localeCompare(bVal) 
-                        : bVal.localeCompare(aVal);
-                }
+                return isAscending 
+                    ? aVal.localeCompare(bVal) 
+                    : bVal.localeCompare(aVal);
             });
             
-            // Rebuild the table
             rows.forEach(row => tbody.appendChild(row));
-            
-            // Update the header
             headers[column].classList.add(isAscending ? "sort-asc" : "sort-desc");
         }
         

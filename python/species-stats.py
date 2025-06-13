@@ -6,7 +6,7 @@ from pathlib import Path
 
 def analyze_species_data(file_path):
     """Analyze species data and return comprehensive statistics."""
-    species_data = defaultdict(list)  # Store all species records per survey
+    species_data = defaultdict(list)
     species_scores = defaultdict(float)
     unique_species = set()
     species_per_releve = defaultdict(set)
@@ -24,13 +24,11 @@ def analyze_species_data(file_path):
                 species_name = row['SPECIES_NAME']
                 domin_score = float(row['DOMIN'])
                 
-                # Store all records for finding max per survey
                 species_data[releve_id].append({
                     'name': species_name,
                     'score': domin_score
                 })
                 
-                # Update overall statistics
                 species_scores[species_name] += domin_score
                 unique_species.add(species_name)
                 unique_releve_ids.add(releve_id)
@@ -44,7 +42,6 @@ def analyze_species_data(file_path):
     if not species_scores:
         raise ValueError("No valid data found in the file")
     
-    # Find max species per survey
     max_per_survey = {}
     for releve_id, records in species_data.items():
         max_record = max(records, key=lambda x: x['score'])
@@ -69,31 +66,35 @@ def analyze_species_data(file_path):
         'max_per_survey': max_per_survey
     }
 
-def generate_html_report(results, input_filename, output_file=None):
-    """Generate an HTML report with enhanced sorting and DOMIN scores."""
+def generate_html_report(results, input_filename, output_dir="../docs"):
+    """Generate an HTML report in the specified docs directory."""
     try:
-        # Set default output filename if not specified
-        if output_file is None:
-            input_path = Path(input_filename)
-            output_file = input_path.with_name(f"{input_path.stem}_report.html")
-
-        # Prepare survey data
-        survey_data = []
+        # Create output directory if it doesn't exist
+        output_path = Path(output_dir)
+        output_path.mkdir(exist_ok=True)
         
+        # Create output filename
+        input_path = Path(input_filename)
+        output_file = output_path / f"{input_path.stem}_report.html"
+
+        survey_data = []
         for releve_id, species_set in results['species_per_releve'].items():
             max_info = results['max_per_survey'][releve_id]
             survey_data.append({
-                'id': releve_id,
+                'id': int(releve_id),  # Convert to integer for sorting
                 'count': len(species_set),
                 'species': ', '.join(sorted(species_set)),
                 'max_domin': max_info['score'],
                 'max_species': max_info['species']
             })
         
-        # Sort by Survey ID numerically
-        survey_data.sort(key=lambda x: int(x['id']))
+        # Numeric sort by Survey ID
+        survey_data.sort(key=lambda x: x['id'])
         
-        # Generate table rows
+        # Convert back to strings for display
+        for item in survey_data:
+            item['id'] = str(item['id'])
+        
         table_rows = []
         for item in survey_data:
             table_rows.append(
@@ -105,8 +106,7 @@ def generate_html_report(results, input_filename, output_file=None):
                 f"</tr>"
             )
         table_rows_html = "".join(table_rows)
-        
-        # Define the complete HTML content
+       
         html_content = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -229,12 +229,10 @@ def generate_html_report(results, input_filename, output_file=None):
             const rows = Array.from(tbody.querySelectorAll("tr"));
             const headers = table.querySelectorAll("th");
             
-            // Reset all headers
             headers.forEach(header => {{
                 header.classList.remove("sort-asc", "sort-desc");
             }});
             
-            // If clicking same column, reverse direction
             if (currentSortColumn === column) {{
                 isAscending = !isAscending;
             }} else {{
@@ -242,32 +240,34 @@ def generate_html_report(results, input_filename, output_file=None):
                 isAscending = true;
             }}
             
-            // Sort the rows
             rows.sort((a, b) => {{
                 let aVal = a.cells[column].textContent.trim();
                 let bVal = b.cells[column].textContent.trim();
                 
-                // For Max DOMIN column, extract just the numeric value
-                if (column === 2) {{
-                    aVal = aVal.split(' ')[0];
-                    bVal = bVal.split(' ')[0];
+                if (column === 0) {{
+                    // Special handling for Survey ID
+                    aVal = parseInt(aVal);
+                    bVal = parseInt(bVal);
+                    return isAscending ? aVal - bVal : bVal - aVal;
+                }}
+                else if (column === 1 || column === 2) {{
+                    // For counts and DOMIN scores
+                    if (column === 2) {{
+                        aVal = parseFloat(aVal.split(' ')[0]);
+                        bVal = parseFloat(bVal.split(' ')[0]);
+                    }} else {{
+                        aVal = parseInt(aVal);
+                        bVal = parseInt(bVal);
+                    }}
+                    return isAscending ? aVal - bVal : bVal - aVal;
                 }}
                 
-                if (isNumeric || column === 2) {{
-                    return isAscending 
-                        ? Number(aVal) - Number(bVal) 
-                        : Number(bVal) - Number(aVal);
-                }} else {{
-                    return isAscending 
-                        ? aVal.localeCompare(bVal) 
-                        : bVal.localeCompare(aVal);
-                }}
+                return isAscending 
+                    ? aVal.localeCompare(bVal) 
+                    : bVal.localeCompare(aVal);
             }});
             
-            // Rebuild the table
             rows.forEach(row => tbody.appendChild(row));
-            
-            // Update the header
             headers[column].classList.add(isAscending ? "sort-asc" : "sort-desc");
         }}
         
@@ -277,7 +277,7 @@ def generate_html_report(results, input_filename, output_file=None):
         }});
     </script>
 </body>
-</html>"""
+</html>"""       
         
         with open(output_file, 'w') as f:
             f.write(html_content)
@@ -296,7 +296,8 @@ if __name__ == "__main__":
     
     input_file = sys.argv[1]
     try:
-        if not Path(input_file).exists():
+        input_path = Path(input_file)
+        if not input_path.exists():
             print(f"Error: Input file '{input_file}' not found")
             sys.exit(1)
             
@@ -305,7 +306,7 @@ if __name__ == "__main__":
         
         if output_file:
             print("Report generation completed successfully!")
-            print(f"Open '{output_file}' in your browser")
+            print(f"GitHub Pages URL: https://<your-username>.github.io/<repo-name>/docs/{input_path.stem}_report.html")
         else:
             print("Report generation failed")
             sys.exit(1)
