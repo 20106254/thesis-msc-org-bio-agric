@@ -7,6 +7,7 @@ def analyze_species_data(file_path):
     species_scores = defaultdict(float)
     unique_species = set()
     species_per_releve = defaultdict(set)
+    unique_releve_ids = set()
     
     try:
         with open(file_path, mode='r') as csvfile:
@@ -22,6 +23,7 @@ def analyze_species_data(file_path):
                 # Update overall statistics
                 species_scores[species_name] += domin_score
                 unique_species.add(species_name)
+                unique_releve_ids.add(releve_id)
                 
                 # Update per-RELEVE_ID statistics
                 species_per_releve[releve_id].add(species_name)
@@ -38,7 +40,7 @@ def analyze_species_data(file_path):
         sys.exit(1)
     
     max_species = max(species_scores.items(), key=lambda x: x[1])
-    return species_scores, max_species, unique_species, species_per_releve
+    return species_scores, max_species, unique_species, species_per_releve, unique_releve_ids
 
 def main():
     if len(sys.argv) != 2:
@@ -47,10 +49,11 @@ def main():
     
     file_path = sys.argv[1]
     results = analyze_species_data(file_path)
-    species_scores, (top_species, top_score), unique_species, species_per_releve = results
+    species_scores, (top_species, top_score), unique_species, species_per_releve, unique_releve_ids = results
     
     # Print overall statistics
     print("\n=== Overall Species Analysis ===")
+    print(f"Total number of unique surveys (RELEVE_ID): {len(unique_releve_ids)}")
     print(f"Total unique species across all surveys: {len(unique_species)}")
     print(f"Species with highest combined DOMIN score: {top_species} ({top_score:.1f})")
     

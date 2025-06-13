@@ -1,0 +1,554 @@
+RELEVE_ID,SPECIES_NAME,GRID_NO,DOMIN
+1,'Cock's Foot (Dactylis Glomerata)',1,4
+1,'Creeping Bentgrass (Agrostis Stolonifera)',1,7
+1,'Perennial Ryegrass (Lolium Perenne)',1,7
+1,'Creeping Buttercup (Ranunculus Repens)',1,0.1
+1,'Chickweed (Stellaria Media),1,0.1
+1,'Dandelion (Taraxacum Aggregate),1,0.1
+2,'Creeping Bentgrass (Agrostis Stolonifera)',1,9
+2,'Perennial Ryegrass (Lolium Perenne)',1,3
+2,'Dock (Rumex Obtusifolius)',1,5
+2,'Creeping Buttercup (Ranunculus Repens)',1,0.1
+2,'Dandelion (Taraxacum Aggregate),1,4
+2,'Meadow Buttercup (Ranunculus Acris),1,0.1
+2,'Mouse Ear (Cerastium Fontanum),1,0.1
+3,'Tufted Hair-grass (Deschampsia Cepitosa),2,3
+3,'Creeping Bentgrass (Agrostis Stolonifera)',2,6
+3,'Common Reed (Phragmites Australis)',2,8
+3,'Rough Meadowgrass (Poa Trivialis)',2,3
+3,'Cock's Foot (Dactylis Glomerata)',2,3
+3,'Creeping Buttercup (Ranunculus repens)',2,0.1
+3,'Hard Rush (Juncus Inflexus)',2,8
+4,'Common Reed (Phragmites Australis)',2,3
+4,'Perennial Ryegrass (Lolium Perenne)',2,4
+4,'Dock (Rumex Obtusifolius)',2,0.1
+4,'Creeping Bentgrass (Agrostis Stolonifera)',2,8
+5,'Creeping Bentgrass (Agrostis Stolonifera)',2,4
+5,'Common Bent (Agrostis Capillaris)',2,6
+5,'Creeping Thistle (Cirsium Arvense)',2,6
+5,'Meadow Buttercup (Ranunculus Acris),2,0.1
+5,'Mouse Ear (Cerastium Fontanum),2,0.1
+5,'Dandelion (Taraxacum Aggregate),2,4 
+6,'Creeping Bentgrass (Agrostis Stolonifera)',3,9
+6,'Perennial Ryegrass (Lolium Perenne)',3,5
+6,'Mouse Ear (Cerastium Fontanum),3,0.1
+6,'Creeping Buttercup (Ranunculus Repens)',3,0.1
+7,'Creeping Bentgrass (Agrostis Stolonifera)',4,9
+7,'Perennial Ryegrass (Lolium Perenne)',4,5
+7,'Dandelion (Taraxacum aggregate),4,3
+8,'Creeping Bentgrass (Agrostis Stolonifera)',5,7
+8,'White Clover (Trifolium Repens),5,5
+8,'Annual Meadow Grass (Poa Annua),5,4
+8,'Perennial Ryegrass (Lolium Perenne)',5,7
+8,'Creeping Buttercup (Ranunculus Repens)',5,0.1
+8,'Creeping Thistle (Cirsium Arvense)',5,0.1
+8,'Mouse Rar (Cerastium Fontanum),5,0.1
+8,'Dandelion (Taraxacum Aggregate),5,0.1
+8,'Meadow Buttercup (Ranunculus Acris),5,0.1
+9,'Yorkshire Fog (Holcus Lanatus)',6,5
+9,'Purple Moor Grass (Molinea Cerulea)',6,4
+9,'Red Fescue (Festuca Rubra),6,4
+9,'Dock (Rumex Obtusifolius)',6,2
+9,'Creeping Thistle (Cirsium Arvense)',6,3
+10,'Meadow Foxtail (Alopercurus Pratensis)',6,8
+10,'Creeping Bentgrass (Agrostis Stolonifera)',6,3
+10,'Creeping Thistle (Cirsium Arvense)',6,3
+10,'Creeping Buttercup (Ranunculus Repens)',6,7
+28,Anthoxanthum odoratum,2,4
+28,Holcus lanatus,2,7
+28,Poa pratensis,2,0.1
+28,Ranunculus repens,2,1
+28,Lolium perenne,2,5
+28,Bromus hordeaceus,2,7
+28,Cardamine pratensis,2,0.1
+30,Anthoxanthum odoratum,2,4
+30,Holcus lanatus,2,6
+30,Ranunculus repens,2,2
+30,Lolium perenne,2,0.1
+30,Cerastium fontanum,2,0.1
+30,Bromus hordeaceus,2,8
+30,Cardamine pratensis,2,0.1
+30,Poa trivialis,2,2
+31,Anthoxanthum odoratum,3,8
+31,Festuca rubra,3,6
+31,Holcus lanatus,3,5
+31,Ranunculus repens,3,1
+31,Rumex acetosa,3,0.1
+31,Taraxacum officinale,3,2
+31,Lolium perenne,3,3
+31,Cerastium fontanum,3,0.1
+31,Cardamine pratensis,3,1
+31,Poa trivialis,3,6
+32,Alopecurus pratensis,3,0.1
+32,Anthoxanthum odoratum,3,1
+32,Dactylis glomerata,3,2
+32,Holcus lanatus,3,8
+32,Cardamine pratensis,3,1
+32,Poa trivialis,3,5
+33,Anthoxanthum odoratum,3,8
+33,Festuca rubra,3,5
+33,Filipendula ulmaria,3,0.1
+33,Holcus lanatus,3,6
+33,Ranunculus repens,3,1
+33,Cerastium fontanum,3,2
+33,Cardamine pratensis,3,0.1
+33,Carex dioica,3,2
+34,Ranunculus repens,4,1
+34,Poa trivialis,4,3
+34,Phragmites australis,4,9
+35,Holcus lanatus,4,9
+35,Taraxacum officinale,4,0.1
+35,Rumex obtusifolius,4,0.1
+35,Bromus hordeaceus,4,2
+35,Cardamine pratensis,4,1
+35,Poa trivialis,4,4
+36,Filipendula ulmaria,4,0.1
+36,Holcus lanatus,4,9
+36,Poa pratensis,4,4
+36,Ranunculus repens,4,0.1
+36,Taraxacum officinale,4,0.1
+36,Bromus hordeaceus,4,0.1
+36,Cardamine pratensis,4,1
+37,Holcus lanatus,5,9
+37,Ranunculus repens,5,0.1
+37,Bromus hordeaceus,5,2
+37,Poa trivialis,5,3
+38,Anthoxanthum odoratum,5,4
+38,Filipendula ulmaria,5,0.1
+38,Holcus lanatus,5,7
+38,Ranunculus acris,5,0.1
+38,Cerastium fontanum,5,0.1
+38,Bromus hordeaceus,5,2
+38,Poa trivialis,5,4
+38,Lolium multiflorum,5,4
+39,Carex flacca,7,5
+39,Festuca rubra,7,1
+39,Filipendula ulmaria,7,7
+39,Plantago lanceolata,7,7
+39,Ranunculus acris,7,1
+39,Eupatorium cannabinum,7,3
+39,Silene vulgaris,7,0.1
+40,Anthoxanthum odoratum,7,4
+40,Caltha palustris,7,2
+40,Carex acutiformis,7,7
+40,Carex nigra,7,2
+40,Festuca rubra,7,2
+40,Filipendula ulmaria,7,0.1
+40,Galium palustre,7,0.1
+40,Holcus lanatus,7,1
+40,Cardamine pratensis,7,2
+40,Phragmites australis,7,2
+41,Anthoxanthum odoratum,8,2
+41,Carex flacca,8,8
+41,Centaurea nigra,8,0.1
+41,Festuca rubra,8,3
+41,Filipendula ulmaria,8,3
+41,Hypochaeris radicata,8,0.1
+41,Plantago lanceolata,8,8
+41,Taraxacum officinale,8,1
+42,Anthoxanthum odoratum,8,0.1
+42,Carex flacca,8,8
+42,Festuca rubra,8,2
+42,Filipendula ulmaria,8,5
+42,Veronica chamaedrys,8,0.1
+43,Anthoxanthum odoratum,9,2
+43,Festuca rubra,9,7
+43,Filipendula ulmaria,9,3
+43,Plantago lanceolata,9,6
+43,Plantago major,9,0.1
+44,Caltha palustris,9,0.1
+44,Festuca rubra,9,8
+44,Filipendula ulmaria,9,2
+44,Galium palustre,9,0.1
+44,Juncus acutiflorus,9,4
+44,Phragmites australis,9,4
+45,Cirsium palustre,10,0.1
+45,Equisetum palustre,10,0.1
+45,Festuca rubra,10,9
+45,Filipendula ulmaria,10,6
+45,Iris pseudacorus,10,3
+45,Plantago lanceolata,10,4
+46,Anthoxanthum odoratum,10,1
+46,Carex flacca,10,4
+46,Centaurea nigra,10,4
+46,Cirsium palustre,10,4
+46,Festuca rubra,10,6
+46,Filipendula ulmaria,10,7
+46,Holcus lanatus,10,2
+46,Plantago lanceolata,10,4
+47,Carex nigra,11,2
+47,Cirsium dissectum,11,2
+47,Festuca rubra,11,7
+47,Filipendula ulmaria,11,7
+47,Holcus lanatus,11,0.1
+47,Plantago lanceolata,11,2
+47,Poa trivialis,11,3
+48,Anthoxanthum odoratum,11,4
+48,Carex flacca,11,1
+48,Centaurea nigra,11,3
+48,Equisetum palustre,11,0.1
+48,Festuca rubra,11,6
+48,Filipendula ulmaria,11,7
+48,Plantago lanceolata,11,4
+48,Taraxacum officinale,11,0.1
+49,Anthoxanthum odoratum,12,4
+49,Carex flacca,12,6
+49,Centaurea nigra,12,3
+49,Equisetum palustre,12,0.1
+49,Festuca rubra,12,7
+49,Filipendula ulmaria,12,6
+49,Holcus lanatus,12,1
+50,Anthoxanthum odoratum,12,4
+50,Carex acutiformis,12,4
+50,Carex flacca,12,3
+50,Festuca rubra,12,3
+50,Filipendula ulmaria,12,5
+50,Holcus lanatus,12,1
+50,Plantago lanceolata,12,3
+50,Ranunculus acris,12,0.1
+50,Ranunculus repens,12,1
+50,Rumex acetosa,12,5
+50,Taraxacum officinale,12,2
+50,Cerastium fontanum,12,0.1
+50,Cardamine pratensis,12,0.1
+51,Anthoxanthum odoratum,13,2
+51,Briza media,13,1
+51,Carex acutiformis,13,0.1
+51,Carex flacca,13,2
+51,Centaurea nigra,13,1
+51,Cirsium dissectum,13,8
+51,Dactylis glomerata,13,2
+51,Equisetum arvense,13,1
+51,Filipendula ulmaria,13,6
+51,Holcus lanatus,13,1
+51,Ophioglossum vulgatum,13,0.1
+51,Plantago lanceolata,13,4
+51,Poa pratensis,13,2
+51,Ranunculus acris,13,2
+51,Ranunculus repens,13,2
+51,Trifolium repens,13,2
+51,Valeriana officinalis,13,1
+52,Filipendula ulmaria,14,6
+52,Anthoxanthum odoratum,14,4
+52,Carex flacca,14,5
+52,Centaurea nigra,14,3
+52,Cirsium palustre,14,0.1
+52,Equisetum arvense,14,4
+52,Holcus lanatus,14,1
+52,Juncus acutiflorus,14,4
+52,Ophioglossum vulgatum,14,1
+52,Plantago lanceolata,14,4
+52,Ranunculus acris,14,2
+52,Taraxacum officinale,14,1
+52,Thalictrum flavum,14,4
+52,Bromus hordeaceus,14,0.1
+52,Silene flos-cuculi,14,0.1
+53,Filipendula ulmaria,15,3
+53,Anthoxanthum odoratum,15,2
+53,Carex flacca,15,9
+53,Carex nigra,15,0.1
+53,Cirsium dissectum,15,4
+53,Deschampsia cespitosa,15,0.1
+53,Equisetum arvense,15,3
+53,Equisetum palustre,15,0.1
+53,Holcus lanatus,15,0.1
+53,Plantago lanceolata,15,4
+53,Ranunculus repens,15,0.1
+53,Succisa pratensis,15,1
+53,Taraxacum officinale,15,1
+53,Thalictrum flavum,15,1
+53,Ranunculus flammula,15,1
+54,Filipendula ulmaria,16,4
+54,Arrhenatherum elatius,16,0.1
+54,Caltha palustris,16,0.1
+54,Carex flacca,16,7
+54,Carex nigra,16,1
+54,Centaurea nigra,16,2
+54,Equisetum arvense,16,2
+54,Iris pseudacorus,16,2
+54,Ophioglossum vulgatum,16,0.1
+54,Plantago lanceolata,16,1
+54,Thalictrum flavum,16,2
+54,Phragmites australis,16,5
+54,Ranunculus flammula,16,1
+55,Filipendula ulmaria,17,5
+55,Anthoxanthum odoratum,17,3
+55,Briza media,17,0.1
+55,Carex flacca,17,8
+55,Carex nigra,17,1
+55,Centaurea nigra,17,0.1
+55,Cirsium dissectum,17,6
+55,Equisetum arvense,17,1
+55,Holcus lanatus,17,0.1
+55,Ophioglossum vulgatum,17,4
+55,Plantago lanceolata,17,2
+55,Ranunculus repens,17,1
+55,Trifolium repens,17,0.1
+55,Phragmites australis,17,1
+56,Filipendula ulmaria,18,7
+56,Anthoxanthum odoratum,18,4
+56,Carex flacca,18,9
+56,Centaurea nigra,18,2
+56,Equisetum arvense,18,2
+56,Galium palustre,18,0.1
+56,Holcus lanatus,18,2
+56,Ophioglossum vulgatum,18,2
+56,Plantago lanceolata,18,3
+56,Ranunculus acris,18,0.1
+56,Succisa pratensis,18,6
+56,Valeriana officinalis,18,0.1
+57,Filipendula ulmaria,18,6
+57,Anthoxanthum odoratum,18,3
+57,Carex flacca,18,7
+57,Carex nigra,18,1
+57,Holcus lanatus,18,4
+57,Ranunculus acris,18,4
+57,Ranunculus repens,18,3
+57,Rhinanthus minor,18,0.1
+57,Cardamine pratensis,18,1
+57,Phragmites australis,18,4
+57,Juncus effusus,18,3
+58,Filipendula ulmaria,17,7
+58,Anthoxanthum odoratum,17,4
+58,Carex flacca,17,7
+58,Carex nigra,17,5
+58,Cirsium dissectum,17,2
+58,Galium palustre,17,0.1
+58,Holcus lanatus,17,2
+58,Ranunculus acris,17,3
+58,Ranunculus repens,17,6
+58,Cardamine pratensis,17,1
+58,Poa trivialis,17,3
+58,Ranunculus flammula,17,2
+58,Juncus effusus,17,1
+59,Filipendula ulmaria,16,6
+59,Anthoxanthum odoratum,16,5
+59,Caltha palustris,16,0.1
+59,Carex flacca,16,4
+59,Centaurea nigra,16,0.1
+59,Equisetum arvense,16,2
+59,Festuca rubra,16,2
+59,Holcus lanatus,16,4
+59,Iris pseudacorus,16,0.1
+59,Lychnis flos-cuculi,16,0.1
+59,Ophioglossum vulgatum,16,0.1
+59,Plantago lanceolata,16,2
+59,Poa pratensis,16,4
+59,Ranunculus repens,16,4
+59,Taraxacum officinale,16,2
+59,Trifolium repens,16,2
+59,Ranunculus flammula,16,0.1
+59,Juncus effusus,16,0.1
+60,Filipendula ulmaria,15,8
+60,Anthoxanthum odoratum,15,2
+60,Caltha palustris,15,0.1
+60,Carex flacca,15,6
+60,Carex nigra,15,5
+60,Equisetum arvense,15,2
+60,Galium palustre,15,1
+60,Holcus lanatus,15,1
+60,Lychnis flos-cuculi,15,3
+60,Plantago lanceolata,15,5
+60,Ranunculus acris,15,3
+60,Ranunculus repens,15,3
+60,Trifolium repens,15,2
+60,Cerastium fontanum,15,0.1
+60,Cardamine pratensis,15,1
+61,Filipendula ulmaria,14,6
+61,Anthoxanthum odoratum,14,5
+61,Carex flacca,14,7
+61,Cirsium dissectum,14,0.1
+61,Equisetum arvense,14,0.1
+61,Holcus lanatus,14,2
+61,Plantago lanceolata,14,4
+61,Ranunculus acris,14,0.1
+61,Thalictrum flavum,14,0.1
+61,Trifolium repens,14,2
+61,Cardamine pratensis,14,0.1
+61,Poa trivialis,14,2
+62,Filipendula ulmaria,13,4
+62,Anthoxanthum odoratum,13,3
+62,Carex flacca,13,2
+62,Centaurea nigra,13,2
+62,Cynosurus cristatus,13,3
+62,Dactylis glomerata,13,3
+62,Galium palustre,13,0.1
+62,Holcus lanatus,13,2
+62,Plantago lanceolata,13,8
+62,Poa pratensis,13,0.1
+62,Ranunculus acris,13,2
+62,Ranunculus repens,13,2
+62,Trifolium repens,13,2
+62,Cerastium fontanum,13,0.1
+62,Poa trivialis,13,2
+63,Filipendula ulmaria,19,6
+63,Carex flacca,19,4
+63,Centaurea nigra,19,3
+63,Cirsium dissectum,19,3
+63,Dactylis glomerata,19,0.1
+63,Equisetum arvense,19,1
+63,Festuca rubra,19,1
+63,Holcus lanatus,19,4
+63,Juncus inflexus,19,1
+63,Plantago lanceolata,19,4
+63,Poa pratensis,19,4
+63,Ranunculus acris,19,2
+63,Ranunculus repens,19,2
+63,Trifolium repens,19,4
+63,Cerastium fontanum,19,0.1
+63,Juncus effusus,19,0.1
+63,Bromopsis ramosa,19,0.1
+63,Orchis mascula,19,0.1
+64,Filipendula ulmaria,20,3
+64,Anthoxanthum odoratum,20,5
+64,Briza media,20,2
+64,Carex flacca,20,7
+64,Cirsium dissectum,20,4
+64,Equisetum palustre,20,2
+64,Festuca rubra,20,3
+64,Holcus lanatus,20,2
+64,Plantago lanceolata,20,6
+64,Poa pratensis,20,3
+64,Ranunculus acris,20,0.1
+64,Ranunculus repens,20,0.1
+64,Trifolium repens,20,1
+64,Cerastium fontanum,20,1
+65,Filipendula ulmaria,25,4
+65,Anthoxanthum odoratum,25,4
+65,Centaurea nigra,25,1
+65,Holcus lanatus,25,8
+65,Plantago lanceolata,25,2
+65,Poa pratensis,25,4
+65,Ranunculus acris,25,1
+65,Ranunculus repens,25,2
+65,Taraxacum officinale,25,0.1
+65,Bromus hordeaceus,25,1
+66,Filipendula ulmaria,26,4
+66,Anthoxanthum odoratum,26,4
+66,Briza media,26,0.1
+66,Carex flacca,26,5
+66,Cirsium dissectum,26,2
+66,Dactylis glomerata,26,1
+66,Equisetum arvense,26,1
+66,Holcus lanatus,26,8
+66,Plantago lanceolata,26,4
+66,Ranunculus acris,26,1
+66,Taraxacum officinale,26,2
+66,Trifolium repens,26,2
+66,Bromus hordeaceus,26,1
+66,Poa trivialis,26,0.1
+66,Dactylorhiza fuchsii,26,1
+66,Scorzoneroides autumnalis,26,0.1
+67,Filipendula ulmaria,27,5
+67,Anthoxanthum odoratum,27,1
+67,Briza media,27,0.1
+67,Carex flacca,27,5
+67,Centaurea nigra,27,3
+67,Cirsium dissectum,27,2
+67,Dactylis glomerata,27,1
+67,Holcus lanatus,27,7
+67,Plantago lanceolata,27,4
+67,Ranunculus repens,27,0.1
+67,Taraxacum officinale,27,1
+67,Trifolium repens,27,2
+67,Poa trivialis,27,3
+67,Dactylorhiza fuchsii,27,0.1
+67,Ranunculus bulbosus,27,0.1
+68,Filipendula ulmaria,28,4
+68,Angelica sylvestris,28,5
+68,Anthoxanthum odoratum,28,1
+68,Briza media,28,3
+68,Carex flacca,28,5
+68,Centaurea nigra,28,2
+68,Dactylis glomerata,28,2
+68,Equisetum arvense,28,2
+68,Festuca rubra,28,3
+68,Holcus lanatus,28,2
+68,Hypochaeris radicata,28,0.1
+68,Plantago lanceolata,28,6
+68,Succisa pratensis,28,4
+68,Trifolium repens,28,2
+68,Valeriana officinalis,28,0.1
+69,Filipendula ulmaria,29,3
+69,Angelica sylvestris,29,2
+69,Anthoxanthum odoratum,29,4
+69,Briza media,29,2
+69,Carex flacca,29,0.1
+69,Centaurea nigra,29,4
+69,Dactylis glomerata,29,0.1
+69,Deschampsia cespitosa,29,4
+69,Equisetum arvense,29,3
+69,Festuca rubra,29,2
+69,Holcus lanatus,29,8
+69,Lotus corniculatus,29,4
+69,Plantago lanceolata,29,4
+69,Primula veris,29,0.1
+69,Succisa pratensis,29,4
+70,Filipendula ulmaria,30,2
+70,Angelica sylvestris,30,1
+70,Anthoxanthum odoratum,30,3
+70,Carex flacca,30,0.1
+70,Centaurea nigra,30,5
+70,Dactylis glomerata,30,1
+70,Festuca rubra,30,2
+70,Holcus lanatus,30,3
+70,Lotus corniculatus,30,1
+70,Plantago lanceolata,30,8
+70,Poa pratensis,30,4
+70,Ranunculus acris,30,0.1
+70,Succisa pratensis,30,1
+70,Taraxacum officinale,30,1
+71,Filipendula ulmaria,30,4
+71,Anthoxanthum odoratum,30,1
+71,Carex flacca,30,5
+71,Centaurea nigra,30,3
+71,Dactylis glomerata,30,1
+71,Equisetum arvense,30,0.1
+71,Festuca rubra,30,5
+71,Holcus lanatus,30,1
+71,Linum catharticum,30,0.1
+71,Lotus corniculatus,30,5
+71,Plantago lanceolata,30,3
+71,Ranunculus acris,30,0.1
+71,Ranunculus repens,30,6
+71,Taraxacum officinale,30,1
+71,Valeriana officinalis,30,1
+71,Poa trivialis,30,5
+72,Filipendula ulmaria,29,1
+72,Angelica sylvestris,29,0.1
+72,Briza media,29,4
+72,Carex flacca,29,6
+72,Centaurea nigra,29,3
+72,Cirsium dissectum,29,4
+72,Cirsium palustre,29,0.1
+72,Dactylis glomerata,29,1
+72,Equisetum arvense,29,1
+72,Festuca rubra,29,6
+72,Holcus lanatus,29,4
+72,Linum catharticum,29,0.1
+72,Plantago lanceolata,29,5
+72,Poa pratensis,29,3
+72,Primula veris,29,0.1
+72,Ranunculus acris,29,1
+72,Ranunculus repens,29,1
+72,Succisa pratensis,29,3
+72,Trifolium repens,29,1
+72,Valeriana officinalis,29,2
+72,Dactylorhiza fuchsii,29,0.1
+73,Filipendula ulmaria,28,2
+73,Angelica sylvestris,28,2
+73,Anthoxanthum odoratum,28,2
+73,Briza media,28,7
+73,Carex flacca,28,2
+73,Cirsium dissectum,28,4
+73,Equisetum arvense,28,5
+73,Festuca rubra,28,2
+73,Holcus lanatus,28,2
+73,Lotus corniculatus,28,1
+73,Ophioglossum vulgatum,28,0.1
+73,Plantago lanceolata,28,5
+73,Ranunculus acris,28,1
+73,Ranunculus repens,28,1
+73,Succisa pratensis,28,1
+73,Trifolium repens,28,3
+73,Dactylorhiza fuchsii,28,1
