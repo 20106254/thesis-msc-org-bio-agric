@@ -1,3 +1,4 @@
+ID,SITE_ID,RELEVE_ID,SPECIES_NAME,DOMIN
 1,68,1,"Achillea millefolium",2
 1521,68,1,"Angelica sylvestris",3
 1522,68,1,"Brachythecium mildeanum",3

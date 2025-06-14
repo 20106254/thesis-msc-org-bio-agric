@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Species Analysis Report</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        h1 {
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        .summary-cards {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+        .card {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 20px;
+            flex: 1;
+            min-width: 200px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px 12px;
+            text-align: left;
+        }
+        th {
+            background-color: #3498db;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        .domin-score {
+            font-weight: bold;
+            color: #e53935;
+        }
+        .pie-container {
+            width: 300px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Species Analysis Report</h1>
+    <p>Generated on: 2025-06-14 14:49:47</p>
+    
+    <div class="summary-cards">
+        <div class="card">
+            <h3>Total Relevés</h3>
+            <div class="card-value">4</div>
+        </div>
+        <div class="card">
+            <h3>Unique Species</h3>
+            <div class="card-value">49</div>
+        </div>
+        <div class="card">
+            <h3>Highest DOMIN Overall</h3>
+            <div class="card-value">Carex panicea</div>
+            <div class="domin-score">Score: 98.0</div>
+        </div>
+    </div>
+    
+    <h2>Relevé Summary</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Relevé ID</th>
+                <th>Species Count</th>
+                <th>Max DOMIN Score</th>
+                <th>Species Composition</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr><td>1</td><td>25</td><td class='domin-score'>30.0 (Carex flacca)</td><td><div id='pie-1' class='pie-container'></div></td><script>Plotly.newPlot('pie-1', [{values: [{"species": "Carex flacca", "score": 30.0}, {"species": "Carex panicea", "score": 30.0}, {"species": "Carex disticha", "score": 18.0}, {"species": "Cirsium dissectum", "score": 18.0}, {"species": "Calliergonella cuspidata", "score": 8.0}, {"species": "Filipendula ulmaria", "score": 8.0}, {"species": "Helictotrichon pubescens", "score": 8.0}, {"species": "Angelica sylvestris", "score": 3.0}, {"species": "Brachythecium mildeanum", "score": 3.0}, {"species": "Centaurea nigra", "score": 3.0}, {"species": "Plantago lanceolata", "score": 3.0}, {"species": "Ranunculus acris", "score": 3.0}, {"species": "Ranunculus repens", "score": 3.0}, {"species": "Rhytidiadelphus squarrosus", "score": 3.0}, {"species": "Thalictrum flavum", "score": 3.0}, {"species": "Achillea millefolium", "score": 0.5}, {"species": "Briza media", "score": 0.5}, {"species": "Dactylis glomerata", "score": 0.5}, {"species": "Equisetum species", "score": 0.5}, {"species": "Euphrasia officinalis ag.", "score": 0.5}, {"species": "Primula veris", "score": 0.5}, {"species": "Rhinanthus minor", "score": 0.5}, {"species": "Trifolium pratense", "score": 0.5}, {"species": "Cirsium palustre", "score": 0.3}, {"species": "Campylium stellatum v. protensum", "score": 0.1}].map(x => x.score),labels: [{"species": "Carex flacca", "score": 30.0}, {"species": "Carex panicea", "score": 30.0}, {"species": "Carex disticha", "score": 18.0}, {"species": "Cirsium dissectum", "score": 18.0}, {"species": "Calliergonella cuspidata", "score": 8.0}, {"species": "Filipendula ulmaria", "score": 8.0}, {"species": "Helictotrichon pubescens", "score": 8.0}, {"species": "Angelica sylvestris", "score": 3.0}, {"species": "Brachythecium mildeanum", "score": 3.0}, {"species": "Centaurea nigra", "score": 3.0}, {"species": "Plantago lanceolata", "score": 3.0}, {"species": "Ranunculus acris", "score": 3.0}, {"species": "Ranunculus repens", "score": 3.0}, {"species": "Rhytidiadelphus squarrosus", "score": 3.0}, {"species": "Thalictrum flavum", "score": 3.0}, {"species": "Achillea millefolium", "score": 0.5}, {"species": "Briza media", "score": 0.5}, {"species": "Dactylis glomerata", "score": 0.5}, {"species": "Equisetum species", "score": 0.5}, {"species": "Euphrasia officinalis ag.", "score": 0.5}, {"species": "Primula veris", "score": 0.5}, {"species": "Rhinanthus minor", "score": 0.5}, {"species": "Trifolium pratense", "score": 0.5}, {"species": "Cirsium palustre", "score": 0.3}, {"species": "Campylium stellatum v. protensum", "score": 0.1}].map(x => x.species),type: 'pie',textinfo: 'percent',hoverinfo: 'label+percent+value',}], {margin: {t:0, b:0, l:0, r:0}, showlegend: false});</script></tr><tr><td>2</td><td>18</td><td class='domin-score'>42.0 (Molinia caerulea)</td><td><div id='pie-2' class='pie-container'></div></td><script>Plotly.newPlot('pie-2', [{values: [{"species": "Molinia caerulea", "score": 42.0}, {"species": "Carex panicea", "score": 30.0}, {"species": "Succisa pratensis", "score": 30.0}, {"species": "Carex pulicaris", "score": 18.0}, {"species": "Festuca rubra", "score": 18.0}, {"species": "Centaurea nigra", "score": 8.0}, {"species": "Filipendula ulmaria", "score": 8.0}, {"species": "Calliergonella cuspidata", "score": 3.0}, {"species": "Plantago lanceolata", "score": 3.0}, {"species": "Rhytidiadelphus squarrosus", "score": 3.0}, {"species": "Equisetum species", "score": 0.5}, {"species": "Euphrasia officinalis ag.", "score": 0.5}, {"species": "Thalictrum flavum", "score": 0.5}, {"species": "Trifolium pratense", "score": 0.5}, {"species": "Valeriana officinalis", "score": 0.5}, {"species": "Brachythecium mildeanum", "score": 0.1}, {"species": "Fissidens adianthoides", "score": 0.1}, {"species": "Lophocolea bidentata", "score": 0.1}].map(x => x.score),labels: [{"species": "Molinia caerulea", "score": 42.0}, {"species": "Carex panicea", "score": 30.0}, {"species": "Succisa pratensis", "score": 30.0}, {"species": "Carex pulicaris", "score": 18.0}, {"species": "Festuca rubra", "score": 18.0}, {"species": "Centaurea nigra", "score": 8.0}, {"species": "Filipendula ulmaria", "score": 8.0}, {"species": "Calliergonella cuspidata", "score": 3.0}, {"species": "Plantago lanceolata", "score": 3.0}, {"species": "Rhytidiadelphus squarrosus", "score": 3.0}, {"species": "Equisetum species", "score": 0.5}, {"species": "Euphrasia officinalis ag.", "score": 0.5}, {"species": "Thalictrum flavum", "score": 0.5}, {"species": "Trifolium pratense", "score": 0.5}, {"species": "Valeriana officinalis", "score": 0.5}, {"species": "Brachythecium mildeanum", "score": 0.1}, {"species": "Fissidens adianthoides", "score": 0.1}, {"species": "Lophocolea bidentata", "score": 0.1}].map(x => x.species),type: 'pie',textinfo: 'percent',hoverinfo: 'label+percent+value',}], {margin: {t:0, b:0, l:0, r:0}, showlegend: false});</script></tr><tr><td>3</td><td>27</td><td class='domin-score'>30.0 (Centaurea nigra)</td><td><div id='pie-3' class='pie-container'></div></td><script>Plotly.newPlot('pie-3', [{values: [{"species": "Centaurea nigra", "score": 30.0}, {"species": "Cynosurus cristatus", "score": 30.0}, {"species": "Filipendula ulmaria", "score": 30.0}, {"species": "Trifolium pratense", "score": 30.0}, {"species": "Bromopsis erecta", "score": 18.0}, {"species": "Cirsium dissectum", "score": 18.0}, {"species": "Festuca pratensis", "score": 18.0}, {"species": "Festuca rubra", "score": 18.0}, {"species": "Plantago lanceolata", "score": 18.0}, {"species": "Ranunculus acris", "score": 18.0}, {"species": "Anthoxanthum odoratum", "score": 8.0}, {"species": "Carex panicea", "score": 8.0}, {"species": "Crepis capillaris", "score": 8.0}, {"species": "Holcus lanatus", "score": 3.0}, {"species": "Bellis perennis", "score": 0.5}, {"species": "Briza media", "score": 0.5}, {"species": "Cerastium fontanum", "score": 0.5}, {"species": "Equisetum species", "score": 0.5}, {"species": "Euphrasia officinalis ag.", "score": 0.5}, {"species": "Helictotrichon pubescens", "score": 0.5}, {"species": "Rhinanthus minor", "score": 0.5}, {"species": "Rumex acetosa", "score": 0.5}, {"species": "Calliergonella cuspidata", "score": 0.3}, {"species": "Cardamine pratensis", "score": 0.3}, {"species": "Luzula campestris", "score": 0.3}, {"species": "Lychnis flos-cuculi", "score": 0.3}, {"species": "Prunella vulgaris", "score": 0.3}].map(x => x.score),labels: [{"species": "Centaurea nigra", "score": 30.0}, {"species": "Cynosurus cristatus", "score": 30.0}, {"species": "Filipendula ulmaria", "score": 30.0}, {"species": "Trifolium pratense", "score": 30.0}, {"species": "Bromopsis erecta", "score": 18.0}, {"species": "Cirsium dissectum", "score": 18.0}, {"species": "Festuca pratensis", "score": 18.0}, {"species": "Festuca rubra", "score": 18.0}, {"species": "Plantago lanceolata", "score": 18.0}, {"species": "Ranunculus acris", "score": 18.0}, {"species": "Anthoxanthum odoratum", "score": 8.0}, {"species": "Carex panicea", "score": 8.0}, {"species": "Crepis capillaris", "score": 8.0}, {"species": "Holcus lanatus", "score": 3.0}, {"species": "Bellis perennis", "score": 0.5}, {"species": "Briza media", "score": 0.5}, {"species": "Cerastium fontanum", "score": 0.5}, {"species": "Equisetum species", "score": 0.5}, {"species": "Euphrasia officinalis ag.", "score": 0.5}, {"species": "Helictotrichon pubescens", "score": 0.5}, {"species": "Rhinanthus minor", "score": 0.5}, {"species": "Rumex acetosa", "score": 0.5}, {"species": "Calliergonella cuspidata", "score": 0.3}, {"species": "Cardamine pratensis", "score": 0.3}, {"species": "Luzula campestris", "score": 0.3}, {"species": "Lychnis flos-cuculi", "score": 0.3}, {"species": "Prunella vulgaris", "score": 0.3}].map(x => x.species),type: 'pie',textinfo: 'percent',hoverinfo: 'label+percent+value',}], {margin: {t:0, b:0, l:0, r:0}, showlegend: false});</script></tr><tr><td>4</td><td>22</td><td class='domin-score'>30.0 (Carex panicea)</td><td><div id='pie-4' class='pie-container'></div></td><script>Plotly.newPlot('pie-4', [{values: [{"species": "Carex panicea", "score": 30.0}, {"species": "Festuca rubra", "score": 30.0}, {"species": "Filipendula ulmaria", "score": 30.0}, {"species": "Plantago lanceolata", "score": 30.0}, {"species": "Valeriana officinalis", "score": 18.0}, {"species": "Anthoxanthum odoratum", "score": 3.0}, {"species": "Centaurea nigra", "score": 3.0}, {"species": "Holcus lanatus", "score": 3.0}, {"species": "Molinia caerulea", "score": 3.0}, {"species": "Succisa pratensis", "score": 3.0}, {"species": "Angelica sylvestris", "score": 0.5}, {"species": "Cirsium dissectum", "score": 0.5}, {"species": "Crepis capillaris", "score": 0.5}, {"species": "Deschampsia cespitosa", "score": 0.5}, {"species": "Equisetum species", "score": 0.5}, {"species": "Ranunculus acris", "score": 0.5}, {"species": "Thalictrum flavum", "score": 0.5}, {"species": "Cirsium palustre", "score": 0.3}, {"species": "Taraxacum officinale ag.", "score": 0.3}, {"species": "Trifolium repens", "score": 0.3}, {"species": "Carex pulicaris", "score": 0.1}, {"species": "Iris pseudacorus", "score": 0.1}].map(x => x.score),labels: [{"species": "Carex panicea", "score": 30.0}, {"species": "Festuca rubra", "score": 30.0}, {"species": "Filipendula ulmaria", "score": 30.0}, {"species": "Plantago lanceolata", "score": 30.0}, {"species": "Valeriana officinalis", "score": 18.0}, {"species": "Anthoxanthum odoratum", "score": 3.0}, {"species": "Centaurea nigra", "score": 3.0}, {"species": "Holcus lanatus", "score": 3.0}, {"species": "Molinia caerulea", "score": 3.0}, {"species": "Succisa pratensis", "score": 3.0}, {"species": "Angelica sylvestris", "score": 0.5}, {"species": "Cirsium dissectum", "score": 0.5}, {"species": "Crepis capillaris", "score": 0.5}, {"species": "Deschampsia cespitosa", "score": 0.5}, {"species": "Equisetum species", "score": 0.5}, {"species": "Ranunculus acris", "score": 0.5}, {"species": "Thalictrum flavum", "score": 0.5}, {"species": "Cirsium palustre", "score": 0.3}, {"species": "Taraxacum officinale ag.", "score": 0.3}, {"species": "Trifolium repens", "score": 0.3}, {"species": "Carex pulicaris", "score": 0.1}, {"species": "Iris pseudacorus", "score": 0.1}].map(x => x.species),type: 'pie',textinfo: 'percent',hoverinfo: 'label+percent+value',}], {margin: {t:0, b:0, l:0, r:0}, showlegend: false});</script></tr>
+        </tbody>
+    </table>
+</body>
+</html>

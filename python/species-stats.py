@@ -74,13 +74,16 @@ def analyze_species_data(file_path):
         'timestamp': datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     }
 
-def generate_html_report(results, input_filename, output_dir="../docs"):
-    """Generate an HTML report with accurate pie charts for each relevé."""
+
+def generate_html_report(results, input_filename, output_dir="../docs", template_file="../templates/report_template.html"):
+    """Generate an HTML report with accurate pie charts for each relevé using a template file."""
     try:
+        # Set up paths
         output_path = Path(output_dir)
         output_path.mkdir(exist_ok=True)
         input_path = Path(input_filename)
         output_file = output_path / f"{input_path.stem}_report.html"
+        template_path = Path(template_file)
 
         # Prepare survey data using per-relevé statistics
         survey_data = []
@@ -129,108 +132,19 @@ def generate_html_report(results, input_filename, output_dir="../docs"):
             )
         table_rows_html = "".join(table_rows)
         
-        html_content = f"""<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Species Analysis Report</title>
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <style>
-        body {{
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f9f9f9;
-        }}
-        h1, h2, h3 {{
-            color: #2c3e50;
-        }}
-        h1 {{
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 10px;
-        }}
-        .summary-cards {{
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            margin-bottom: 30px;
-        }}
-        .card {{
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            padding: 20px;
-            flex: 1;
-            min-width: 200px;
-        }}
-        table {{
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-        }}
-        th, td {{
-            border: 1px solid #ddd;
-            padding: 8px 12px;
-            text-align: left;
-        }}
-        th {{
-            background-color: #3498db;
-            color: white;
-        }}
-        tr:nth-child(even) {{
-            background-color: #f2f2f2;
-        }}
-        .domin-score {{
-            font-weight: bold;
-            color: #e53935;
-        }}
-        .pie-container {{
-            width: 300px;
-            height: 200px;
-        }}
-    </style>
-</head>
-<body>
-    <h1>Species Analysis Report</h1>
-    <p>Generated on: {results['timestamp']}</p>
-    
-    <div class="summary-cards">
-        <div class="card">
-            <h3>Total Relevés</h3>
-            <div class="card-value">{len(results['unique_releve_ids'])}</div>
-        </div>
-        <div class="card">
-            <h3>Unique Species</h3>
-            <div class="card-value">{len(results['unique_species'])}</div>
-        </div>
-        <div class="card">
-            <h3>Highest DOMIN Overall</h3>
-            <div class="card-value">{results['top_species']}</div>
-            <div class="domin-score">Score: {results['top_score']:.1f}</div>
-        </div>
-    </div>
-    
-    <h2>Relevé Summary</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>Relevé ID</th>
-                <th>Species Count</th>
-                <th>Max DOMIN Score</th>
-                <th>Species Composition</th>
-            </tr>
-        </thead>
-        <tbody>
-            {table_rows_html}
-        </tbody>
-    </table>
-</body>
-</html>"""
+        # Read template file
+        with open(template_path, 'r', encoding='utf-8') as f:
+            html_template = f.read()
         
+        # Replace placeholders in template
+        html_content = html_template.replace("{{timestamp}}", results['timestamp'])
+        html_content = html_content.replace("{{total_releves}}", str(len(results['unique_releve_ids'])))
+        html_content = html_content.replace("{{unique_species_count}}", str(len(results['unique_species'])))
+        html_content = html_content.replace("{{top_species}}", results['top_species'])
+        html_content = html_content.replace("{{top_score}}", f"{results['top_score']:.1f}")
+        html_content = html_content.replace("{{table_rows_html}}", table_rows_html)
+        
+        # Write the final HTML to output file
         with open(output_file, 'w', encoding='utf-8') as f:
             f.write(html_content)
         
@@ -240,6 +154,7 @@ def generate_html_report(results, input_filename, output_dir="../docs"):
     except Exception as e:
         print(f"Error generating report: {str(e)}")
         return None
+
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
