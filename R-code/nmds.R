@@ -1,17 +1,44 @@
+#!/usr/bin/env Rscript
+args <- commandArgs(trailingOnly = TRUE)
+
+# Get the directory where this script is located
+initial_options <- commandArgs(trailingOnly = FALSE)
+file_arg_name <- "--file="
+script_name <- sub(file_arg_name, "", initial_options[grep(file_arg_name, initial_options)])
+script_dir <- dirname(script_name)
+
+# Set default paths if no arguments provided
+if (length(args) < 2) {
+  input_path <- file.path(dirname(script_dir), "datasets", "site-68-2025", "COMBINED_MID_RANGE.csv")
+  output_dir <- file.path(dirname(script_dir), "results")
+} else {
+  input_path <- args[1]
+  output_dir <- args[2]
+}
+
+# Load libraries
 library(dplyr)
 library(tidyr)
 library(vegan)
 library(ggplot2)
 library(cluster)
-source("custom_theme.R")
-source("save_plot.R")
+
+# Create output directory if it doesn't exist
+if (!dir.exists(output_dir)) {
+  dir.create(output_dir, recursive = TRUE)
+}
+
+# Load custom theme and plotting functions
+source(file.path(script_dir, "custom_theme.R"))
+source(file.path(script_dir, "save_plot.R"))
 
 # Load and prepare data
-data <- read.csv("../datasets/site-68-2025/COMBINED_MID_RANGE.csv") %>%
+cat("Loading data from:", input_path, "\n")
+data <- read.csv(input_path) %>%
   group_by(RELEVE_ID, SPECIES_NAME) %>%
   summarise(DOMIN = sum(DOMIN), .groups = "drop") %>%
   group_by(SPECIES_NAME) %>%
-  filter(sum(DOMIN > 0) >= 3) %>%  # Remove rare species (<5 occurrences)
+  filter(sum(DOMIN > 0) >= 3) %>%  # Remove rare species (<3 occurrences)
   ungroup() %>%
   pivot_wider(names_from = SPECIES_NAME, values_from = DOMIN, values_fill = 0)
 
@@ -23,15 +50,18 @@ data.numeric <- data %>%
 rownames(data.numeric) <- data$RELEVE_ID
 
 # Hellinger-transformed Bray-Curtis dissimilarity
+cat("Calculating dissimilarity matrix...\n")
 diss.matrix <- vegdist(decostand(data.numeric, "hellinger"), "bray")
 
 # Fuzzy clustering (k=3)
 set.seed(123)
+cat("Performing fuzzy clustering...\n")
 fanny.clust <- fanny(diss.matrix, k = 3, memb.exp = 1.2)
 data$Management <- c("Grazing + Fertiliser", "Mowing + Fertiliser", "Organic Management")[fanny.clust$clustering]
 
 # NMDS (3D for better stress)
 set.seed(123)
+cat("Running NMDS ordination...\n")
 nmds <- metaMDS(
   decostand(data.numeric, "hellinger"),
   distance = "bray",
@@ -52,29 +82,37 @@ plot_data <- data.frame(
   RELEVE_ID = data$RELEVE_ID
 )
 
-# Create convex hulls (more stable than ellipses)
+# Create convex hulls
 hulls <- plot_data %>%
   group_by(Management) %>%
   slice(chull(MDS1, MDS2))
 
-# Visualization
+# Visualization with triangles
+cat("Creating visualization...\n")
 p <- ggplot(plot_data, aes(x = MDS1, y = MDS2)) +
   geom_polygon(
     data = hulls,
     aes(fill = Management, color = Management),
     alpha = 0.1,
-    linewidth = 0.7
+    linewidth = 0.5  # Reduced from 0.7
   ) +
   geom_point(
-    aes(color = Management),
-    size = 2.5,
+    aes(color = Management, shape = Management),
+    size = 1.5,  # Reduced from 3
     alpha = 0.8
+  ) +
+  scale_shape_manual(
+    values = c(
+      "Grazing + Fertiliser" = 17,
+      "Mowing + Fertiliser" = 15,
+      "Organic Management" = 18
+    )
   ) +
   geom_text(
     aes(label = RELEVE_ID),
-    hjust = 1.5,
-    vjust = 1.5,
-    size = 2.5,
+    hjust = 1.3,  # Adjusted from 1.5
+    vjust = 1.3,  # Adjusted from 1.5
+    size = 2,     # Reduced from 2.5
     check_overlap = TRUE
   ) +
   scale_color_manual(
@@ -92,17 +130,54 @@ p <- ggplot(plot_data, aes(x = MDS1, y = MDS2)) +
     )
   ) +
   labs(
-    title = "NMDS of Grassland Management Approaches",
-    subtitle = paste("Stress =", round(nmds$stress, 3)),
-    x = "NMDS Axis 1",
-    y = "NMDS Axis 2"
+    title = "NMDS Ordination",
+    subtitle = paste0("Stress: ", round(nmds$stress, 3)),
+    x = "NMDS1",
+    y = "NMDS2",
+    shape = NULL,  # Remove legend title
+    color = NULL   # Remove legend title
   ) +
-  custom_theme +
-  theme(legend.position = "right")
+  theme_minimal(base_size = 10) +  # Reduced base font size
+  theme(
+    plot.title = element_text(size = 11, face = "bold", hjust = 0.5),
+    plot.subtitle = element_text(size = 10, hjust = 0.5),
+    axis.title = element_text(size = 9),
+    legend.position = "bottom",
+    legend.box = "horizontal",
+    legend.spacing.x = unit(0.2, 'cm'),
+    legend.key.size = unit(0.4, 'cm'),  # Smaller legend key boxes
+    legend.text = element_text(size = 8),  # Smaller legend text
+    plot.margin = margin(5, 5, 5, 5, "pt")  # Reduced margins
+  ) +
+  guides(
+    color = guide_legend(nrow = 1),
+    shape = guide_legend(nrow = 1),
+    fill = "none"  # Hide fill legend (redundant with color)
+  )
 
-# Save plot
-save_plot(p, "nmds_three_management_types.svg")
+# Save plot and results
+output_plot <- file.path(output_dir, "nmds_plot.svg")
+output_data <- file.path(output_dir, "nmds_results.csv")
+
+cat("Saving results to:", output_dir, "\n")
+save_plot(p, output_plot)
+write.csv(data, output_data, row.names = FALSE)
 
 # Cluster diagnostics
 cat("\nCluster sizes:\n")
 print(table(data$Management))
+
+# Save metrics
+metrics <- list(
+  stress_value = nmds$stress,
+  n_species = ncol(data.numeric),
+  n_releves = nrow(data.numeric),
+  cluster_sizes = as.list(table(data$Management))
+)
+
+writeLines(
+  jsonlite::toJSON(metrics, auto_unbox = TRUE, pretty = TRUE),
+  file.path(output_dir, "nmds_metrics.json")
+)
+
+cat("\nAnalysis complete. Results saved to:", output_dir, "\n")

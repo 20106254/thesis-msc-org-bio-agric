@@ -3,99 +3,303 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Species Analysis Report</title>
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <title>Grassland Management Dashboard</title>
+    <script src="https://cdn.plot.ly/plotly-2.24.1.min.js"></script>
     <style>
+        /* Base Styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+        }
+        
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 1200px;
-            margin: 0 auto;
+            min-height: 100vh;
             padding: 20px;
-            background-color: #f9f9f9;
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
         }
-        h1, h2, h3 {
-            color: #2c3e50;
+        
+        /* Header */
+        .dashboard-header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 15px 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
-        h1 {
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 10px;
+        
+        .dashboard-header h1 {
+            font-size: 1.5rem;
+            margin-bottom: 5px;
         }
-        .summary-cards {
-            display: flex;
-            flex-wrap: wrap;
+        
+        .timestamp {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+        
+        /* Main Grid Layout - UPDATED */
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 20px;
-            margin-bottom: 30px;
         }
-        .card {
+        
+        /* NMDS Card - Now spans 2 columns */
+        .nmds-card {
+            grid-column: span 2;
+            min-height: 400px;
+        }
+        
+        /* Card Styles */
+        .dashboard-card {
             background: white;
             border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
             padding: 20px;
-            flex: 1;
-            min-width: 200px;
+            overflow: visible;
         }
-        table {
+        
+        .card-title {
+            font-size: clamp(1rem, 2vw, 1.2rem);
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #2c3e50;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        /* Summary Card */
+        .summary-list {
+            list-style: none;
+        }
+        
+        .summary-list li {
+            margin-bottom: 12px;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .summary-value {
+            font-weight: 600;
+            color: #3498db;
+        }
+        
+        .nmds-container {
+            flex: 1;
+            min-height: 300px;
+        }
+        
+        /* Metrics Card */
+        .metrics-table {
             width: 100%;
             border-collapse: collapse;
-            margin: 20px 0;
         }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px 12px;
+        
+        .metrics-table th, 
+        .metrics-table td {
+            padding: 8px 10px;
             text-align: left;
+            border-bottom: 1px solid #eee;
         }
-        th {
-            background-color: #3498db;
-            color: white;
+        
+        /* Management Cards */
+        .management-card {
+            min-height: 380px;
+            display: flex;
+            flex-direction: column;
         }
-        tr:nth-child(even) {
-            background-color: #f2f2f2;
+        
+        .chart-container {
+            width: 100%;
+            height: 280px;
+            margin: 0 auto;
         }
-        .domin-score {
-            font-weight: bold;
-            color: #e53935;
+        
+        /* Responsive Adjustments */
+        @media (max-width: 1200px) {
+            .nmds-card {
+                grid-column: span 2;
+            }
         }
-        .pie-container {
-            width: 300px;
-            height: 200px;
+        
+        @media (max-width: 768px) {
+            .dashboard-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .nmds-card {
+                grid-column: span 1;
+            }
+            
+            .management-card {
+                min-height: 350px;
+            }
+            
+            .chart-container {
+                height: 250px;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>Species Analysis Report</h1>
-    <p>Generated on: 2025-06-14 14:31:12</p>
+    <header class="dashboard-header">
+        <h1>Grassland Management Dashboard</h1>
+        <div class="timestamp">Generated: 2025-06-15 15:38:23</div>
+    </header>
     
-    <div class="summary-cards">
-        <div class="card">
-            <h3>Total Relevés</h3>
-            <div class="card-value">38</div>
-        </div>
-        <div class="card">
-            <h3>Unique Species</h3>
-            <div class="card-value">78</div>
-        </div>
-        <div class="card">
-            <h3>Highest DOMIN Overall</h3>
-            <div class="card-value">Holcus lanatus</div>
-            <div class="domin-score">Score: 546.9</div>
-        </div>
-    </div>
-    
-    <h2>Relevé Summary</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>Relevé ID</th>
-                <th>Species Count</th>
-                <th>Max DOMIN Score</th>
-                <th>Species Composition</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr><td>1</td><td>6</td><td class='domin-score'>42.0 (Agrostis Stolonifera)</td><td><div id='pie-1' class='pie-container'></div></td><script>Plotly.newPlot('pie-1', [{values: [{"species": "Agrostis Stolonifera", "score": 42.0}, {"species": "Lolium Perenne", "score": 42.0}, {"species": "Dactylis Glomerata", "score": 8.0}, {"species": "Ranunculus Repens", "score": 0.1}, {"species": "Stellaria Media", "score": 0.1}, {"species": "Taraxacum Aggregate", "score": 0.1}].map(x => x.score),labels: [{"species": "Agrostis Stolonifera", "score": 42.0}, {"species": "Lolium Perenne", "score": 42.0}, {"species": "Dactylis Glomerata", "score": 8.0}, {"species": "Ranunculus Repens", "score": 0.1}, {"species": "Stellaria Media", "score": 0.1}, {"species": "Taraxacum Aggregate", "score": 0.1}].map(x => x.species),type: 'pie',textinfo: 'percent',hoverinfo: 'label+percent+value',}], {margin: {t:0, b:0, l:0, r:0}, showlegend: false});</script></tr><tr><td>2</td><td>7</td><td class='domin-score'>83.0 (Agrostis Stolonifera)</td><td><div id='pie-2' class='pie-container'></div></td><script>Plotly.newPlot('pie-2', [{values: [{"species": "Agrostis Stolonifera", "score": 83.0}, {"species": "Rumex Obtusifolius", "score": 18.0}, {"species": "Taraxacum Aggregate", "score": 8.0}, {"species": "Lolium Perenne", "score": 3.0}, {"species": "Ranunculus Repens", "score": 0.1}, {"species": "Ranunculus Acris", "score": 0.1}, {"species": "Cerastium Fontanum", "score": 0.1}].map(x => x.score),labels: [{"species": "Agrostis Stolonifera", "score": 83.0}, {"species": "Rumex Obtusifolius", "score": 18.0}, {"species": "Taraxacum Aggregate", "score": 8.0}, {"species": "Lolium Perenne", "score": 3.0}, {"species": "Ranunculus Repens", "score": 0.1}, {"species": "Ranunculus Acris", "score": 0.1}, {"species": "Cerastium Fontanum", "score": 0.1}].map(x => x.species),type: 'pie',textinfo: 'percent',hoverinfo: 'label+percent+value',}], {margin: {t:0, b:0, l:0, r:0}, showlegend: false});</script></tr><tr><td>3</td><td>7</td><td class='domin-score'>63.0 (Phragmites Australis)</td><td><div id='pie-3' class='pie-container'></div></td><script>Plotly.newPlot('pie-3', [{values: [{"species": "Phragmites Australis", "score": 63.0}, {"species": "Juncus Inflexus", "score": 63.0}, {"species": "Agrostis Stolonifera", "score": 30.0}, {"species": "Deschampsia Cepitosa", "score": 3.0}, {"species": "Poa Trivialis", "score": 3.0}, {"species": "Dactylis Glomerata", "score": 3.0}, {"species": "Ranunculus repens", "score": 0.1}].map(x => x.score),labels: [{"species": "Phragmites Australis", "score": 63.0}, {"species": "Juncus Inflexus", "score": 63.0}, {"species": "Agrostis Stolonifera", "score": 30.0}, {"species": "Deschampsia Cepitosa", "score": 3.0}, {"species": "Poa Trivialis", "score": 3.0}, {"species": "Dactylis Glomerata", "score": 3.0}, {"species": "Ranunculus repens", "score": 0.1}].map(x => x.species),type: 'pie',textinfo: 'percent',hoverinfo: 'label+percent+value',}], {margin: {t:0, b:0, l:0, r:0}, showlegend: false});</script></tr><tr><td>4</td><td>4</td><td class='domin-score'>63.0 (Agrostis Stolonifera)</td><td><div id='pie-4' class='pie-container'></div></td><script>Plotly.newPlot('pie-4', [{values: [{"species": "Agrostis Stolonifera", "score": 63.0}, {"species": "Lolium Perenne", "score": 8.0}, {"species": "Phragmites Australis", "score": 3.0}, {"species": "Rumex Obtusifolius", "score": 0.1}].map(x => x.score),labels: [{"species": "Agrostis Stolonifera", "score": 63.0}, {"species": "Lolium Perenne", "score": 8.0}, {"species": "Phragmites Australis", "score": 3.0}, {"species": "Rumex Obtusifolius", "score": 0.1}].map(x => x.species),type: 'pie',textinfo: 'percent',hoverinfo: 'label+percent+value',}], {margin: {t:0, b:0, l:0, r:0}, showlegend: false});</script></tr><tr><td>5</td><td>6</td><td class='domin-score'>30.0 (Agrostis Capillaris)</td><td><div id='pie-5' class='pie-container'></div></td><script>Plotly.newPlot('pie-5', [{values: [{"species": "Agrostis Capillaris", "score": 30.0}, {"species": "Cirsium Arvense", "score": 30.0}, {"species": "Agrostis Stolonifera", "score": 8.0}, {"species": "Taraxacum Aggregate", "score": 8.0}, {"species": "Ranunculus Acris", "score": 0.1}, {"species": "Cerastium Fontanum", "score": 0.1}].map(x => x.score),labels: [{"species": "Agrostis Capillaris", "score": 30.0}, {"species": "Cirsium Arvense", "score": 30.0}, {"species": "Agrostis Stolonifera", "score": 8.0}, {"species": "Taraxacum Aggregate", "score": 8.0}, {"species": "Ranunculus Acris", "score": 0.1}, {"species": "Cerastium Fontanum", "score": 0.1}].map(x => x.species),type: 'pie',textinfo: 'percent',hoverinfo: 'label+percent+value',}], {margin: {t:0, b:0, l:0, r:0}, showlegend: false});</script></tr><tr><td>6</td><td>4</td><td class='domin-score'>83.0 (Agrostis Stolonifera)</td><td><div id='pie-6' class='pie-container'></div></td><script>Plotly.newPlot('pie-6', [{values: [{"species": "Agrostis Stolonifera", "score": 83.0}, {"species": "Lolium Perenne", "score": 18.0}, {"species": "Cerastium Fontanum", "score": 0.1}, {"species": "Ranunculus Repens", "score": 0.1}].map(x => x.score),labels: [{"species": "Agrostis Stolonifera", "score": 83.0}, {"species": "Lolium Perenne", "score": 18.0}, {"species": "Cerastium Fontanum", "score": 0.1}, {"species": "Ranunculus Repens", "score": 0.1}].map(x => x.species),type: 'pie',textinfo: 'percent',hoverinfo: 'label+percent+value',}], {margin: {t:0, b:0, l:0, r:0}, showlegend: false});</script></tr><tr><td>7</td><td>3</td><td class='domin-score'>83.0 (Agrostis Stolonifera)</td><td><div id='pie-7' class='pie-container'></div></td><script>Plotly.newPlot('pie-7', [{values: [{"species": "Agrostis Stolonifera", "score": 83.0}, {"species": "Lolium Perenne", "score": 18.0}, {"species": "Taraxacum aggregate", "score": 3.0}].map(x => x.score),labels: [{"species": "Agrostis Stolonifera", "score": 83.0}, {"species": "Lolium Perenne", "score": 18.0}, {"species": "Taraxacum aggregate", "score": 3.0}].map(x => x.species),type: 'pie',textinfo: 'percent',hoverinfo: 'label+percent+value',}], {margin: {t:0, b:0, l:0, r:0}, showlegend: false});</script></tr><tr><td>8</td><td>9</td><td class='domin-score'>42.0 (Agrostis Stolonifera)</td><td><div id='pie-8' class='pie-container'></div></td><script>Plotly.newPlot('pie-8', [{values: [{"species": "Agrostis Stolonifera", "score": 42.0}, {"species": "Lolium Perenne", "score": 42.0}, {"species": "Trifolium Repens", "score": 18.0}, {"species": "Poa Annua", "score": 8.0}, {"species": "Ranunculus Repens", "score": 0.1}, {"species": "Cirsium Arvense", "score": 0.1}, {"species": "Cerastium Fontanum", "score": 0.1}, {"species": "Taraxacum Aggregate", "score": 0.1}, {"species": "Ranunculus Acris", "score": 0.1}].map(x => x.score),labels: [{"species": "Agrostis Stolonifera", "score": 42.0}, {"species": "Lolium Perenne", "score": 42.0}, {"species": "Trifolium Repens", "score": 18.0}, {"species": "Poa Annua", "score": 8.0}, {"species": "Ranunculus Repens", "score": 0.1}, {"species": "Cirsium Arvense", "score": 0.1}, {"species": "Cerastium Fontanum", "score": 0.1}, {"species": "Taraxacum Aggregate", "score": 0.1}, {"species": "Ranunculus Acris", "score": 0.1}].map(x => x.species),type: 'pie',textinfo: 'percent',hoverinfo: 'label+percent+value',}], {margin: {t:0, b:0, l:0, r:0}, showlegend: false});</script></tr><tr><td>9</td><td>5</td><td class='domin-score'>18.0 (Holcus Lanatus)</td><td><div id='pie-9' class='pie-container'></div></td><script>Plotly.newPlot('pie-9', [{values: [{"species": "Holcus Lanatus", "score": 18.0}, {"species": "Molinea Cerulea", "score": 8.0}, {"species": "Festuca Rubra", "score": 8.0}, {"species": "Cirsium Arvense", "score": 3.0}, {"species": "Rumex Obtusifolius", "score": 0.5}].map(x => x.score),labels: [{"species": "Holcus Lanatus", "score": 18.0}, {"species": "Molinea Cerulea", "score": 8.0}, {"species": "Festuca Rubra", "score": 8.0}, {"species": "Cirsium Arvense", "score": 3.0}, {"species": "Rumex Obtusifolius", "score": 0.5}].map(x => x.species),type: 'pie',textinfo: 'percent',hoverinfo: 'label+percent+value',}], {margin: {t:0, b:0, l:0, r:0}, showlegend: false});</script></tr><tr><td>10</td><td>4</td><td class='domin-score'>63.0 (Alopercurus Pratensis)</td><td><div id='pie-10' class='pie-container'></div></td><script>Plotly.newPlot('pie-10', [{values: [{"species": "Alopercurus Pratensis", "score": 63.0}, {"species": "Ranunculus Repens", "score": 42.0}, {"species": "Agrostis Stolonifera", "score": 3.0}, {"species": "Cirsium Arvense", "score": 3.0}].map(x => x.score),labels: [{"species": "Alopercurus Pratensis", "score": 63.0}, {"species": "Ranunculus Repens", "score": 42.0}, {"species": "Agrostis Stolonifera", "score": 3.0}, {"species": "Cirsium Arvense", "score": 3.0}].map(x => x.species),type: 'pie',textinfo: 'percent',hoverinfo: 'label+percent+value',}], {margin: {t:0, b:0, l:0, r:0}, showlegend: false});</script></tr><tr><td>28</td><td>7</td><td class='domin-score'>42.0 (Holcus lanatus)</td><td><div id='pie-28' class='pie-container'></div></td><script>Plotly.newPlot('pie-28', [{values: [{"species": "Holcus lanatus", "score": 42.0}, {"species": "Bromus hordeaceus", "score": 42.0}, {"species": "Lolium perenne", "score": 18.0}, {"species": "Anthoxanthum odoratum", "score": 8.0}, {"species": "Ranunculus repens", "score": 0.3}, {"species": "Poa pratensis", "score": 0.1}, {"species": "Cardamine pratensis", "score": 0.1}].map(x => x.score),labels: [{"species": "Holcus lanatus", "score": 42.0}, {"species": "Bromus hordeaceus", "score": 42.0}, {"species": "Lolium perenne", "score": 18.0}, {"species": "Anthoxanthum odoratum", "score": 8.0}, {"species": "Ranunculus repens", "score": 0.3}, {"species": "Poa pratensis", "score": 0.1}, {"species": "Cardamine pratensis", "score": 0.1}].map(x => x.species),type: 'pie',textinfo: 'percent',hoverinfo: 'label+percent+value',}], {margin: {t:0, b:0, l:0, r:0}, showlegend: false});</script></tr><tr><td>30</td><td>8</td><td class='domin-score'>63.0 (Bromus hordeaceus)</td><td><div id='pie-30' class='pie-container'></div></td><script>Plotly.newPlot('pie-30', [{values: [{"species": "Bromus hordeaceus", "score": 63.0}, {"species": "Holcus lanatus", "score": 30.0}, {"species": "Anthoxanthum odoratum", "score": 8.0}, {"species": "Ranunculus repens", "score": 0.5}, {"species": "Poa trivialis", "score": 0.5}, {"species": "Lolium perenne", "score": 0.1}, {"species": "Cerastium fontanum", "score": 0.1}, {"species": "Cardamine pratensis", "score": 0.1}].map(x => x.score),labels: [{"species": "Bromus hordeaceus", "score": 63.0}, {"species": "Holcus lanatus", "score": 30.0}, {"species": "Anthoxanthum odoratum", "score": 8.0}, {"species": "Ranunculus repens", "score": 0.5}, {"species": "Poa trivialis", "score": 0.5}, {"species": "Lolium perenne", "score": 0.1}, {"species": "Cerastium fontanum", "score": 0.1}, {"species": "Cardamine pratensis", "score": 0.1}].map(x => x.species),type: 'pie',textinfo: 'percent',hoverinfo: 'label+percent+value',}], {margin: {t:0, b:0, l:0, r:0}, showlegend: false});</script></tr><tr><td>31</td><td>10</td><td class='domin-score'>63.0 (Anthoxanthum odoratum)</td><td><div id='pie-31' class='pie-container'></div></td><script>Plotly.newPlot('pie-31', [{values: [{"species": "Anthoxanthum odoratum", "score": 63.0}, {"species": "Festuca rubra", "score": 30.0}, {"species": "Poa trivialis", "score": 30.0}, {"species": "Holcus lanatus", "score": 18.0}, {"species": "Lolium perenne", "score": 3.0}, {"species": "Taraxacum officinale", "score": 0.5}, {"species": "Ranunculus repens", "score": 0.3}, {"species": "Cardamine pratensis", "score": 0.3}, {"species": "Rumex acetosa", "score": 0.1}, {"species": "Cerastium fontanum", "score": 0.1}].map(x => x.score),labels: [{"species": "Anthoxanthum odoratum", "score": 63.0}, {"species": "Festuca rubra", "score": 30.0}, {"species": "Poa trivialis", "score": 30.0}, {"species": "Holcus lanatus", "score": 18.0}, {"species": "Lolium perenne", "score": 3.0}, {"species": "Taraxacum officinale", "score": 0.5}, {"species": "Ranunculus repens", "score": 0.3}, {"species": "Cardamine pratensis", "score": 0.3}, {"species": "Rumex acetosa", "score": 0.1}, {"species": "Cerastium fontanum", "score": 0.1}].map(x => x.species),type: 'pie',textinfo: 'percent',hoverinfo: 'label+percent+value',}], {margin: {t:0, b:0, l:0, r:0}, showlegend: false});</script></tr><tr><td>32</td><td>6</td><td class='domin-score'>63.0 (Holcus lanatus)</td><td><div id='pie-32' class='pie-container'></div></td><script>Plotly.newPlot('pie-32', [{values: [{"species": "Holcus lanatus", "score": 63.0}, {"species": "Poa trivialis", "score": 18.0}, {"species": "Dactylis glomerata", "score": 0.5}, {"species": "Anthoxanthum odoratum", "score": 0.3}, {"species": "Cardamine pratensis", "score": 0.3}, {"species": "Alopecurus pratensis", "score": 0.1}].map(x => x.score),labels: [{"species": "Holcus lanatus", "score": 63.0}, {"species": "Poa trivialis", "score": 18.0}, {"species": "Dactylis glomerata", "score": 0.5}, {"species": "Anthoxanthum odoratum", "score": 0.3}, {"species": "Cardamine pratensis", "score": 0.3}, {"species": "Alopecurus pratensis", "score": 0.1}].map(x => x.species),type: 'pie',textinfo: 'percent',hoverinfo: 'label+percent+value',}], {margin: {t:0, b:0, l:0, r:0}, showlegend: false});</script></tr><tr><td>33</td><td>8</td><td class='domin-score'>63.0 (Anthoxanthum odoratum)</td><td><div id='pie-33' class='pie-container'></div></td><script>Plotly.newPlot('pie-33', [{values: [{"species": "Anthoxanthum odoratum", "score": 63.0}, {"species": "Holcus lanatus", "score": 30.0}, {"species": "Festuca rubra", "score": 18.0}, {"species": "Cerastium fontanum", "score": 0.5}, {"species": "Carex dioica", "score": 0.5}, {"species": "Ranunculus repens", "score": 0.3}, {"species": "Filipendula ulmaria", "score": 0.1}, {"species": "Cardamine pratensis", "score": 0.1}].map(x => x.score),labels: [{"species": "Anthoxanthum odoratum", "score": 63.0}, {"species": "Holcus lanatus", "score": 30.0}, {"species": "Festuca rubra", "score": 18.0}, {"species": "Cerastium fontanum", "score": 0.5}, {"species": "Carex dioica", "score": 0.5}, {"species": "Ranunculus repens", "score": 0.3}, {"species": "Filipendula ulmaria", "score": 0.1}, {"species": "Cardamine pratensis", "score": 0.1}].map(x => x.species),type: 'pie',textinfo: 'percent',hoverinfo: 'label+percent+value',}], {margin: {t:0, b:0, l:0, r:0}, showlegend: false});</script></tr><tr><td>34</td><td>3</td><td class='domin-score'>83.0 (Phragmites australis)</td><td><div id='pie-34' class='pie-container'></div></td><script>Plotly.newPlot('pie-34', [{values: [{"species": "Phragmites australis", "score": 83.0}, {"species": "Poa trivialis", "score": 3.0}, {"species": "Ranunculus repens", "score": 0.3}].map(x => x.score),labels: [{"species": "Phragmites australis", "score": 83.0}, {"species": "Poa trivialis", "score": 3.0}, {"species": "Ranunculus repens", "score": 0.3}].map(x => x.species),type: 'pie',textinfo: 'percent',hoverinfo: 'label+percent+value',}], {margin: {t:0, b:0, l:0, r:0}, showlegend: false});</script></tr><tr><td>35</td><td>6</td><td class='domin-score'>83.0 (Holcus lanatus)</td><td><div id='pie-35' class='pie-container'></div></td><script>Plotly.newPlot('pie-35', [{values: [{"species": "Holcus lanatus", "score": 83.0}, {"species": "Poa trivialis", "score": 8.0}, {"species": "Bromus hordeaceus", "score": 0.5}, {"species": "Cardamine pratensis", "score": 0.3}, {"species": "Taraxacum officinale", "score": 0.1}, {"species": "Rumex obtusifolius", "score": 0.1}].map(x => x.score),labels: [{"species": "Holcus lanatus", "score": 83.0}, {"species": "Poa trivialis", "score": 8.0}, {"species": "Bromus hordeaceus", "score": 0.5}, {"species": "Cardamine pratensis", "score": 0.3}, {"species": "Taraxacum officinale", "score": 0.1}, {"species": "Rumex obtusifolius", "score": 0.1}].map(x => x.species),type: 'pie',textinfo: 'percent',hoverinfo: 'label+percent+value',}], {margin: {t:0, b:0, l:0, r:0}, showlegend: false});</script></tr><tr><td>36</td><td>7</td><td class='domin-score'>83.0 (Holcus lanatus)</td><td><div id='pie-36' class='pie-container'></div></td><script>Plotly.newPlot('pie-36', [{values: [{"species": "Holcus lanatus", "score": 83.0}, {"species": "Poa pratensis", "score": 8.0}, {"species": "Cardamine pratensis", "score": 0.3}, {"species": "Filipendula ulmaria", "score": 0.1}, {"species": "Ranunculus repens", "score": 0.1}, {"species": "Taraxacum officinale", "score": 0.1}, {"species": "Bromus hordeaceus", "score": 0.1}].map(x => x.score),labels: [{"species": "Holcus lanatus", "score": 83.0}, {"species": "Poa pratensis", "score": 8.0}, {"species": "Cardamine pratensis", "score": 0.3}, {"species": "Filipendula ulmaria", "score": 0.1}, {"species": "Ranunculus repens", "score": 0.1}, {"species": "Taraxacum officinale", "score": 0.1}, {"species": "Bromus hordeaceus", "score": 0.1}].map(x => x.species),type: 'pie',textinfo: 'percent',hoverinfo: 'label+percent+value',}], {margin: {t:0, b:0, l:0, r:0}, showlegend: false});</script></tr><tr><td>37</td><td>4</td><td class='domin-score'>83.0 (Holcus lanatus)</td><td><div id='pie-37' class='pie-container'></div></td><script>Plotly.newPlot('pie-37', [{values: [{"species": "Holcus lanatus", "score": 83.0}, {"species": "Poa trivialis", "score": 3.0}, {"species": "Bromus hordeaceus", "score": 0.5}, {"species": "Ranunculus repens", "score": 0.1}].map(x => x.score),labels: [{"species": "Holcus lanatus", "score": 83.0}, {"species": "Poa trivialis", "score": 3.0}, {"species": "Bromus hordeaceus", "score": 0.5}, {"species": "Ranunculus repens", "score": 0.1}].map(x => x.species),type: 'pie',textinfo: 'percent',hoverinfo: 'label+percent+value',}], {margin: {t:0, b:0, l:0, r:0}, showlegend: false});</script></tr><tr><td>38</td><td>8</td><td class='domin-score'>42.0 (Holcus lanatus)</td><td><div id='pie-38' class='pie-container'></div></td><script>Plotly.newPlot('pie-38', [{values: [{"species": "Holcus lanatus", "score": 42.0}, {"species": "Anthoxanthum odoratum", "score": 8.0}, {"species": "Poa trivialis", "score": 8.0}, {"species": "Lolium multiflorum", "score": 8.0}, {"species": "Bromus hordeaceus", "score": 0.5}, {"species": "Filipendula ulmaria", "score": 0.1}, {"species": "Ranunculus acris", "score": 0.1}, {"species": "Cerastium fontanum", "score": 0.1}].map(x => x.score),labels: [{"species": "Holcus lanatus", "score": 42.0}, {"species": "Anthoxanthum odoratum", "score": 8.0}, {"species": "Poa trivialis", "score": 8.0}, {"species": "Lolium multiflorum", "score": 8.0}, {"species": "Bromus hordeaceus", "score": 0.5}, {"species": "Filipendula ulmaria", "score": 0.1}, {"species": "Ranunculus acris", "score": 0.1}, {"species": "Cerastium fontanum", "score": 0.1}].map(x => x.species),type: 'pie',textinfo: 'percent',hoverinfo: 'label+percent+value',}], {margin: {t:0, b:0, l:0, r:0}, showlegend: false});</script></tr><tr><td>39</td><td>7</td><td class='domin-score'>42.0 (Filipendula ulmaria)</td><td><div id='pie-39' class='pie-container'></div></td><script>Plotly.newPlot('pie-39', [{values: [{"species": "Filipendula ulmaria", "score": 42.0}, {"species": "Plantago lanceolata", "score": 42.0}, {"species": "Carex flacca", "score": 18.0}, {"species": "Eupatorium cannabinum", "score": 3.0}, {"species": "Festuca rubra", "score": 0.3}, {"species": "Ranunculus acris", "score": 0.3}, {"species": "Silene vulgaris", "score": 0.1}].map(x => x.score),labels: [{"species": "Filipendula ulmaria", "score": 42.0}, {"species": "Plantago lanceolata", "score": 42.0}, {"species": "Carex flacca", "score": 18.0}, {"species": "Eupatorium cannabinum", "score": 3.0}, {"species": "Festuca rubra", "score": 0.3}, {"species": "Ranunculus acris", "score": 0.3}, {"species": "Silene vulgaris", "score": 0.1}].map(x => x.species),type: 'pie',textinfo: 'percent',hoverinfo: 'label+percent+value',}], {margin: {t:0, b:0, l:0, r:0}, showlegend: false});</script></tr><tr><td>41</td><td>8</td><td class='domin-score'>63.0 (Carex flacca)</td><td><div id='pie-41' class='pie-container'></div></td><script>Plotly.newPlot('pie-41', [{values: [{"species": "Carex flacca", "score": 63.0}, {"species": "Plantago lanceolata", "score": 63.0}, {"species": "Festuca rubra", "score": 3.0}, {"species": "Filipendula ulmaria", "score": 3.0}, {"species": "Anthoxanthum odoratum", "score": 0.5}, {"species": "Taraxacum officinale", "score": 0.3}, {"species": "Centaurea nigra", "score": 0.1}, {"species": "Hypochaeris radicata", "score": 0.1}].map(x => x.score),labels: [{"species": "Carex flacca", "score": 63.0}, {"species": "Plantago lanceolata", "score": 63.0}, {"species": "Festuca rubra", "score": 3.0}, {"species": "Filipendula ulmaria", "score": 3.0}, {"species": "Anthoxanthum odoratum", "score": 0.5}, {"species": "Taraxacum officinale", "score": 0.3}, {"species": "Centaurea nigra", "score": 0.1}, {"species": "Hypochaeris radicata", "score": 0.1}].map(x => x.species),type: 'pie',textinfo: 'percent',hoverinfo: 'label+percent+value',}], {margin: {t:0, b:0, l:0, r:0}, showlegend: false});</script></tr><tr><td>42</td><td>5</td><td class='domin-score'>63.0 (Carex flacca)</td><td><div id='pie-42' class='pie-container'></div></td><script>Plotly.newPlot('pie-42', [{values: [{"species": "Carex flacca", "score": 63.0}, {"species": "Filipendula ulmaria", "score": 18.0}, {"species": "Festuca rubra", "score": 0.5}, {"species": "Anthoxanthum odoratum", "score": 0.1}, {"species": "Veronica chamaedrys", "score": 0.1}].map(x => x.score),labels: [{"species": "Carex flacca", "score": 63.0}, {"species": "Filipendula ulmaria", "score": 18.0}, {"species": "Festuca rubra", "score": 0.5}, {"species": "Anthoxanthum odoratum", "score": 0.1}, {"species": "Veronica chamaedrys", "score": 0.1}].map(x => x.species),type: 'pie',textinfo: 'percent',hoverinfo: 'label+percent+value',}], {margin: {t:0, b:0, l:0, r:0}, showlegend: false});</script></tr><tr><td>43</td><td>5</td><td class='domin-score'>42.0 (Festuca rubra)</td><td><div id='pie-43' class='pie-container'></div></td><script>Plotly.newPlot('pie-43', [{values: [{"species": "Festuca rubra", "score": 42.0}, {"species": "Plantago lanceolata", "score": 30.0}, {"species": "Filipendula ulmaria", "score": 3.0}, {"species": "Anthoxanthum odoratum", "score": 0.5}, {"species": "Plantago major", "score": 0.1}].map(x => x.score),labels: [{"species": "Festuca rubra", "score": 42.0}, {"species": "Plantago lanceolata", "score": 30.0}, {"species": "Filipendula ulmaria", "score": 3.0}, {"species": "Anthoxanthum odoratum", "score": 0.5}, {"species": "Plantago major", "score": 0.1}].map(x => x.species),type: 'pie',textinfo: 'percent',hoverinfo: 'label+percent+value',}], {margin: {t:0, b:0, l:0, r:0}, showlegend: false});</script></tr><tr><td>51</td><td>17</td><td class='domin-score'>63.0 (Cirsium dissectum)</td><td><div id='pie-51' class='pie-container'></div></td><script>Plotly.newPlot('pie-51', [{values: [{"species": "Cirsium dissectum", "score": 63.0}, {"species": "Filipendula ulmaria", "score": 30.0}, {"species": "Plantago lanceolata", "score": 8.0}, {"species": "Anthoxanthum odoratum", "score": 0.5}, {"species": "Carex flacca", "score": 0.5}, {"species": "Dactylis glomerata", "score": 0.5}, {"species": "Poa pratensis", "score": 0.5}, {"species": "Ranunculus acris", "score": 0.5}, {"species": "Ranunculus repens", "score": 0.5}, {"species": "Trifolium repens", "score": 0.5}, {"species": "Briza media", "score": 0.3}, {"species": "Centaurea nigra", "score": 0.3}, {"species": "Equisetum arvense", "score": 0.3}, {"species": "Holcus lanatus", "score": 0.3}, {"species": "Valeriana officinalis", "score": 0.3}, {"species": "Carex acutiformis", "score": 0.1}, {"species": "Ophioglossum vulgatum", "score": 0.1}].map(x => x.score),labels: [{"species": "Cirsium dissectum", "score": 63.0}, {"species": "Filipendula ulmaria", "score": 30.0}, {"species": "Plantago lanceolata", "score": 8.0}, {"species": "Anthoxanthum odoratum", "score": 0.5}, {"species": "Carex flacca", "score": 0.5}, {"species": "Dactylis glomerata", "score": 0.5}, {"species": "Poa pratensis", "score": 0.5}, {"species": "Ranunculus acris", "score": 0.5}, {"species": "Ranunculus repens", "score": 0.5}, {"species": "Trifolium repens", "score": 0.5}, {"species": "Briza media", "score": 0.3}, {"species": "Centaurea nigra", "score": 0.3}, {"species": "Equisetum arvense", "score": 0.3}, {"species": "Holcus lanatus", "score": 0.3}, {"species": "Valeriana officinalis", "score": 0.3}, {"species": "Carex acutiformis", "score": 0.1}, {"species": "Ophioglossum vulgatum", "score": 0.1}].map(x => x.species),type: 'pie',textinfo: 'percent',hoverinfo: 'label+percent+value',}], {margin: {t:0, b:0, l:0, r:0}, showlegend: false});</script></tr><tr><td>58</td><td>13</td><td class='domin-score'>42.0 (Filipendula ulmaria)</td><td><div id='pie-58' class='pie-container'></div></td><script>Plotly.newPlot('pie-58', [{values: [{"species": "Filipendula ulmaria", "score": 42.0}, {"species": "Carex flacca", "score": 42.0}, {"species": "Ranunculus repens", "score": 30.0}, {"species": "Carex nigra", "score": 18.0}, {"species": "Anthoxanthum odoratum", "score": 8.0}, {"species": "Ranunculus acris", "score": 3.0}, {"species": "Poa trivialis", "score": 3.0}, {"species": "Cirsium dissectum", "score": 0.5}, {"species": "Holcus lanatus", "score": 0.5}, {"species": "Ranunculus flammula", "score": 0.5}, {"species": "Cardamine pratensis", "score": 0.3}, {"species": "Juncus effusus", "score": 0.3}, {"species": "Galium palustre", "score": 0.1}].map(x => x.score),labels: [{"species": "Filipendula ulmaria", "score": 42.0}, {"species": "Carex flacca", "score": 42.0}, {"species": "Ranunculus repens", "score": 30.0}, {"species": "Carex nigra", "score": 18.0}, {"species": "Anthoxanthum odoratum", "score": 8.0}, {"species": "Ranunculus acris", "score": 3.0}, {"species": "Poa trivialis", "score": 3.0}, {"species": "Cirsium dissectum", "score": 0.5}, {"species": "Holcus lanatus", "score": 0.5}, {"species": "Ranunculus flammula", "score": 0.5}, {"species": "Cardamine pratensis", "score": 0.3}, {"species": "Juncus effusus", "score": 0.3}, {"species": "Galium palustre", "score": 0.1}].map(x => x.species),type: 'pie',textinfo: 'percent',hoverinfo: 'label+percent+value',}], {margin: {t:0, b:0, l:0, r:0}, showlegend: false});</script></tr><tr><td>59</td><td>18</td><td class='domin-score'>30.0 (Filipendula ulmaria)</td><td><div id='pie-59' class='pie-container'></div></td><script>Plotly.newPlot('pie-59', [{values: [{"species": "Filipendula ulmaria", "score": 30.0}, {"species": "Anthoxanthum odoratum", "score": 18.0}, {"species": "Carex flacca", "score": 8.0}, {"species": "Holcus lanatus", "score": 8.0}, {"species": "Poa pratensis", "score": 8.0}, {"species": "Ranunculus repens", "score": 8.0}, {"species": "Equisetum arvense", "score": 0.5}, {"species": "Festuca rubra", "score": 0.5}, {"species": "Plantago lanceolata", "score": 0.5}, {"species": "Taraxacum officinale", "score": 0.5}, {"species": "Trifolium repens", "score": 0.5}, {"species": "Caltha palustris", "score": 0.1}, {"species": "Centaurea nigra", "score": 0.1}, {"species": "Iris pseudacorus", "score": 0.1}, {"species": "Lychnis flos-cuculi", "score": 0.1}, {"species": "Ophioglossum vulgatum", "score": 0.1}, {"species": "Ranunculus flammula", "score": 0.1}, {"species": "Juncus effusus", "score": 0.1}].map(x => x.score),labels: [{"species": "Filipendula ulmaria", "score": 30.0}, {"species": "Anthoxanthum odoratum", "score": 18.0}, {"species": "Carex flacca", "score": 8.0}, {"species": "Holcus lanatus", "score": 8.0}, {"species": "Poa pratensis", "score": 8.0}, {"species": "Ranunculus repens", "score": 8.0}, {"species": "Equisetum arvense", "score": 0.5}, {"species": "Festuca rubra", "score": 0.5}, {"species": "Plantago lanceolata", "score": 0.5}, {"species": "Taraxacum officinale", "score": 0.5}, {"species": "Trifolium repens", "score": 0.5}, {"species": "Caltha palustris", "score": 0.1}, {"species": "Centaurea nigra", "score": 0.1}, {"species": "Iris pseudacorus", "score": 0.1}, {"species": "Lychnis flos-cuculi", "score": 0.1}, {"species": "Ophioglossum vulgatum", "score": 0.1}, {"species": "Ranunculus flammula", "score": 0.1}, {"species": "Juncus effusus", "score": 0.1}].map(x => x.species),type: 'pie',textinfo: 'percent',hoverinfo: 'label+percent+value',}], {margin: {t:0, b:0, l:0, r:0}, showlegend: false});</script></tr><tr><td>60</td><td>15</td><td class='domin-score'>63.0 (Filipendula ulmaria)</td><td><div id='pie-60' class='pie-container'></div></td><script>Plotly.newPlot('pie-60', [{values: [{"species": "Filipendula ulmaria", "score": 63.0}, {"species": "Carex flacca", "score": 30.0}, {"species": "Carex nigra", "score": 18.0}, {"species": "Plantago lanceolata", "score": 18.0}, {"species": "Lychnis flos-cuculi", "score": 3.0}, {"species": "Ranunculus acris", "score": 3.0}, {"species": "Ranunculus repens", "score": 3.0}, {"species": "Anthoxanthum odoratum", "score": 0.5}, {"species": "Equisetum arvense", "score": 0.5}, {"species": "Trifolium repens", "score": 0.5}, {"species": "Galium palustre", "score": 0.3}, {"species": "Holcus lanatus", "score": 0.3}, {"species": "Cardamine pratensis", "score": 0.3}, {"species": "Caltha palustris", "score": 0.1}, {"species": "Cerastium fontanum", "score": 0.1}].map(x => x.score),labels: [{"species": "Filipendula ulmaria", "score": 63.0}, {"species": "Carex flacca", "score": 30.0}, {"species": "Carex nigra", "score": 18.0}, {"species": "Plantago lanceolata", "score": 18.0}, {"species": "Lychnis flos-cuculi", "score": 3.0}, {"species": "Ranunculus acris", "score": 3.0}, {"species": "Ranunculus repens", "score": 3.0}, {"species": "Anthoxanthum odoratum", "score": 0.5}, {"species": "Equisetum arvense", "score": 0.5}, {"species": "Trifolium repens", "score": 0.5}, {"species": "Galium palustre", "score": 0.3}, {"species": "Holcus lanatus", "score": 0.3}, {"species": "Cardamine pratensis", "score": 0.3}, {"species": "Caltha palustris", "score": 0.1}, {"species": "Cerastium fontanum", "score": 0.1}].map(x => x.species),type: 'pie',textinfo: 'percent',hoverinfo: 'label+percent+value',}], {margin: {t:0, b:0, l:0, r:0}, showlegend: false});</script></tr><tr><td>61</td><td>12</td><td class='domin-score'>42.0 (Carex flacca)</td><td><div id='pie-61' class='pie-container'></div></td><script>Plotly.newPlot('pie-61', [{values: [{"species": "Carex flacca", "score": 42.0}, {"species": "Filipendula ulmaria", "score": 30.0}, {"species": "Anthoxanthum odoratum", "score": 18.0}, {"species": "Plantago lanceolata", "score": 8.0}, {"species": "Holcus lanatus", "score": 0.5}, {"species": "Trifolium repens", "score": 0.5}, {"species": "Poa trivialis", "score": 0.5}, {"species": "Cirsium dissectum", "score": 0.1}, {"species": "Equisetum arvense", "score": 0.1}, {"species": "Ranunculus acris", "score": 0.1}, {"species": "Thalictrum flavum", "score": 0.1}, {"species": "Cardamine pratensis", "score": 0.1}].map(x => x.score),labels: [{"species": "Carex flacca", "score": 42.0}, {"species": "Filipendula ulmaria", "score": 30.0}, {"species": "Anthoxanthum odoratum", "score": 18.0}, {"species": "Plantago lanceolata", "score": 8.0}, {"species": "Holcus lanatus", "score": 0.5}, {"species": "Trifolium repens", "score": 0.5}, {"species": "Poa trivialis", "score": 0.5}, {"species": "Cirsium dissectum", "score": 0.1}, {"species": "Equisetum arvense", "score": 0.1}, {"species": "Ranunculus acris", "score": 0.1}, {"species": "Thalictrum flavum", "score": 0.1}, {"species": "Cardamine pratensis", "score": 0.1}].map(x => x.species),type: 'pie',textinfo: 'percent',hoverinfo: 'label+percent+value',}], {margin: {t:0, b:0, l:0, r:0}, showlegend: false});</script></tr><tr><td>62</td><td>15</td><td class='domin-score'>63.0 (Plantago lanceolata)</td><td><div id='pie-62' class='pie-container'></div></td><script>Plotly.newPlot('pie-62', [{values: [{"species": "Plantago lanceolata", "score": 63.0}, {"species": "Filipendula ulmaria", "score": 8.0}, {"species": "Anthoxanthum odoratum", "score": 3.0}, {"species": "Cynosurus cristatus", "score": 3.0}, {"species": "Dactylis glomerata", "score": 3.0}, {"species": "Carex flacca", "score": 0.5}, {"species": "Centaurea nigra", "score": 0.5}, {"species": "Holcus lanatus", "score": 0.5}, {"species": "Ranunculus acris", "score": 0.5}, {"species": "Ranunculus repens", "score": 0.5}, {"species": "Trifolium repens", "score": 0.5}, {"species": "Poa trivialis", "score": 0.5}, {"species": "Galium palustre", "score": 0.1}, {"species": "Poa pratensis", "score": 0.1}, {"species": "Cerastium fontanum", "score": 0.1}].map(x => x.score),labels: [{"species": "Plantago lanceolata", "score": 63.0}, {"species": "Filipendula ulmaria", "score": 8.0}, {"species": "Anthoxanthum odoratum", "score": 3.0}, {"species": "Cynosurus cristatus", "score": 3.0}, {"species": "Dactylis glomerata", "score": 3.0}, {"species": "Carex flacca", "score": 0.5}, {"species": "Centaurea nigra", "score": 0.5}, {"species": "Holcus lanatus", "score": 0.5}, {"species": "Ranunculus acris", "score": 0.5}, {"species": "Ranunculus repens", "score": 0.5}, {"species": "Trifolium repens", "score": 0.5}, {"species": "Poa trivialis", "score": 0.5}, {"species": "Galium palustre", "score": 0.1}, {"species": "Poa pratensis", "score": 0.1}, {"species": "Cerastium fontanum", "score": 0.1}].map(x => x.species),type: 'pie',textinfo: 'percent',hoverinfo: 'label+percent+value',}], {margin: {t:0, b:0, l:0, r:0}, showlegend: false});</script></tr><tr><td>63</td><td>18</td><td class='domin-score'>30.0 (Filipendula ulmaria)</td><td><div id='pie-63' class='pie-container'></div></td><script>Plotly.newPlot('pie-63', [{values: [{"species": "Filipendula ulmaria", "score": 30.0}, {"species": "Carex flacca", "score": 8.0}, {"species": "Holcus lanatus", "score": 8.0}, {"species": "Plantago lanceolata", "score": 8.0}, {"species": "Poa pratensis", "score": 8.0}, {"species": "Trifolium repens", "score": 8.0}, {"species": "Centaurea nigra", "score": 3.0}, {"species": "Cirsium dissectum", "score": 3.0}, {"species": "Ranunculus acris", "score": 0.5}, {"species": "Ranunculus repens", "score": 0.5}, {"species": "Equisetum arvense", "score": 0.3}, {"species": "Festuca rubra", "score": 0.3}, {"species": "Juncus inflexus", "score": 0.3}, {"species": "Dactylis glomerata", "score": 0.1}, {"species": "Cerastium fontanum", "score": 0.1}, {"species": "Juncus effusus", "score": 0.1}, {"species": "Bromopsis ramosa", "score": 0.1}, {"species": "Orchis mascula", "score": 0.1}].map(x => x.score),labels: [{"species": "Filipendula ulmaria", "score": 30.0}, {"species": "Carex flacca", "score": 8.0}, {"species": "Holcus lanatus", "score": 8.0}, {"species": "Plantago lanceolata", "score": 8.0}, {"species": "Poa pratensis", "score": 8.0}, {"species": "Trifolium repens", "score": 8.0}, {"species": "Centaurea nigra", "score": 3.0}, {"species": "Cirsium dissectum", "score": 3.0}, {"species": "Ranunculus acris", "score": 0.5}, {"species": "Ranunculus repens", "score": 0.5}, {"species": "Equisetum arvense", "score": 0.3}, {"species": "Festuca rubra", "score": 0.3}, {"species": "Juncus inflexus", "score": 0.3}, {"species": "Dactylis glomerata", "score": 0.1}, {"species": "Cerastium fontanum", "score": 0.1}, {"species": "Juncus effusus", "score": 0.1}, {"species": "Bromopsis ramosa", "score": 0.1}, {"species": "Orchis mascula", "score": 0.1}].map(x => x.species),type: 'pie',textinfo: 'percent',hoverinfo: 'label+percent+value',}], {margin: {t:0, b:0, l:0, r:0}, showlegend: false});</script></tr><tr><td>64</td><td>14</td><td class='domin-score'>42.0 (Carex flacca)</td><td><div id='pie-64' class='pie-container'></div></td><script>Plotly.newPlot('pie-64', [{values: [{"species": "Carex flacca", "score": 42.0}, {"species": "Plantago lanceolata", "score": 30.0}, {"species": "Anthoxanthum odoratum", "score": 18.0}, {"species": "Cirsium dissectum", "score": 8.0}, {"species": "Filipendula ulmaria", "score": 3.0}, {"species": "Festuca rubra", "score": 3.0}, {"species": "Poa pratensis", "score": 3.0}, {"species": "Briza media", "score": 0.5}, {"species": "Equisetum palustre", "score": 0.5}, {"species": "Holcus lanatus", "score": 0.5}, {"species": "Trifolium repens", "score": 0.3}, {"species": "Cerastium fontanum", "score": 0.3}, {"species": "Ranunculus acris", "score": 0.1}, {"species": "Ranunculus repens", "score": 0.1}].map(x => x.score),labels: [{"species": "Carex flacca", "score": 42.0}, {"species": "Plantago lanceolata", "score": 30.0}, {"species": "Anthoxanthum odoratum", "score": 18.0}, {"species": "Cirsium dissectum", "score": 8.0}, {"species": "Filipendula ulmaria", "score": 3.0}, {"species": "Festuca rubra", "score": 3.0}, {"species": "Poa pratensis", "score": 3.0}, {"species": "Briza media", "score": 0.5}, {"species": "Equisetum palustre", "score": 0.5}, {"species": "Holcus lanatus", "score": 0.5}, {"species": "Trifolium repens", "score": 0.3}, {"species": "Cerastium fontanum", "score": 0.3}, {"species": "Ranunculus acris", "score": 0.1}, {"species": "Ranunculus repens", "score": 0.1}].map(x => x.species),type: 'pie',textinfo: 'percent',hoverinfo: 'label+percent+value',}], {margin: {t:0, b:0, l:0, r:0}, showlegend: false});</script></tr><tr><td>67</td><td>15</td><td class='domin-score'>42.0 (Holcus lanatus)</td><td><div id='pie-67' class='pie-container'></div></td><script>Plotly.newPlot('pie-67', [{values: [{"species": "Holcus lanatus", "score": 42.0}, {"species": "Filipendula ulmaria", "score": 18.0}, {"species": "Carex flacca", "score": 18.0}, {"species": "Plantago lanceolata", "score": 8.0}, {"species": "Centaurea nigra", "score": 3.0}, {"species": "Poa trivialis", "score": 3.0}, {"species": "Cirsium dissectum", "score": 0.5}, {"species": "Trifolium repens", "score": 0.5}, {"species": "Anthoxanthum odoratum", "score": 0.3}, {"species": "Dactylis glomerata", "score": 0.3}, {"species": "Taraxacum officinale", "score": 0.3}, {"species": "Briza media", "score": 0.1}, {"species": "Ranunculus repens", "score": 0.1}, {"species": "Dactylorhiza fuchsii", "score": 0.1}, {"species": "Ranunculus bulbosus", "score": 0.1}].map(x => x.score),labels: [{"species": "Holcus lanatus", "score": 42.0}, {"species": "Filipendula ulmaria", "score": 18.0}, {"species": "Carex flacca", "score": 18.0}, {"species": "Plantago lanceolata", "score": 8.0}, {"species": "Centaurea nigra", "score": 3.0}, {"species": "Poa trivialis", "score": 3.0}, {"species": "Cirsium dissectum", "score": 0.5}, {"species": "Trifolium repens", "score": 0.5}, {"species": "Anthoxanthum odoratum", "score": 0.3}, {"species": "Dactylis glomerata", "score": 0.3}, {"species": "Taraxacum officinale", "score": 0.3}, {"species": "Briza media", "score": 0.1}, {"species": "Ranunculus repens", "score": 0.1}, {"species": "Dactylorhiza fuchsii", "score": 0.1}, {"species": "Ranunculus bulbosus", "score": 0.1}].map(x => x.species),type: 'pie',textinfo: 'percent',hoverinfo: 'label+percent+value',}], {margin: {t:0, b:0, l:0, r:0}, showlegend: false});</script></tr><tr><td>68</td><td>15</td><td class='domin-score'>30.0 (Plantago lanceolata)</td><td><div id='pie-68' class='pie-container'></div></td><script>Plotly.newPlot('pie-68', [{values: [{"species": "Plantago lanceolata", "score": 30.0}, {"species": "Angelica sylvestris", "score": 18.0}, {"species": "Carex flacca", "score": 18.0}, {"species": "Filipendula ulmaria", "score": 8.0}, {"species": "Succisa pratensis", "score": 8.0}, {"species": "Briza media", "score": 3.0}, {"species": "Festuca rubra", "score": 3.0}, {"species": "Centaurea nigra", "score": 0.5}, {"species": "Dactylis glomerata", "score": 0.5}, {"species": "Equisetum arvense", "score": 0.5}, {"species": "Holcus lanatus", "score": 0.5}, {"species": "Trifolium repens", "score": 0.5}, {"species": "Anthoxanthum odoratum", "score": 0.3}, {"species": "Hypochaeris radicata", "score": 0.1}, {"species": "Valeriana officinalis", "score": 0.1}].map(x => x.score),labels: [{"species": "Plantago lanceolata", "score": 30.0}, {"species": "Angelica sylvestris", "score": 18.0}, {"species": "Carex flacca", "score": 18.0}, {"species": "Filipendula ulmaria", "score": 8.0}, {"species": "Succisa pratensis", "score": 8.0}, {"species": "Briza media", "score": 3.0}, {"species": "Festuca rubra", "score": 3.0}, {"species": "Centaurea nigra", "score": 0.5}, {"species": "Dactylis glomerata", "score": 0.5}, {"species": "Equisetum arvense", "score": 0.5}, {"species": "Holcus lanatus", "score": 0.5}, {"species": "Trifolium repens", "score": 0.5}, {"species": "Anthoxanthum odoratum", "score": 0.3}, {"species": "Hypochaeris radicata", "score": 0.1}, {"species": "Valeriana officinalis", "score": 0.1}].map(x => x.species),type: 'pie',textinfo: 'percent',hoverinfo: 'label+percent+value',}], {margin: {t:0, b:0, l:0, r:0}, showlegend: false});</script></tr><tr><td>70</td><td>14</td><td class='domin-score'>63.0 (Plantago lanceolata)</td><td><div id='pie-70' class='pie-container'></div></td><script>Plotly.newPlot('pie-70', [{values: [{"species": "Plantago lanceolata", "score": 63.0}, {"species": "Centaurea nigra", "score": 18.0}, {"species": "Poa pratensis", "score": 8.0}, {"species": "Anthoxanthum odoratum", "score": 3.0}, {"species": "Holcus lanatus", "score": 3.0}, {"species": "Filipendula ulmaria", "score": 0.5}, {"species": "Festuca rubra", "score": 0.5}, {"species": "Angelica sylvestris", "score": 0.3}, {"species": "Dactylis glomerata", "score": 0.3}, {"species": "Lotus corniculatus", "score": 0.3}, {"species": "Succisa pratensis", "score": 0.3}, {"species": "Taraxacum officinale", "score": 0.3}, {"species": "Carex flacca", "score": 0.1}, {"species": "Ranunculus acris", "score": 0.1}].map(x => x.score),labels: [{"species": "Plantago lanceolata", "score": 63.0}, {"species": "Centaurea nigra", "score": 18.0}, {"species": "Poa pratensis", "score": 8.0}, {"species": "Anthoxanthum odoratum", "score": 3.0}, {"species": "Holcus lanatus", "score": 3.0}, {"species": "Filipendula ulmaria", "score": 0.5}, {"species": "Festuca rubra", "score": 0.5}, {"species": "Angelica sylvestris", "score": 0.3}, {"species": "Dactylis glomerata", "score": 0.3}, {"species": "Lotus corniculatus", "score": 0.3}, {"species": "Succisa pratensis", "score": 0.3}, {"species": "Taraxacum officinale", "score": 0.3}, {"species": "Carex flacca", "score": 0.1}, {"species": "Ranunculus acris", "score": 0.1}].map(x => x.species),type: 'pie',textinfo: 'percent',hoverinfo: 'label+percent+value',}], {margin: {t:0, b:0, l:0, r:0}, showlegend: false});</script></tr><tr><td>71</td><td>16</td><td class='domin-score'>30.0 (Ranunculus repens)</td><td><div id='pie-71' class='pie-container'></div></td><script>Plotly.newPlot('pie-71', [{values: [{"species": "Ranunculus repens", "score": 30.0}, {"species": "Carex flacca", "score": 18.0}, {"species": "Festuca rubra", "score": 18.0}, {"species": "Lotus corniculatus", "score": 18.0}, {"species": "Poa trivialis", "score": 18.0}, {"species": "Filipendula ulmaria", "score": 8.0}, {"species": "Centaurea nigra", "score": 3.0}, {"species": "Plantago lanceolata", "score": 3.0}, {"species": "Anthoxanthum odoratum", "score": 0.3}, {"species": "Dactylis glomerata", "score": 0.3}, {"species": "Holcus lanatus", "score": 0.3}, {"species": "Taraxacum officinale", "score": 0.3}, {"species": "Valeriana officinalis", "score": 0.3}, {"species": "Equisetum arvense", "score": 0.1}, {"species": "Linum catharticum", "score": 0.1}, {"species": "Ranunculus acris", "score": 0.1}].map(x => x.score),labels: [{"species": "Ranunculus repens", "score": 30.0}, {"species": "Carex flacca", "score": 18.0}, {"species": "Festuca rubra", "score": 18.0}, {"species": "Lotus corniculatus", "score": 18.0}, {"species": "Poa trivialis", "score": 18.0}, {"species": "Filipendula ulmaria", "score": 8.0}, {"species": "Centaurea nigra", "score": 3.0}, {"species": "Plantago lanceolata", "score": 3.0}, {"species": "Anthoxanthum odoratum", "score": 0.3}, {"species": "Dactylis glomerata", "score": 0.3}, {"species": "Holcus lanatus", "score": 0.3}, {"species": "Taraxacum officinale", "score": 0.3}, {"species": "Valeriana officinalis", "score": 0.3}, {"species": "Equisetum arvense", "score": 0.1}, {"species": "Linum catharticum", "score": 0.1}, {"species": "Ranunculus acris", "score": 0.1}].map(x => x.species),type: 'pie',textinfo: 'percent',hoverinfo: 'label+percent+value',}], {margin: {t:0, b:0, l:0, r:0}, showlegend: false});</script></tr><tr><td>72</td><td>21</td><td class='domin-score'>30.0 (Carex flacca)</td><td><div id='pie-72' class='pie-container'></div></td><script>Plotly.newPlot('pie-72', [{values: [{"species": "Carex flacca", "score": 30.0}, {"species": "Festuca rubra", "score": 30.0}, {"species": "Plantago lanceolata", "score": 18.0}, {"species": "Briza media", "score": 8.0}, {"species": "Cirsium dissectum", "score": 8.0}, {"species": "Holcus lanatus", "score": 8.0}, {"species": "Centaurea nigra", "score": 3.0}, {"species": "Poa pratensis", "score": 3.0}, {"species": "Succisa pratensis", "score": 3.0}, {"species": "Valeriana officinalis", "score": 0.5}, {"species": "Filipendula ulmaria", "score": 0.3}, {"species": "Dactylis glomerata", "score": 0.3}, {"species": "Equisetum arvense", "score": 0.3}, {"species": "Ranunculus acris", "score": 0.3}, {"species": "Ranunculus repens", "score": 0.3}, {"species": "Trifolium repens", "score": 0.3}, {"species": "Angelica sylvestris", "score": 0.1}, {"species": "Cirsium palustre", "score": 0.1}, {"species": "Linum catharticum", "score": 0.1}, {"species": "Primula veris", "score": 0.1}, {"species": "Dactylorhiza fuchsii", "score": 0.1}].map(x => x.score),labels: [{"species": "Carex flacca", "score": 30.0}, {"species": "Festuca rubra", "score": 30.0}, {"species": "Plantago lanceolata", "score": 18.0}, {"species": "Briza media", "score": 8.0}, {"species": "Cirsium dissectum", "score": 8.0}, {"species": "Holcus lanatus", "score": 8.0}, {"species": "Centaurea nigra", "score": 3.0}, {"species": "Poa pratensis", "score": 3.0}, {"species": "Succisa pratensis", "score": 3.0}, {"species": "Valeriana officinalis", "score": 0.5}, {"species": "Filipendula ulmaria", "score": 0.3}, {"species": "Dactylis glomerata", "score": 0.3}, {"species": "Equisetum arvense", "score": 0.3}, {"species": "Ranunculus acris", "score": 0.3}, {"species": "Ranunculus repens", "score": 0.3}, {"species": "Trifolium repens", "score": 0.3}, {"species": "Angelica sylvestris", "score": 0.1}, {"species": "Cirsium palustre", "score": 0.1}, {"species": "Linum catharticum", "score": 0.1}, {"species": "Primula veris", "score": 0.1}, {"species": "Dactylorhiza fuchsii", "score": 0.1}].map(x => x.species),type: 'pie',textinfo: 'percent',hoverinfo: 'label+percent+value',}], {margin: {t:0, b:0, l:0, r:0}, showlegend: false});</script></tr><tr><td>73</td><td>17</td><td class='domin-score'>42.0 (Briza media)</td><td><div id='pie-73' class='pie-container'></div></td><script>Plotly.newPlot('pie-73', [{values: [{"species": "Briza media", "score": 42.0}, {"species": "Equisetum arvense", "score": 18.0}, {"species": "Plantago lanceolata", "score": 18.0}, {"species": "Cirsium dissectum", "score": 8.0}, {"species": "Trifolium repens", "score": 3.0}, {"species": "Filipendula ulmaria", "score": 0.5}, {"species": "Angelica sylvestris", "score": 0.5}, {"species": "Anthoxanthum odoratum", "score": 0.5}, {"species": "Carex flacca", "score": 0.5}, {"species": "Festuca rubra", "score": 0.5}, {"species": "Holcus lanatus", "score": 0.5}, {"species": "Lotus corniculatus", "score": 0.3}, {"species": "Ranunculus acris", "score": 0.3}, {"species": "Ranunculus repens", "score": 0.3}, {"species": "Succisa pratensis", "score": 0.3}, {"species": "Dactylorhiza fuchsii", "score": 0.3}, {"species": "Ophioglossum vulgatum", "score": 0.1}].map(x => x.score),labels: [{"species": "Briza media", "score": 42.0}, {"species": "Equisetum arvense", "score": 18.0}, {"species": "Plantago lanceolata", "score": 18.0}, {"species": "Cirsium dissectum", "score": 8.0}, {"species": "Trifolium repens", "score": 3.0}, {"species": "Filipendula ulmaria", "score": 0.5}, {"species": "Angelica sylvestris", "score": 0.5}, {"species": "Anthoxanthum odoratum", "score": 0.5}, {"species": "Carex flacca", "score": 0.5}, {"species": "Festuca rubra", "score": 0.5}, {"species": "Holcus lanatus", "score": 0.5}, {"species": "Lotus corniculatus", "score": 0.3}, {"species": "Ranunculus acris", "score": 0.3}, {"species": "Ranunculus repens", "score": 0.3}, {"species": "Succisa pratensis", "score": 0.3}, {"species": "Dactylorhiza fuchsii", "score": 0.3}, {"species": "Ophioglossum vulgatum", "score": 0.1}].map(x => x.species),type: 'pie',textinfo: 'percent',hoverinfo: 'label+percent+value',}], {margin: {t:0, b:0, l:0, r:0}, showlegend: false});</script></tr>
-        </tbody>
-    </table>
+    <main class="dashboard-grid">
+        <!-- Summary Card -->
+        <section class="dashboard-card">
+            <h2 class="card-title">Dataset Summary</h2>
+            <ul class="summary-list">
+                <li>
+                    <span>Total Relevés:</span>
+                    <span class="summary-value">55</span>
+                </li>
+                <li>
+                    <span>Unique Species:</span>
+                    <span class="summary-value">84</span>
+                </li>
+                <li>
+                    <span>Dominant Species:</span>
+                    <span class="summary-value">
+                        Carex flacca (792.0)
+                    </span>
+                </li>
+            </ul>
+        </section>
+        
+        <!-- NMDS Card - Now wider -->
+        <section class="dashboard-card nmds-card">
+            <h2 class="card-title">NMDS Ordination</h2>
+            <div class="nmds-container">
+                
+                <object type="image/svg+xml" data="nmds_plot.svg" style="width:100%; height:100%;"></object>
+                
+            </div>
+        </section>
+        
+        <!-- Metrics Card -->
+        <section class="dashboard-card">
+            <h2 class="card-title">NMDS Metrics</h2>
+            <table class="metrics-table">
+                <tbody>
+                    
+                    <tr>
+                        <td>Stress Value</td>
+                        <td>
+                            
+                                0.062
+                            
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>N Species</td>
+                        <td>
+                            
+                                46.000
+                            
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>N Releves</td>
+                        <td>
+                            
+                                55.000
+                            
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Cluster Sizes</td>
+                        <td>
+                            
+                                {'Grazing + Fertiliser': 10, 'Mowing + Fertiliser': 14, 'Organic Management': 31}
+                            
+                        </td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+        </section>
+        
+        <!-- Management Charts -->
+        <section class="dashboard-card management-card">
+            <h2 class="card-title">Grazing + Fertiliser</h2>
+            <div id="pie-grazing" class="chart-container"></div>
+        </section>
+        
+        <section class="dashboard-card management-card">
+            <h2 class="card-title">Mowing + Fertiliser</h2>
+            <div id="pie-mowing" class="chart-container"></div>
+        </section>
+        
+        <section class="dashboard-card management-card">
+            <h2 class="card-title">Organic Management</h2>
+            <div id="pie-organic" class="chart-container"></div>
+        </section>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize all pie charts
+            function initPieChart(containerId, speciesData) {
+                // Take top 5 species for cleaner visualization
+                const topSpecies = speciesData.slice(0, 5);
+                
+                Plotly.newPlot(containerId, [{
+                    values: topSpecies.map(item => item[1]),
+                    labels: topSpecies.map(item => item[0]),
+                    type: 'pie',
+                    textinfo: 'percent',
+                    hoverinfo: 'label+percent+value',
+                    marker: {
+                        colors: ['#4E79A7', '#F28E2B', '#E15759', '#76B7B2', '#59A14F']
+                    }
+                }], {
+                    margin: {t: 20, b: 20, l: 20, r: 20},
+                    showlegend: false
+                });
+            }
+
+            // Initialize charts for each management type
+            
+                
+                    initPieChart(
+                        'pie-grazing',
+                        [["Agrostis Stolonifera", 437.0], ["Lolium Perenne", 131.0], ["Phragmites Australis", 66.0], ["Juncus Inflexus", 63.0], ["Alopercurus Pratensis", 63.0], ["Ranunculus Repens", 42.4], ["Cirsium Arvense", 36.1], ["Agrostis Capillaris", 30.0], ["Rumex Obtusifolius", 18.6], ["Trifolium Repens", 18.0], ["Holcus Lanatus", 18.0], ["Taraxacum Aggregate", 16.200000000000003], ["Dactylis Glomerata", 11.0], ["Poa Annua", 8.0], ["Molinea Cerulea", 8.0], ["Festuca Rubra", 8.0], ["Deschampsia Cepitosa", 3.0], ["Poa Trivialis", 3.0], ["Taraxacum aggregate", 3.0], ["Cerastium Fontanum", 0.4], ["Ranunculus Acris", 0.30000000000000004], ["Stellaria Media", 0.1], ["Ranunculus repens", 0.1]]
+                    );
+                
+            
+                
+                    initPieChart(
+                        'pie-mowing',
+                        [["Holcus lanatus", 474.0], ["Anthoxanthum odoratum", 150.3], ["Bromus hordeaceus", 106.6], ["Phragmites australis", 83.0], ["Poa trivialis", 70.5], ["Festuca rubra", 48.0], ["Lolium perenne", 21.1], ["Poa pratensis", 8.1], ["Lolium multiflorum", 8.0], ["Ranunculus repens", 1.9000000000000004], ["Cardamine pratensis", 1.5], ["Cerastium fontanum", 0.7999999999999999], ["Taraxacum officinale", 0.7], ["Dactylis glomerata", 0.5], ["Carex dioica", 0.5], ["Filipendula ulmaria", 0.30000000000000004], ["Rumex acetosa", 0.1], ["Alopecurus pratensis", 0.1], ["Rumex obtusifolius", 0.1], ["Ranunculus acris", 0.1]]
+                    );
+                
+            
+                
+                    initPieChart(
+                        'pie-organic',
+                        [["Carex flacca", 792.0], ["Filipendula ulmaria", 691.9], ["Plantago lanceolata", 474.3], ["Festuca rubra", 395.6], ["Holcus lanatus", 272.40000000000003], ["Anthoxanthum odoratum", 150.30000000000004], ["Cirsium dissectum", 130.1], ["Ranunculus repens", 77.5], ["Centaurea nigra", 57.900000000000006], ["Briza media", 54.6], ["Carex acutiformis", 50.1], ["Succisa pratensis", 49.89999999999999], ["Poa pratensis", 38.6], ["Carex nigra", 38.0], ["Equisetum arvense", 36.2], ["Phragmites australis", 34.8], ["Poa trivialis", 28.1], ["Lotus corniculatus", 26.6], ["Angelica sylvestris", 19.400000000000002], ["Ranunculus acris", 18.10000000000001], ["Rumex acetosa", 18.0], ["Juncus acutiflorus", 16.0], ["Trifolium repens", 15.700000000000001], ["Ophioglossum vulgatum", 9.2], ["Thalictrum flavum", 8.9], ["Cirsium palustre", 8.299999999999999], ["Deschampsia cespitosa", 8.1], ["Dactylis glomerata", 5.699999999999999], ["Iris pseudacorus", 3.6], ["Juncus effusus", 3.5], ["Taraxacum officinale", 3.4999999999999996], ["Lychnis flos-cuculi", 3.1], ["Eupatorium cannabinum", 3.0], ["Cynosurus cristatus", 3.0], ["Cardamine pratensis", 1.6], ["Valeriana officinalis", 1.3], ["Ranunculus flammula", 1.2000000000000002], ["Equisetum palustre", 0.9], ["Caltha palustris", 0.8999999999999999], ["Dactylorhiza fuchsii", 0.8], ["Galium palustre", 0.7999999999999999], ["Cerastium fontanum", 0.7], ["Bromus hordeaceus", 0.7], ["Juncus inflexus", 0.3], ["Hypochaeris radicata", 0.2], ["Primula veris", 0.2], ["Linum catharticum", 0.2], ["Silene vulgaris", 0.1], ["Veronica chamaedrys", 0.1], ["Plantago major", 0.1], ["Silene flos-cuculi", 0.1], ["Arrhenatherum elatius", 0.1], ["Rhinanthus minor", 0.1], ["Bromopsis ramosa", 0.1], ["Orchis mascula", 0.1], ["Scorzoneroides autumnalis", 0.1], ["Ranunculus bulbosus", 0.1]]
+                    );
+                
+            
+
+            // Make charts responsive
+            window.addEventListener('resize', function() {
+                ['pie-grazing', 'pie-mowing', 'pie-organic'].forEach(id => {
+                    Plotly.Plots.resize(id);
+                });
+            });
+        });
+    </script>
 </body>
 </html>
