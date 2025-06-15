@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grassland Management Dashboard</title>
+    <title>Site 68 - Data Analysis</title>
     <script src="https://cdn.plot.ly/plotly-2.24.1.min.js"></script>
     <style>
         /* Base Styles */
@@ -54,6 +54,17 @@
             grid-column: span 2;
             min-height: 400px;
         }
+
+        .card-header {
+            margin-bottom: 12px;
+        }
+
+        .card-subtitle {
+            font-size: 0.85rem;
+            color: #666;
+            margin-top: 4px;
+            font-weight: 400;
+        }        
         
         /* Card Styles */
         .dashboard-card {
@@ -99,6 +110,52 @@
             width: 100%;
             border-collapse: collapse;
         }
+
+/* Card Structure */
+.management-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card-header {
+    margin-bottom: 12px;
+}
+
+.card-subtitle {
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 4px;
+}
+
+.chart-container {
+    flex-grow: 1;
+    min-height: 250px;
+}
+
+.card-details {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+    font-size: 0.9rem;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.detail-label {
+    font-weight: 600;
+    color: #555;
+}
+
+.detail-value {
+    color: #333;
+}        
+
+
         
         .metrics-table th, 
         .metrics-table td {
@@ -148,8 +205,8 @@
 </head>
 <body>
     <header class="dashboard-header">
-        <h1>Grassland Management Dashboard</h1>
-        <div class="timestamp">Generated: 2025-06-15 15:38:23</div>
+        <h1>Site 68 Data Analysis</h1>
+        <div class="timestamp">Generated: 2025-06-15 16:53:49</div>
     </header>
     
     <main class="dashboard-grid">
@@ -159,17 +216,11 @@
             <ul class="summary-list">
                 <li>
                     <span>Total Relevés:</span>
-                    <span class="summary-value">55</span>
+                    <span class="summary-value">41</span>
                 </li>
                 <li>
                     <span>Unique Species:</span>
-                    <span class="summary-value">84</span>
-                </li>
-                <li>
-                    <span>Dominant Species:</span>
-                    <span class="summary-value">
-                        Carex flacca (792.0)
-                    </span>
+                    <span class="summary-value">79</span>
                 </li>
             </ul>
         </section>
@@ -194,7 +245,7 @@
                         <td>Stress Value</td>
                         <td>
                             
-                                0.062
+                                0.051
                             
                         </td>
                     </tr>
@@ -203,7 +254,7 @@
                         <td>N Species</td>
                         <td>
                             
-                                46.000
+                                39.000
                             
                         </td>
                     </tr>
@@ -212,7 +263,7 @@
                         <td>N Releves</td>
                         <td>
                             
-                                55.000
+                                41.000
                             
                         </td>
                     </tr>
@@ -221,7 +272,7 @@
                         <td>Cluster Sizes</td>
                         <td>
                             
-                                {'Grazing + Fertiliser': 10, 'Mowing + Fertiliser': 14, 'Organic Management': 31}
+                                {'Grazing + Fertiliser': 10, 'Mowing + Fertiliser': 10, 'Organic Management': 21}
                             
                         </td>
                     </tr>
@@ -230,22 +281,38 @@
             </table>
         </section>
         
-        <!-- Management Charts -->
-        <section class="dashboard-card management-card">
-            <h2 class="card-title">Grazing + Fertiliser</h2>
-            <div id="pie-grazing" class="chart-container"></div>
-        </section>
-        
-        <section class="dashboard-card management-card">
-            <h2 class="card-title">Mowing + Fertiliser</h2>
-            <div id="pie-mowing" class="chart-container"></div>
-        </section>
-        
-        <section class="dashboard-card management-card">
-            <h2 class="card-title">Organic Management</h2>
-            <div id="pie-organic" class="chart-container"></div>
-        </section>
-    </main>
+<!-- Grazing + Fertiliser Card -->
+<section class="dashboard-card management-card">
+    <div class="card-header">
+        <h2 class="card-title">Grazing + Fertiliser</h2>
+        <p class="card-subtitle">
+            Species breakdown 
+        </p>
+    </div>
+    <div id="pie-grazing" class="chart-container"></div>
+</section>
+
+<!-- Mowing + Fertiliser Card -->
+<section class="dashboard-card management-card">
+    <div class="card-header">
+        <h2 class="card-title">Mowing + Fertiliser</h2>
+        <p class="card-subtitle">
+            Species breakdown
+        </p>
+    </div>
+    <div id="pie-mowing" class="chart-container"></div>
+</section>
+
+<!-- Organic Management Card -->
+<section class="dashboard-card management-card">
+    <div class="card-header">
+        <h2 class="card-title">Organic Management</h2>
+        <p class="card-subtitle">
+            Species breakdown
+        </p>
+    </div>
+    <div id="pie-organic" class="chart-container"></div>
+</section>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -265,7 +332,7 @@
                     }
                 }], {
                     margin: {t: 20, b: 20, l: 20, r: 20},
-                    showlegend: false
+                    showlegend: true
                 });
             }
 
@@ -288,7 +355,7 @@
                 
                     initPieChart(
                         'pie-organic',
-                        [["Carex flacca", 792.0], ["Filipendula ulmaria", 691.9], ["Plantago lanceolata", 474.3], ["Festuca rubra", 395.6], ["Holcus lanatus", 272.40000000000003], ["Anthoxanthum odoratum", 150.30000000000004], ["Cirsium dissectum", 130.1], ["Ranunculus repens", 77.5], ["Centaurea nigra", 57.900000000000006], ["Briza media", 54.6], ["Carex acutiformis", 50.1], ["Succisa pratensis", 49.89999999999999], ["Poa pratensis", 38.6], ["Carex nigra", 38.0], ["Equisetum arvense", 36.2], ["Phragmites australis", 34.8], ["Poa trivialis", 28.1], ["Lotus corniculatus", 26.6], ["Angelica sylvestris", 19.400000000000002], ["Ranunculus acris", 18.10000000000001], ["Rumex acetosa", 18.0], ["Juncus acutiflorus", 16.0], ["Trifolium repens", 15.700000000000001], ["Ophioglossum vulgatum", 9.2], ["Thalictrum flavum", 8.9], ["Cirsium palustre", 8.299999999999999], ["Deschampsia cespitosa", 8.1], ["Dactylis glomerata", 5.699999999999999], ["Iris pseudacorus", 3.6], ["Juncus effusus", 3.5], ["Taraxacum officinale", 3.4999999999999996], ["Lychnis flos-cuculi", 3.1], ["Eupatorium cannabinum", 3.0], ["Cynosurus cristatus", 3.0], ["Cardamine pratensis", 1.6], ["Valeriana officinalis", 1.3], ["Ranunculus flammula", 1.2000000000000002], ["Equisetum palustre", 0.9], ["Caltha palustris", 0.8999999999999999], ["Dactylorhiza fuchsii", 0.8], ["Galium palustre", 0.7999999999999999], ["Cerastium fontanum", 0.7], ["Bromus hordeaceus", 0.7], ["Juncus inflexus", 0.3], ["Hypochaeris radicata", 0.2], ["Primula veris", 0.2], ["Linum catharticum", 0.2], ["Silene vulgaris", 0.1], ["Veronica chamaedrys", 0.1], ["Plantago major", 0.1], ["Silene flos-cuculi", 0.1], ["Arrhenatherum elatius", 0.1], ["Rhinanthus minor", 0.1], ["Bromopsis ramosa", 0.1], ["Orchis mascula", 0.1], ["Scorzoneroides autumnalis", 0.1], ["Ranunculus bulbosus", 0.1]]
+                        [["Carex flacca", 547.4000000000001], ["Filipendula ulmaria", 466.3], ["Plantago lanceolata", 395.0], ["Anthoxanthum odoratum", 108.39999999999999], ["Festuca rubra", 92.1], ["Holcus lanatus", 81.8], ["Ranunculus repens", 76.4], ["Cirsium dissectum", 58.1], ["Briza media", 53.7], ["Succisa pratensis", 41.599999999999994], ["Centaurea nigra", 37.8], ["Carex nigra", 36.6], ["Poa pratensis", 30.1], ["Equisetum arvense", 29.1], ["Poa trivialis", 25.0], ["Angelica sylvestris", 18.900000000000002], ["Lotus corniculatus", 18.6], ["Rumex acetosa", 18.0], ["Ranunculus acris", 17.000000000000007], ["Trifolium repens", 14.700000000000001], ["Ophioglossum vulgatum", 9.0], ["Phragmites australis", 8.3], ["Thalictrum flavum", 8.1], ["Carex acutiformis", 8.0], ["Juncus acutiflorus", 8.0], ["Dactylis glomerata", 4.8], ["Juncus effusus", 3.5], ["Lychnis flos-cuculi", 3.1], ["Eupatorium cannabinum", 3.0], ["Cynosurus cristatus", 3.0], ["Taraxacum officinale", 2.5999999999999996], ["Cardamine pratensis", 1.1], ["Valeriana officinalis", 1.0], ["Cerastium fontanum", 0.7], ["Equisetum palustre", 0.6], ["Galium palustre", 0.6], ["Ranunculus flammula", 0.6], ["Dactylorhiza fuchsii", 0.5], ["Juncus inflexus", 0.3], ["Hypochaeris radicata", 0.2], ["Cirsium palustre", 0.2], ["Caltha palustris", 0.2], ["Linum catharticum", 0.2], ["Silene vulgaris", 0.1], ["Bromus hordeaceus", 0.1], ["Silene flos-cuculi", 0.1], ["Rhinanthus minor", 0.1], ["Iris pseudacorus", 0.1], ["Bromopsis ramosa", 0.1], ["Orchis mascula", 0.1], ["Ranunculus bulbosus", 0.1], ["Primula veris", 0.1]]
                     );
                 
             

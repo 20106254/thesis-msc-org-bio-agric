@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Grassland Management Dashboard</title>
+    <title>Site 68 - Data Analysis</title>
     <script src="https://cdn.plot.ly/plotly-2.24.1.min.js"></script>
     <style>
         /* Base Styles */
@@ -54,6 +54,17 @@
             grid-column: span 2;
             min-height: 400px;
         }
+
+        .card-header {
+            margin-bottom: 12px;
+        }
+
+        .card-subtitle {
+            font-size: 0.85rem;
+            color: #666;
+            margin-top: 4px;
+            font-weight: 400;
+        }        
         
         /* Card Styles */
         .dashboard-card {
@@ -99,6 +110,52 @@
             width: 100%;
             border-collapse: collapse;
         }
+
+/* Card Structure */
+.management-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card-header {
+    margin-bottom: 12px;
+}
+
+.card-subtitle {
+    font-size: 0.85rem;
+    color: #666;
+    margin-top: 4px;
+}
+
+.chart-container {
+    flex-grow: 1;
+    min-height: 250px;
+}
+
+.card-details {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+    font-size: 0.9rem;
+}
+
+.detail-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.detail-label {
+    font-weight: 600;
+    color: #555;
+}
+
+.detail-value {
+    color: #333;
+}        
+
+
         
         .metrics-table th, 
         .metrics-table td {
@@ -148,7 +205,7 @@
 </head>
 <body>
     <header class="dashboard-header">
-        <h1>Grassland Management Dashboard</h1>
+        <h1>Site 68 Data Analysis</h1>
         <div class="timestamp">Generated: {{ timestamp }}</div>
     </header>
     
@@ -164,12 +221,6 @@
                 <li>
                     <span>Unique Species:</span>
                     <span class="summary-value">{{ unique_species_count }}</span>
-                </li>
-                <li>
-                    <span>Dominant Species:</span>
-                    <span class="summary-value">
-                        {{ top_species[:20] }}{% if top_species|length > 20 %}...{% endif %} ({{ "%.1f"|format(top_score) }})
-                    </span>
                 </li>
             </ul>
         </section>
@@ -207,22 +258,38 @@
             </table>
         </section>
         
-        <!-- Management Charts -->
-        <section class="dashboard-card management-card">
-            <h2 class="card-title">Grazing + Fertiliser</h2>
-            <div id="pie-grazing" class="chart-container"></div>
-        </section>
-        
-        <section class="dashboard-card management-card">
-            <h2 class="card-title">Mowing + Fertiliser</h2>
-            <div id="pie-mowing" class="chart-container"></div>
-        </section>
-        
-        <section class="dashboard-card management-card">
-            <h2 class="card-title">Organic Management</h2>
-            <div id="pie-organic" class="chart-container"></div>
-        </section>
-    </main>
+<!-- Grazing + Fertiliser Card -->
+<section class="dashboard-card management-card">
+    <div class="card-header">
+        <h2 class="card-title">Grazing + Fertiliser</h2>
+        <p class="card-subtitle">
+            Species breakdown 
+        </p>
+    </div>
+    <div id="pie-grazing" class="chart-container"></div>
+</section>
+
+<!-- Mowing + Fertiliser Card -->
+<section class="dashboard-card management-card">
+    <div class="card-header">
+        <h2 class="card-title">Mowing + Fertiliser</h2>
+        <p class="card-subtitle">
+            Species breakdown
+        </p>
+    </div>
+    <div id="pie-mowing" class="chart-container"></div>
+</section>
+
+<!-- Organic Management Card -->
+<section class="dashboard-card management-card">
+    <div class="card-header">
+        <h2 class="card-title">Organic Management</h2>
+        <p class="card-subtitle">
+            Species breakdown
+        </p>
+    </div>
+    <div id="pie-organic" class="chart-container"></div>
+</section>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -242,7 +309,7 @@
                     }
                 }], {
                     margin: {t: 20, b: 20, l: 20, r: 20},
-                    showlegend: false
+                    showlegend: true
                 });
             }
 
