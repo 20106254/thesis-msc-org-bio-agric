@@ -32,44 +32,53 @@ if (!dir.exists(output_dir)) {
 source(file.path(script_dir, "custom_theme.R"))
 source(file.path(script_dir, "save_plot.R"))
 
-# Load and prepare data
-cat("Loading data from:", input_path, "\n")
+
+# Load and prepare data (NO rare species filtering)
 data <- read.csv(input_path) %>%
   group_by(RELEVE_ID, SPECIES_NAME) %>%
-  summarise(DOMIN = sum(DOMIN), .groups = "drop") %>%
-  group_by(SPECIES_NAME) %>%
-  filter(sum(DOMIN > 0) >= 3) %>%  # Remove rare species (<3 occurrences)
-  ungroup() %>%
-  pivot_wider(names_from = SPECIES_NAME, values_from = DOMIN, values_fill = 0)
+  summarise(DOMIN = sum(DOMIN), .groups = "drop") %>%  # Sum dominance per species per relevé
+  pivot_wider(
+    names_from = SPECIES_NAME, 
+    values_from = DOMIN, 
+    values_fill = 0  # Fill missing species with 0
+  )
 
-# Remove zero-variance species and empty samples
+# Remove species with TOTAL abundance = 0 (if any)
 data.numeric <- data %>%
   select(-RELEVE_ID) %>%
-  select(where(~sum(.) > 0)) %>%
+  select(where(~sum(.) > 0)) %>%  # Drop species columns that are all 0
   as.data.frame()
 rownames(data.numeric) <- data$RELEVE_ID
 
-# Hellinger-transformed Bray-Curtis dissimilarity
-cat("Calculating dissimilarity matrix...\n")
-diss.matrix <- vegdist(decostand(data.numeric, "hellinger"), "bray")
+empty_releves <- data.numeric[rowSums(data.numeric) == 0, ]
+if (nrow(empty_releves) > 0) {
+  cat("The following relevés were excluded for having no species data:\n")
+  print(rownames(empty_releves))  # Should show RELEVE_IDs like '9'
+}
 
-# Fuzzy clustering (k=3)
+# Hellinger transform (improves handling of zeros)
+hel_data <- decostand(data.numeric, "hellinger")
+
+# Fuzzy clustering (k=3) on Bray-Curtis dissimilarity
+diss.matrix <- vegdist(hel_data, "bray")
 set.seed(123)
-cat("Performing fuzzy clustering...\n")
 fanny.clust <- fanny(diss.matrix, k = 3, memb.exp = 1.2)
 data$Management <- c("Grazing + Fertiliser", "Mowing + Fertiliser", "Organic Management")[fanny.clust$clustering]
 
-# NMDS (3D for better stress)
+# NMDS (3D for stability)
 set.seed(123)
-cat("Running NMDS ordination...\n")
 nmds <- metaMDS(
-  decostand(data.numeric, "hellinger"),
+  hel_data,
   distance = "bray",
   k = 3,
   trymax = 500,
-  autotransform = FALSE
+  autotransform = FALSE  # Already Hellinger-transformed
 )
-cat("Final stress:", nmds$stress, "\n")
+
+cat("Relevés in NMDS results:", rownames(nmds$points), "\n")
+cat("Missing relevés:", setdiff(data$RELEVE_ID, rownames(nmds$points)), "\n")
+cat("NMDS points for 9", nmds$points["9", ] ,  "\n")
+stressplot(nmds)
 
 # Prepare plot data
 plot_data <- data.frame(
