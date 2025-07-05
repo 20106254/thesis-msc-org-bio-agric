@@ -6,8 +6,8 @@ library(cluster)
 source("custom_theme.R")
 source("save_plot.R")
 
-#data <- read.csv("../datasets/generated-data/generated-data-set.csv")
-data <- read.csv("../datasets/site-68-2025/COMBINED_MID_RANGE.csv")
+data <- read.csv("../datasets/generated-data/generated-data-set.csv")
+#data <- read.csv("../datasets/site-68-2025/COMBINED_MID_RANGE.csv")
 
 data.aggregated <- data %>%
   group_by(RELEVE_ID, SPECIES_NAME) %>%
