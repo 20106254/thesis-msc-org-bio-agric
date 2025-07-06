@@ -1,0 +1,607 @@
+RELEVE_ID,SPECIES_NAME,DOMIN
+1,'Deschampsia cespitosa',8
+1,'Dactylis glomerata',8
+1,'Holcus lanatus',7
+1,'Poa pratensis',10
+2,'Dactylis glomerata',9
+2,'Molinia caerulea',7
+2,'Briza media',10
+3,'Poa pratensis',9
+3,'Agrostis stolonifera',9
+3,'Equisetum species',7
+3,'Holcus lanatus',8
+4,'Dactylis glomerata',9
+4,'Holcus lanatus',9
+4,'Anthoxanthum odoratum',9
+5,'Dactylis glomerata',8
+5,'Anthoxanthum odoratum',7
+5,'Briza media',9
+5,'Agrostis stolonifera',7
+6,'Briza media',7
+6,'Anthoxanthum odoratum',8
+7,'Festuca pratensis',9
+7,'Poa trivialis',10
+7,'Holcus lanatus',7
+7,'Molinia caerulea',8
+8,'Dactylis glomerata',10
+8,'Briza media',8
+8,'Equisetum species',10
+8,'Poa pratensis',8
+9,'Festuca rubra',9
+9,'Agrostis stolonifera',8
+9,'Dactylis glomerata',9
+9,'Molinia caerulea',9
+10,'Poa trivialis',7
+10,'Holcus lanatus',7
+11,'Equisetum species',8
+11,'Festuca pratensis',7
+11,'Dactylis glomerata',10
+12,'Poa trivialis',9
+12,'Holcus lanatus',9
+12,'Festuca rubra',10
+13,'Festuca rubra',8
+13,'Anthoxanthum odoratum',9
+14,'Deschampsia cespitosa',8
+14,'Poa trivialis',9
+15,'Equisetum species',9
+15,'Poa trivialis',7
+15,'Molinia caerulea',10
+16,'Molinia caerulea',9
+16,'Dactylis glomerata',7
+16,'Poa pratensis',9
+17,'Molinia caerulea',7
+17,'Poa pratensis',10
+17,'Dactylis glomerata',8
+17,'Holcus lanatus',7
+18,'Anthoxanthum odoratum',9
+18,'Equisetum species',9
+18,'Agrostis stolonifera',10
+19,'Dactylis glomerata',10
+19,'Molinia caerulea',8
+20,'Festuca rubra',8
+20,'Equisetum species',7
+20,'Deschampsia cespitosa',10
+22,'Rumex acetosa',10
+22,'Ranunculus acris',9
+22,'Festuca pratensis',8
+22,'Agrostis stolonifera',10
+22,'Poa pratensis',9
+22,'Anthoxanthum odoratum',8
+23,'Taraxacum agg',8
+23,'Deschampsia cespitosa',9
+23,'Festuca pratensis',10
+23,'Juncus effusus',8
+23,'Dactylis glomerata',8
+23,'Rhinanthus minor',7
+24,'Molinia caerulea',9
+24,'Ranunculus acris',10
+24,'Anthoxanthum odoratum',10
+24,'Rhinanthus minor',8
+24,'Holcus lanatus',7
+24,'Poa pratensis',9
+25,'Festuca rubra',10
+25,'Taraxacum agg',10
+25,'Agrostis stolonifera',7
+25,'Poa trivialis',10
+25,'Ranunculus repens',8
+25,'Molinia caerulea',8
+25,'Equisetum species',9
+25,'Rumex acetosa',10
+26,'Ranunculus repens',9
+26,'Briza media',7
+26,'Festuca rubra',9
+26,'Taraxacum agg',7
+26,'Juncus effusus',9
+26,'Festuca pratensis',10
+26,'Anthoxanthum odoratum',10
+26,'Rhinanthus minor',10
+27,'Molinia caerulea',10
+27,'Dactylis glomerata',10
+27,'Rumex acetosa',8
+27,'Briza media',10
+27,'Deschampsia cespitosa',8
+27,'Ranunculus repens',10
+27,'Juncus effusus',10
+27,'Festuca rubra',8
+28,'Festuca rubra',8
+28,'Dactylis glomerata',10
+28,'Molinia caerulea',9
+28,'Deschampsia cespitosa',9
+28,'Rumex acetosa',10
+28,'Briza media',9
+28,'Equisetum species',8
+28,'Holcus lanatus',9
+28,'Agrostis stolonifera',10
+29,'Agrostis stolonifera',8
+29,'Poa trivialis',7
+29,'Rhinanthus minor',9
+29,'Equisetum species',8
+29,'Briza media',7
+29,'Ranunculus repens',9
+30,'Ranunculus repens',8
+30,'Juncus effusus',8
+30,'Ranunculus acris',9
+30,'Anthoxanthum odoratum',8
+30,'Holcus lanatus',9
+30,'Rumex acetosa',9
+30,'Dactylis glomerata',8
+30,'Poa trivialis',10
+30,'Taraxacum agg',7
+30,'Deschampsia cespitosa',7
+31,'Anthoxanthum odoratum',8
+31,'Agrostis stolonifera',8
+31,'Ranunculus acris',9
+31,'Equisetum species',7
+31,'Poa trivialis',10
+31,'Molinia caerulea',9
+31,'Festuca pratensis',7
+31,'Juncus effusus',10
+31,'Briza media',9
+31,'Poa pratensis',7
+32,'Festuca rubra',9
+32,'Taraxacum agg',8
+32,'Poa pratensis',7
+32,'Molinia caerulea',10
+32,'Agrostis stolonifera',8
+32,'Anthoxanthum odoratum',9
+32,'Ranunculus acris',8
+32,'Deschampsia cespitosa',10
+32,'Poa trivialis',8
+32,'Holcus lanatus',10
+32,'Rumex acetosa',10
+32,'Ranunculus repens',7
+33,'Anthoxanthum odoratum',8
+33,'Poa pratensis',8
+33,'Juncus effusus',7
+33,'Agrostis stolonifera',9
+33,'Holcus lanatus',10
+33,'Ranunculus acris',7
+34,'Briza media',9
+34,'Ranunculus acris',10
+34,'Equisetum species',9
+34,'Rumex acetosa',8
+34,'Festuca rubra',8
+34,'Anthoxanthum odoratum',10
+34,'Juncus effusus',9
+34,'Molinia caerulea',10
+35,'Festuca rubra',9
+35,'Rumex acetosa',9
+35,'Taraxacum agg',9
+35,'Festuca pratensis',7
+35,'Agrostis stolonifera',8
+35,'Molinia caerulea',9
+35,'Anthoxanthum odoratum',10
+35,'Dactylis glomerata',8
+35,'Rhinanthus minor',8
+35,'Deschampsia cespitosa',8
+35,'Holcus lanatus',8
+36,'Taraxacum agg',9
+36,'Rumex acetosa',7
+36,'Equisetum species',7
+36,'Ranunculus repens',8
+36,'Poa trivialis',10
+36,'Briza media',8
+36,'Agrostis stolonifera',7
+37,'Ranunculus repens',8
+37,'Poa trivialis',10
+37,'Festuca pratensis',8
+37,'Ranunculus acris',9
+37,'Anthoxanthum odoratum',10
+37,'Equisetum species',10
+37,'Taraxacum agg',7
+37,'Rhinanthus minor',10
+37,'Dactylis glomerata',7
+37,'Poa pratensis',10
+37,'Deschampsia cespitosa',8
+37,'Molinia caerulea',9
+38,'Anthoxanthum odoratum',8
+38,'Briza media',9
+38,'Poa pratensis',7
+38,'Rumex acetosa',8
+38,'Deschampsia cespitosa',9
+38,'Festuca rubra',9
+39,'Anthoxanthum odoratum',9
+39,'Rumex acetosa',10
+39,'Ranunculus acris',8
+39,'Ranunculus repens',9
+39,'Deschampsia cespitosa',7
+39,'Juncus effusus',7
+40,'Ranunculus acris',8
+40,'Ranunculus repens',7
+40,'Molinia caerulea',7
+40,'Equisetum species',7
+40,'Taraxacum agg',9
+40,'Poa pratensis',7
+40,'Anthoxanthum odoratum',8
+40,'Holcus lanatus',10
+40,'Rhinanthus minor',9
+42,'s',10
+42,'.',7
+42,'0',3
+42,'y',1
+42,'n',7
+42,'t',7
+42,'s',5
+42,'e',2
+42,'r',8
+42,'t',5
+42,'0',7
+42,'g',10
+42,'t',2
+42,'d',6
+42,'v',6
+42,'e',8
+42,'.',3
+42,'/',6
+43,'-',4
+43,'t',1
+43,'a',1
+43,'2',6
+43,'d',1
+43,'t',1
+43,'t',4
+43,'a',1
+43,'s',4
+43,'n',2
+43,'.',4
+43,'e',4
+43,'.',4
+43,'.',7
+43,'x',5
+43,'t',4
+43,'e',5
+43,'s',9
+43,'0',7
+43,'s',10
+43,'r',2
+43,'g',4
+43,'u',1
+43,'-',4
+43,'t',3
+44,'n',7
+44,'x',10
+44,'.',8
+44,'/',2
+44,'d',5
+44,'0',2
+44,'0',4
+44,'v',8
+44,'e',3
+44,'t',7
+44,'-',2
+44,'-',1
+44,'u',2
+44,'d',4
+44,'/',6
+44,'s',8
+44,'a',7
+44,'t',8
+44,'.',2
+44,'t',4
+44,'a',3
+44,'e',1
+44,'a',5
+44,'g',5
+44,'/',9
+45,'0',10
+45,'v',2
+45,'r',4
+45,'-',4
+45,'r',6
+45,'s',2
+45,'t',3
+45,'e',9
+45,'s',8
+45,'a',7
+45,'a',4
+45,'a',6
+45,'.',2
+45,'d',3
+45,'d',2
+45,'t',9
+45,'.',10
+45,'t',2
+45,'/',7
+46,'d',1
+46,'a',6
+46,'/',5
+46,'t',4
+46,'-',9
+46,'a',7
+46,'d',7
+46,'-',3
+46,'t',6
+46,'r',4
+46,'.',4
+46,'0',8
+46,'a',5
+46,'e',7
+46,'a',7
+46,'n',1
+46,'s',2
+47,'v',2
+47,'.',9
+47,'s',5
+47,'/',9
+47,'g',2
+47,'t',1
+47,'e',2
+47,'t',7
+47,'t',4
+47,'d',9
+47,'/',1
+47,'0',5
+47,'e',7
+47,'e',10
+47,'t',6
+47,'-',4
+47,'s',2
+47,'d',6
+47,'e',9
+47,'u',3
+47,'a',6
+48,'7',2
+48,'a',10
+48,'/',9
+48,'t',9
+48,'t',4
+48,'s',6
+48,'e',4
+48,'.',3
+48,'g',2
+48,'a',9
+48,'-',3
+48,'s',4
+48,'s',3
+48,'t',1
+48,'n',8
+48,'/',5
+48,'.',10
+48,'d',3
+48,'-',7
+48,'a',8
+48,'2',5
+48,'t',4
+48,'u',4
+48,'r',3
+49,'s',5
+49,'t',1
+49,'7',10
+49,'a',9
+49,'d',5
+49,'u',8
+49,'g',6
+49,'.',4
+49,'s',1
+49,'v',2
+49,'-',4
+49,'a',7
+49,'y',9
+49,'d',7
+49,'2',10
+49,'t',6
+49,'s',6
+49,'-',8
+49,'x',10
+49,'e',1
+49,'t',7
+50,'a',1
+50,'d',6
+50,'x',3
+50,'.',4
+50,'a',9
+50,'-',9
+50,'y',7
+50,'r',2
+50,'e',10
+50,'a',9
+50,'g',6
+50,'e',8
+50,'a',4
+50,'t',9
+50,'v',6
+50,'d',1
+50,'r',5
+50,'t',8
+50,'0',5
+50,'.',6
+50,'t',5
+50,'d',3
+50,'s',1
+50,'/',5
+50,'t',8
+51,'t',10
+51,'2',4
+51,'t',9
+51,'.',9
+51,'.',10
+51,'.',9
+51,'d',6
+51,'/',10
+51,'t',2
+51,'y',9
+51,'-',7
+51,'a',9
+51,'v',1
+51,'0',3
+51,'a',3
+51,'u',5
+51,'7',3
+51,'a',1
+51,'t',6
+51,'/',5
+52,'e',2
+52,'a',4
+52,'t',10
+52,'g',2
+52,'t',7
+52,'e',7
+52,'0',10
+52,'t',8
+52,'a',4
+52,'/',6
+52,'2',5
+52,'t',8
+52,'e',1
+52,'n',5
+52,'-',1
+52,'0',6
+52,'7',6
+52,'x',6
+53,'g',9
+53,'t',1
+53,'x',1
+53,'r',10
+53,'a',10
+53,'e',1
+53,'u',9
+53,'d',9
+53,'t',6
+53,'e',9
+53,'t',8
+53,'t',5
+53,'e',1
+53,'0',8
+53,'s',2
+53,'.',9
+53,'/',9
+54,'t',1
+54,'t',6
+54,'t',9
+54,'.',9
+54,'/',10
+54,'r',5
+54,'x',7
+54,'t',6
+54,'-',6
+54,'r',3
+54,'-',8
+54,'y',9
+54,'a',10
+54,'2',8
+54,'7',8
+54,'e',10
+54,'d',8
+54,'a',2
+54,'d',2
+54,'a',9
+54,'d',1
+54,'0',10
+54,'e',8
+54,'/',7
+54,'g',3
+55,'s',3
+55,'t',1
+55,'7',3
+55,'e',2
+55,'d',8
+55,'t',1
+55,'d',3
+55,'r',8
+55,'-',4
+55,'/',5
+55,'e',8
+55,'s',9
+55,'0',6
+55,'t',9
+55,'u',10
+55,'/',9
+55,'e',8
+55,'g',2
+55,'a',6
+56,'t',2
+56,'e',7
+56,'s',6
+56,'d',9
+56,'a',8
+56,'u',8
+56,'s',4
+56,'t',8
+56,'y',9
+56,'t',1
+56,'/',8
+56,'0',8
+56,'-',6
+56,'e',10
+56,'.',6
+57,'s',8
+57,'.',4
+57,'0',4
+57,'-',1
+57,'.',1
+57,'.',1
+57,'7',2
+57,'2',7
+57,'/',1
+57,'t',3
+57,'t',3
+57,'a',1
+57,'-',4
+57,'t',8
+57,'e',9
+58,'n',2
+58,'t',10
+58,'u',6
+58,'a',4
+58,'e',7
+58,'s',2
+58,'/',1
+58,'t',10
+58,'/',4
+58,'d',4
+58,'d',10
+58,'a',9
+58,'s',8
+58,'g',6
+58,'-',4
+58,'e',2
+58,'2',8
+58,'y',6
+58,'s',3
+58,'d',7
+58,'e',4
+58,'7',1
+58,'0',7
+59,'s',2
+59,'t',5
+59,'r',10
+59,'r',8
+59,'t',4
+59,'e',5
+59,'a',8
+59,'.',8
+59,'a',8
+59,'g',4
+59,'d',6
+59,'e',5
+59,'s',3
+59,'n',7
+59,'u',5
+59,'e',3
+59,'e',8
+59,'v',5
+59,'/',10
+60,'.',8
+60,'a',7
+60,'a',1
+60,'x',10
+60,'/',1
+60,'t',5
+60,'n',5
+60,'e',5
+60,'s',2
+60,'a',5
+60,'0',6
+60,'s',7
+60,'.',5
+60,'v',7
+60,'0',8
+60,'t',4
+60,'u',3
+60,'g',10
+60,'7',10
+60,'d',6
+60,'-',3
+60,'r',8
+60,'y',4
+60,'t',9

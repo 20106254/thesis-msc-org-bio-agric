@@ -2,55 +2,53 @@ import pandas as pd
 import numpy as np
 import random
 
-def generate_data_set(species_list, grass_species):
+def generate_data_set(grass_species, grass_with_forbs, full_list):
     no_of_species = 0
-    high_dominance_values = [18, 30, 42, 63, 83, 96]
-    dominance_values = [0.1, 0.3, 0.5, 3, 8, 18, 30, 42, 63, 83, 96]
+    low_dominance_range = (1, 2)
+    medium_dominance_range = (5, 6)
+    high_dominance_range = (7, 10)
+    dominance_range = (1, 10)
     data_set = []
 
     for i in range(0, 20):
-        no_of_species = random.randint(2, 5)
+        no_of_species = random.randint(2, 4)
         selected_species = random.sample(grass_species, no_of_species)
 
         for species in selected_species:
-            dominance_score = random.choice(dominance_values)
+            dominance_score = random.randint(*high_dominance_range)
             data_set.append({
-                'RELEVE_ID': i,
+                'RELEVE_ID': i + 1,
                 'SPECIES_NAME': f"'{species}'",
                 'DOMIN': dominance_score
             })
 
-    for j in range(21, 40):
-        no_of_species = random.randint(6, 10)
-        selected_species = random.sample(species_list, no_of_species)
+    for i in range(21, 40):
+        no_of_species = random.randint(6, 12)
+        selected_species = random.sample(grass_with_forbs, no_of_species)
 
         for species in selected_species:
-            if random.random() < 0.3:
-                dominance_score = random.choice(high_dominance_values)
-            else:
-                dominance_score = random.choice(dominance_values)
+            dominance_score = random.randint(*high_dominance_range)
             data_set.append({
-                'RELEVE_ID': j,
+                'RELEVE_ID': i + 1,
                 'SPECIES_NAME': f"'{species}'",
                 'DOMIN': dominance_score
-            })
+            })            
 
-    for k in range(41, 60):
+
+    for j in range(41, 60):
         no_of_species = random.randint(15, 25)
-        selected_species = random.sample(species_list, no_of_species)
+        selected_species = random.sample(full_list, no_of_species)
 
         for species in selected_species:
-            if random.random() < 0.3:
-                dominance_score = random.choice(high_dominance_values)
-            else:
-                dominance_score = random.choice(dominance_values)
+            dominance_score = random.randint(*dominance_range)
             data_set.append({
-                'RELEVE_ID': k,
+                'RELEVE_ID': j + 1,
                 'SPECIES_NAME': f"'{species}'",
                 'DOMIN': dominance_score
             })            
 
     return data_set
+            
 
 def get_species_list(file_path):
     with open(file_path, 'r') as file:
@@ -62,9 +60,13 @@ def write_data_set(data):
     print(releve_df.head())
     releve_df.to_csv("generated-data-set.csv", index=False)
 
-species_file_path = "../datasets/site-68-2007/2007-survey.txt"
-grass_species_file_path = "../datasets/site-68-2007/2007-survey-grasses.txt"
-species_list = get_species_list(species_file_path)
+
+full_species_file_path = "../datasets/generated-data/2007-survey.txt"
+grass_species_file_path = "../datasets/generated-data/2007-survey-grasses.txt"
+grass_with_forbs_file_path = "../datasets/generated-data/2007-survey-grasses-with-forbs.txt"
+species_list = get_species_list(full_species_file_path)
 grasses_list = get_species_list(grass_species_file_path)
-generated_data = generate_data_set(species_list, grasses_list)
+grasses_with_forbs_list = get_species_list(grass_with_forbs_file_path)
+generated_data = generate_data_set(grasses_list, grasses_with_forbs_list, full_species_file_path)
 write_data_set(generated_data)
+
