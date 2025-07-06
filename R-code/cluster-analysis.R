@@ -6,7 +6,7 @@ library(cluster)
 source("custom_theme.R")
 source("save_plot.R")
 
-data <- read.csv("../datasets/site-68-2025/COMBINED_MID_RANGE.csv")
+data <- read.csv("../python/generated-data-set.csv")
 
 data.aggregated <- data %>%
   group_by(RELEVE_ID, SPECIES_NAME) %>%
@@ -20,11 +20,11 @@ data.numeric <- data.wide %>%
 
 data.numeric[data.numeric < 0] <- 0 
 
-#membership.exponent <- 1.1
+membership.exponent <- 1.1
 
-dissimilarity.matrix <- vegdist(data.numeric, method = "bray") #, mem.exp = membership.exponent)
+dissimilarity.matrix <- vegdist(data.numeric, method = "bray", mem.exp = membership.exponent)
 
-fanny.result <- fanny(dissimilarity.matrix, k = 3) #, memb.exp = membership.exponent)
+fanny.result <- fanny(dissimilarity.matrix, k = 3, memb.exp = membership.exponent)
 
 data.wide$FANNY.Cluster <- fanny.result$clustering
 

@@ -4,17 +4,15 @@ import random
 
 def generate_data_set(species_list, grass_species):
     no_of_species = 0
-    # Updated ranges with discrete values
     high_dominance_values = [18, 30, 42, 63, 83, 96]
     dominance_values = [0.1, 0.3, 0.5, 3, 8, 18, 30, 42, 63, 83, 96]
     data_set = []
 
-    for i in range(1, 20):
-        no_of_species = random.randint(10, 12)
+    for i in range(0, 20):
+        no_of_species = random.randint(2, 5)
         selected_species = random.sample(grass_species, no_of_species)
 
         for species in selected_species:
-            # Choose from full dominance range for grasses
             dominance_score = random.choice(dominance_values)
             data_set.append({
                 'RELEVE_ID': i,
@@ -22,12 +20,11 @@ def generate_data_set(species_list, grass_species):
                 'DOMIN': dominance_score
             })
 
-    for j in range(21, 60):
-        no_of_species = random.randint(20, 30)
+    for j in range(21, 40):
+        no_of_species = random.randint(6, 10)
         selected_species = random.sample(species_list, no_of_species)
 
         for species in selected_species:
-            # 30% chance to get high dominance value, otherwise regular dominance
             if random.random() < 0.3:
                 dominance_score = random.choice(high_dominance_values)
             else:
@@ -37,6 +34,21 @@ def generate_data_set(species_list, grass_species):
                 'SPECIES_NAME': f"'{species}'",
                 'DOMIN': dominance_score
             })
+
+    for k in range(41, 60):
+        no_of_species = random.randint(15, 25)
+        selected_species = random.sample(species_list, no_of_species)
+
+        for species in selected_species:
+            if random.random() < 0.3:
+                dominance_score = random.choice(high_dominance_values)
+            else:
+                dominance_score = random.choice(dominance_values)
+            data_set.append({
+                'RELEVE_ID': k,
+                'SPECIES_NAME': f"'{species}'",
+                'DOMIN': dominance_score
+            })            
 
     return data_set
 
