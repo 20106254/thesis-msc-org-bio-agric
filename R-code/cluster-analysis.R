@@ -1,3 +1,11 @@
+args <- commandArgs(trailingOnly = TRUE)
+
+if(length(args) < 1) {
+  stop("Usage: Rscript cluster_analysis.R <input_csv>")
+}
+
+input_file <- args[1]
+
 library(dplyr)
 library(tidyr)
 library(vegan)
@@ -6,7 +14,7 @@ library(cluster)
 source("custom_theme.R")
 source("save_plot.R")
 
-data <- read.csv("../datasets/generated-data/generated-data-set.csv")
+data <- read.csv(input_file)
 
 data.aggregated <- data %>%
   group_by(RELEVE_ID, SPECIES_NAME) %>%

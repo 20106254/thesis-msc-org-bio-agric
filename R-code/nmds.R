@@ -1,3 +1,11 @@
+args <- commandArgs(trailingOnly = TRUE)
+
+if(length(args) < 1) {
+  stop("Usage: Rscript nmds_analysis.R <input_csv>")
+}
+
+input_file <- args[1]
+
 library(dplyr)
 library(tidyr)
 library(vegan)
@@ -6,7 +14,7 @@ library(cluster)
 source("custom_theme.R")
 source("save_plot.R")
 
-data <- read.csv("../datasets/generated-data/generated-data-set.csv")
+data <- read.csv(input_file)
 
 data.aggregated <- data %>%
   group_by(RELEVE_ID, SPECIES_NAME) %>%
@@ -45,9 +53,8 @@ print(nmds.points)
 p <- ggplot(nmds.points, aes(x = MDS1, y = MDS2)) +
   geom_point(aes(color = FANNY.Cluster), size = 1.5) +
   geom_text(aes(label = RELEVE_ID), hjust = 1.75, vjust = 1.75, size = 2.0, fontface = "bold") +
-  ggtitle("NMDS Ordination on generated data set") +
+  ggtitle("NMDS Ordination on survey results") +
   scale_color_manual(values = c("1" = "blue", "2" = "red", "3" = "green"), labels = c("Low Species Richness", "Medium Species Richness", "High Species Richness")) +
   custom_theme
 
-save_plot(p, "nmds-generated-data.svg")
-
+save_plot(p, "nmds-ordination.svg")
