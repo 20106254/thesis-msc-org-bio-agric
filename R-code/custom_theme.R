@@ -13,6 +13,23 @@ font_add_google("Outfit", "title_font")
 font_add_google("Cabin", "body_font")
 showtext_auto()
 
+TREATMENT_LABELS <- c(
+  grazing = "Grazing + fertiliser",
+  mowing = "Mowing + fertiliser",
+  organic = "Organic Management (Mowing only)"
+)
+
+NMDS_LABELS <- c(
+  "1" = "Grazing + fertiliser",
+  "2" = "Mowing + fertiliser",
+  "3" = "Organic Management (Mowing only)"
+)
+
+TREATMENT_COLOURS <- c(
+  "Grazing + fertiliser" = "#FFA500",      
+  "Mowing + fertiliser" = "#FF0000",     
+  "Organic Management (Mowing only)" = "#1E90FF"  
+)
 
 title_font <- "title_font"
 body_font <- "body_font"
@@ -26,8 +43,8 @@ custom_theme <- theme_minimal() +
     theme(
         axis.title.x = element_text(family = body_font, size=10, margin = margin(t = 10)),
         axis.title.y = element_text(family = body_font, size=10, margin = margin(r = 10)),
-        axis.text.x = element_text(family = body_font, size=6),
-        axis.text.y = element_text(family = body_font, size=6),
+        axis.text.x = element_text(family = title_font, size=10),
+        axis.text.y = element_text(family = body_font, size=10),
         legend.position = "top",
         legend.title = element_blank(),
         legend.spacing = unit(0.5, 'cm'),

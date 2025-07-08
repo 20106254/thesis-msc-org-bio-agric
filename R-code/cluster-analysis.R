@@ -44,12 +44,13 @@ colnames(plot.data) <- c("Cluster", "Count")
 
 print(plot.data)
 
-plot.data$Cluster <- factor(plot.data$Cluster, levels = c(1, 2, 3), labels = c("Low species richness", "Medium species richness", "High species richness"))
+plot.data$Cluster <- factor(plot.data$Cluster, levels = c(1,2,3), labels = TREATMENT_LABELS)
 
 plot <- ggplot(plot.data, aes(x = Cluster, y = Count, fill = Cluster)) +
   geom_bar(stat = "identity", color = "black") +
+  scale_fill_manual(values = TREATMENT_COLOURS) + 
   custom_theme +
-  labs(title = "Cluster Counts", x = "Clusters", y = "Number of data points")
+  labs(title = "Cluster Assignments", x = "Clusters", y = "No. of relevés per cluster")
 
-save_plot(plot, "cluster_analysis_bar_plot_with_membership.svg")
+save_plot(plot, "cluster_analysis.svg")
 

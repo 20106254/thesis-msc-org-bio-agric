@@ -6,6 +6,10 @@ if(length(args) < 1) {
 
 input_file <- args[1]
 
+options(showtext.opts = list(dpi = 96, device = "pdf")) 
+
+options(ragg.use_downloadable_fonts = FALSE)  
+
 library(dplyr)
 library(tidyr)
 library(vegan)
@@ -49,12 +53,16 @@ nmds.points$RELEVE_ID <- data.wide$RELEVE_ID
 nmds.points$FANNY.Cluster <- as.factor(data.wide$FANNY.Cluster)
 print(nmds.points)
 
-
 p <- ggplot(nmds.points, aes(x = MDS1, y = MDS2)) +
   geom_point(aes(color = FANNY.Cluster), size = 1.5) +
   geom_text(aes(label = RELEVE_ID), hjust = 1.75, vjust = 1.75, size = 2.0, fontface = "bold") +
-  ggtitle("NMDS Ordination on survey results") +
-  scale_color_manual(values = c("1" = "blue", "2" = "red", "3" = "green"), labels = c("Low Species Richness", "Medium Species Richness", "High Species Richness")) +
+  labs(
+    title = "NMDS Ordination of Survey Data",
+    subtitle = sprintf("Stress  %.5f", nmds.result$stress), 
+    x = "MDS1",
+    y = "MDS2"
+  ) +
+  scale_color_manual(values = c("1" = "#FFA500", "2" = "#FF0000", "3" = "#1E90FF"), labels = NMDS_LABELS) +
   custom_theme
 
 save_plot(p, "nmds-ordination.svg")
