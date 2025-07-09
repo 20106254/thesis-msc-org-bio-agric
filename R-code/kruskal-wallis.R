@@ -50,6 +50,10 @@ data_df <- data.frame(data.richness, cluster = as.factor(clusters))
 data_df$cluster_label <- factor(cluster_labels[as.character(data_df$cluster)],
                                levels = TREATMENT_LABELS)
 
+original_scipen <- getOption("scipen")
+options(scipen = 999)
+
+
 kruskal_result <- kruskal.test(species_richness ~ cluster, data = data_df)
 print(kruskal_result)
 
