@@ -49,6 +49,13 @@ plot.data$Cluster <- factor(plot.data$Cluster, levels = c(1,2,3), labels = TREAT
 plot <- ggplot(plot.data, aes(x = Cluster, y = Count, fill = Cluster)) +
   geom_bar(stat = "identity", color = "black") +
   scale_fill_manual(values = TREATMENT_COLOURS) + 
+  geom_text(
+    aes(label = Count),  
+    vjust = -0.5,       
+    size = 5,          
+    color = "black",  
+    fontface = "bold" 
+  ) +
   custom_theme +
   labs(title = "Cluster Assignments", x = "Clusters", y = "No. of relevés per cluster")
 

@@ -63,12 +63,15 @@ if (kruskal_result$p.value < 0.05) {
   print(dunn_result)
 }
 p <- ggplot(data_df, aes(x = cluster_label, y = species_richness)) +
-  geom_boxplot(width = 0.6, fill = "lightblue") +
+  geom_boxplot(width = 0.6, aes(fill = cluster_label)) +
+  scale_fill_manual(values = TREATMENT_COLOURS) +  
   geom_text(data = cluster_medians,
-            aes(x = cluster_labels[as.character(cluster)],
-                y = median_richness,
-                label = round(median_richness, 1)),
-            vjust = -0.5, size = 5, color = "darkred") +
+            aes(
+              x = cluster_labels[as.character(cluster)],
+              y = median_richness,
+              label = sprintf("~tilde(x): %.1f", median_richness)  
+            ),
+            vjust = -0.5, size = 4, color = "white", parse = TRUE,  family = "mono") +
   labs(
     title = "Species Richness by treatment [Survey data]",
     x = "Species Richness Level",
@@ -77,3 +80,19 @@ p <- ggplot(data_df, aes(x = cluster_label, y = species_richness)) +
   custom_theme
 
 save_plot(p, "kruskal-wallis.svg")
+
+summary_stats <- data_df %>%
+  group_by(cluster_label) %>%
+  summarise(
+    n = n(),
+    median = median(species_richness),
+    mean = mean(species_richness),
+    sd = sd(species_richness),
+    min = min(species_richness),
+    max = max(species_richness),
+    q1 = quantile(species_richness, 0.25),
+    q3 = quantile(species_richness, 0.75)
+  )
+
+print("Summary statistics for species richness by cluster:")
+print(summary_stats)
