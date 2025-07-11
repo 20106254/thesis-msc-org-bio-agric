@@ -73,7 +73,7 @@ p <- ggplot(data_df, aes(x = cluster_label, y = species_richness)) +
             ),
             vjust = -0.5, size = 4, color = "white", parse = TRUE,  family = "mono") +
   labs(
-    title = "Species Richness by treatment [Survey data]",
+    title = "Species Richness by treatment [Infrequently mown relevés removed]",
     x = "Species Richness Level",
     y = "Species Richness Count"
   ) +

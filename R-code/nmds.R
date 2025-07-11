@@ -57,7 +57,7 @@ p <- ggplot(nmds.points, aes(x = MDS1, y = MDS2)) +
   geom_point(aes(color = FANNY.Cluster), size = 1.5) +
   geom_text(aes(label = RELEVE_ID), hjust = 1.75, vjust = 1.75, size = 2.0, fontface = "bold") +
   labs(
-    title = "NMDS Ordination of Survey Data",
+    title = "NMDS Ordination of Survey Data [Remove infrequent mowing]",
     subtitle = sprintf("Stress  %.5f", nmds.result$stress), 
     x = "MDS1",
     y = "MDS2"
