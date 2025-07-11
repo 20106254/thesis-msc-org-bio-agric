@@ -2,6 +2,8 @@
 ### Student Number: 20106254
 ### MSc. in Organic & Biological Agriculture
 
+![Project poster](docs/collage.jpg)
+
 This repository contains the following:
 
 `R-Code`
